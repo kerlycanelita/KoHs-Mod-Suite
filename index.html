@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KoHs Mod Suite — Minecraft mods &amp; plugins by Zymery Dria</title>
+  <meta name="description" content="Every approved KoHs Minecraft mod and plugin by Zymery Dria — Crystal Tweaks, Inventory Tweaks, Herzium, Death Effects and more, synced live from Modrinth.">
+  <meta name="theme-color" content="#a855f7">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://kerlycanelita.github.io/KoHs-Mod-Suite/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KoHs Mod Suite">
+  <meta property="og:title" content="KoHs Mod Suite">
+  <meta property="og:description" content="Every approved KoHs Minecraft mod and plugin by Zymery Dria, synced live from Modrinth.">
+  <meta property="og:url" content="https://kerlycanelita.github.io/KoHs-Mod-Suite/">
+  <meta property="og:image" content="https://kerlycanelita.github.io/KoHs-Mod-Suite/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="KoHs Mod Suite — Minecraft mods and plugins by Zymery Dria">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.modrinth.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.modrinth.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500..900&amp;family=JetBrains+Mono:wght@400..700&amp;family=Outfit:wght@300..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('kohs-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <script src="assets/vendor/marked.min.js" defer></script>
+  <script src="assets/vendor/purify.min.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#d8b4fe"/>
+        <stop offset=".5" stop-color="#a855f7"/>
+        <stop offset="1" stop-color="#ff4fb8"/>
+      </linearGradient>
+    </defs>
+    <symbol id="logo-mark" viewBox="0 0 64 64">
+      <path d="M32 1.5 62.5 32 32 62.5 1.5 32Z" fill="url(#logo-grad)"/>
+      <path d="M32 8.5 55.5 32 32 55.5 8.5 32Z" fill="#12051f"/>
+      <path d="M32 13 51 32 32 51 13 32Z" fill="none" stroke="url(#logo-grad)" stroke-width="1" stroke-opacity=".45"/>
+      <path d="M41.5 13.5 46 16 24.5 50.5 20 48Z" fill="url(#logo-grad)"/>
+      <path d="M42.6 15.2 44 16 23.2 48.8 21.8 48Z" fill="#fff" fill-opacity=".85"/>
+    </symbol>
+    <symbol id="sigil" viewBox="0 0 400 400">
+      <g fill="none" stroke="currentColor">
+        <circle cx="200" cy="200" r="172" stroke-width="1.6"/>
+        <circle cx="200" cy="200" r="146" stroke-width="1" stroke-dasharray="2 7"/>
+        <path d="M352 200L364 200M355.62 210.88L361.61 211.3M354.48 221.71L360.42 222.55M352.59 232.43L358.46 233.68M349.96 243L355.72 244.65M342.83 251.99L354.11 256.09M342.51 263.45L347.99 265.89M337.74 273.24L343.04 276.05M332.3 282.67L337.38 285.85M326.21 291.69L331.06 295.22M316.44 297.7L325.63 305.42M312.22 308.37L316.53 312.53M304.38 315.93L308.4 320.39M296.04 322.93L299.74 327.66M287.23 329.33L290.59 334.3M276 331.64L282 342.03M268.39 340.21L271.02 345.6M258.44 344.64L260.69 350.2M248.21 348.36L250.06 354.07M237.74 351.37L239.19 357.19M226.39 349.69L228.48 361.51M216.31 355.15L216.93 361.11M205.44 355.9L205.65 361.9M194.56 355.9L194.35 361.9M183.69 355.15L183.07 361.11M173.61 349.69L171.52 361.51M162.26 351.37L160.81 357.19M151.79 348.36L149.94 354.07M141.56 344.64L139.31 350.2M131.61 340.21L128.98 345.6M124 331.64L118 342.03M112.77 329.33L109.41 334.3M103.96 322.93L100.26 327.66M95.62 315.93L91.6 320.39M87.78 308.37L83.47 312.53M83.56 297.7L74.37 305.42M73.79 291.69L68.94 295.22M67.7 282.67L62.62 285.85M62.26 273.24L56.96 276.05M57.49 263.45L52.01 265.89M57.17 251.99L45.89 256.09M50.04 243L44.28 244.65M47.41 232.43L41.54 233.68M45.52 221.71L39.58 222.55M44.38 210.88L38.39 211.3M48 200L36 200M44.38 189.12L38.39 188.7M45.52 178.29L39.58 177.45M47.41 167.57L41.54 166.32M50.04 157L44.28 155.35M57.17 148.01L45.89 143.91M57.49 136.55L52.01 134.11M62.26 126.76L56.96 123.95M67.7 117.33L62.62 114.15M73.79 108.31L68.94 104.78M83.56 102.3L74.37 94.58M87.78 91.63L83.47 87.47M95.62 84.07L91.6 79.61M103.96 77.07L100.26 72.34M112.77 70.67L109.41 65.7M124 68.36L118 57.97M131.61 59.79L128.98 54.4M141.56 55.36L139.31 49.8M151.79 51.64L149.94 45.93M162.26 48.63L160.81 42.81M173.61 50.31L171.52 38.49M183.69 44.85L183.07 38.89M194.56 44.1L194.35 38.1M205.44 44.1L205.65 38.1M216.31 44.85L216.93 38.89M226.39 50.31L228.48 38.49M237.74 48.63L239.19 42.81M248.21 51.64L250.06 45.93M258.44 55.36L260.69 49.8M268.39 59.79L271.02 54.4M276 68.36L282 57.97M287.23 70.67L290.59 65.7M296.04 77.07L299.74 72.34M304.38 84.07L308.4 79.61M312.22 91.63L316.53 87.47M316.44 102.3L325.63 94.58M326.21 108.31L331.06 104.78M332.3 117.33L337.38 114.15M337.74 126.76L343.04 123.95M342.51 136.55L347.99 134.11M342.83 148.01L354.11 143.91M349.96 157L355.72 155.35M352.59 167.57L358.46 166.32M354.48 178.29L360.42 177.45M355.62 189.12L361.61 188.7" stroke-width="1.4"/>
+        <path d="M309.02 245.16L331.19 254.34M245.16 309.02L254.34 331.19M154.84 309.02L145.66 331.19M90.98 245.16L68.81 254.34M90.98 154.84L68.81 145.66M154.84 90.98L145.66 68.81M245.16 90.98L254.34 68.81M309.02 154.84L331.19 145.66" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path d="M193.12 28.14L200 8L206.88 28.14ZM220.09 29.18L228.31 21.23L233.68 31.33ZM246.57 34.42L259.33 17.4L259.65 38.67ZM271.9 43.75L282.17 38.73L284.15 49.99ZM295.45 56.92L312.85 44.67L306.58 65ZM316.66 73.61L327.99 72.01L326.39 83.34ZM335 93.42L355.33 87.15L343.08 104.55ZM350.01 115.85L361.27 117.83L356.25 128.1ZM361.33 140.35L382.6 140.67L365.58 153.43ZM368.67 166.32L378.77 171.69L370.82 179.91ZM371.86 193.12L392 200L371.86 206.88ZM370.82 220.09L378.77 228.31L368.67 233.68ZM365.58 246.57L382.6 259.33L361.33 259.65ZM356.25 271.9L361.27 282.17L350.01 284.15ZM343.08 295.45L355.33 312.85L335 306.58ZM326.39 316.66L327.99 327.99L316.66 326.39ZM306.58 335L312.85 355.33L295.45 343.08ZM284.15 350.01L282.17 361.27L271.9 356.25ZM259.65 361.33L259.33 382.6L246.57 365.58ZM233.68 368.67L228.31 378.77L220.09 370.82ZM206.88 371.86L200 392L193.12 371.86ZM179.91 370.82L171.69 378.77L166.32 368.67ZM153.43 365.58L140.67 382.6L140.35 361.33ZM128.1 356.25L117.83 361.27L115.85 350.01ZM104.55 343.08L87.15 355.33L93.42 335ZM83.34 326.39L72.01 327.99L73.61 316.66ZM65 306.58L44.67 312.85L56.92 295.45ZM49.99 284.15L38.73 282.17L43.75 271.9ZM38.67 259.65L17.4 259.33L34.42 246.57ZM31.33 233.68L21.23 228.31L29.18 220.09ZM28.14 206.88L8 200L28.14 193.12ZM29.18 179.91L21.23 171.69L31.33 166.32ZM34.42 153.43L17.4 140.67L38.67 140.35ZM43.75 128.1L38.73 117.83L49.99 115.85ZM56.92 104.55L44.67 87.15L65 93.42ZM73.61 83.34L72.01 72.01L83.34 73.61ZM93.42 65L87.15 44.67L104.55 56.92ZM115.85 49.99L117.83 38.73L128.1 43.75ZM140.35 38.67L140.67 17.4L153.43 34.42ZM166.32 31.33L171.69 21.23L179.91 29.18Z" fill="currentColor" fill-opacity=".55"/>
+    </symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/> <path d="m19 12-7 7-7-7"/></g></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></g></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/> <path d="M12 19V5"/></g></symbol>
+    <symbol id="i-book-open" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16"/> <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/></g></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-9"/> <path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/> <path d="M14.12 3.88 16 2"/> <path d="M21 21a4 4 0 0 0-3.81-4"/> <path d="M21 5a4 4 0 0 1-3.55 3.97"/> <path d="M22 13h-4"/> <path d="M3 21a4 4 0 0 1 3.81-4"/> <path d="M3 5a4 4 0 0 0 3.55 3.97"/> <path d="M6 13H2"/> <path d="m8 2 1.88 1.88"/> <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v3"/> <path d="M16 2v3"/> <rect x="3" y="3" width="18" height="18" rx="2"/> <path d="M3 9h18"/></g></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></g></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <path d="M12 6v6l4 2"/></g></symbol>
+    <symbol id="i-code-xml" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/> <path d="m6 8-4 4 4 4"/> <path d="m14.5 4-5 16"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/> <path d="m7 10 5 5 5-5"/></g></symbol>
+    <symbol id="i-external-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/> <path d="M10 14 21 3"/> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></g></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></g></symbol>
+    <symbol id="i-images" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16"/> <path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2"/> <circle cx="13" cy="7" r="1" fill="currentColor"/> <rect x="8" y="2" width="14" height="14" rx="2"/></g></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/> <path d="M4 12h16"/> <path d="M4 19h16"/></g></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/> <line x1="8" x2="16" y1="21" y2="21"/> <line x1="12" x2="12" y1="17" y2="21"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></symbol>
+    <symbol id="i-package" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/> <path d="M12 22V12"/> <polyline points="3.29 7 12 12 20.71 7"/> <path d="m7.5 4.27 9 5.15"/></g></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></g></symbol>
+    <symbol id="i-rotate-ccw" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/> <path d="M3 3v5h5"/></g></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/> <path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/> <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/> <path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/> <path d="M7 21h10"/></g></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/> <circle cx="11" cy="11" r="8"/></g></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/> <path d="m9 12 2 2 4-4"/></g></symbol>
+    <symbol id="i-sliders-horizontal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H3"/> <path d="M12 19H3"/> <path d="M14 3v4"/> <path d="M16 17v4"/> <path d="M21 12h-9"/> <path d="M21 19h-5"/> <path d="M21 5h-7"/> <path d="M8 10v4"/> <path d="M8 12H3"/></g></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/> <path d="M20 2v4"/> <path d="M22 4h-4"/> <circle cx="4" cy="20" r="2"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/> <path d="M12 2v2"/> <path d="M12 20v2"/> <path d="m4.93 4.93 1.41 1.41"/> <path d="m17.66 17.66 1.41 1.41"/> <path d="M2 12h2"/> <path d="M20 12h2"/> <path d="m6.34 17.66-1.41 1.41"/> <path d="m19.07 4.93-1.41 1.41"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/> <path d="M16 3.128a4 4 0 0 1 0 7.744"/> <path d="M22 21v-2a4 4 0 0 0-3-3.87"/> <circle cx="9" cy="7" r="4"/></g></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/> <path d="m6 6 12 12"/></g></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></g></symbol>
+    <symbol id="i-discord" viewBox="0 0 24 24"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-modrinth" viewBox="0 0 24 24"><path fill="currentColor" d="M12.252.004a11.78 11.768 0 0 0-8.92 3.73 11 10.999 0 0 0-2.17 3.11 11.37 11.359 0 0 0-1.16 5.169c0 1.42.17 2.5.6 3.77.24.759.77 1.899 1.17 2.529a12.3 12.298 0 0 0 8.85 5.639c.44.05 2.54.07 2.76.02.2-.04.22.1-.26-1.7l-.36-1.37-1.01-.06a8.5 8.489 0 0 1-5.18-1.8 5.34 5.34 0 0 1-1.3-1.26c0-.05.34-.28.74-.5a37.572 37.545 0 0 1 2.88-1.629c.03 0 .5.45 1.06.98l1 .97 2.07-.43 2.06-.43 1.47-1.47c.8-.8 1.48-1.5 1.48-1.52 0-.09-.42-1.63-.46-1.7-.04-.06-.2-.03-1.02.18-.53.13-1.2.3-1.45.4l-.48.15-.53.53-.53.53-.93.1-.93.07-.52-.5a2.7 2.7 0 0 1-.96-1.7l-.13-.6.43-.57c.68-.9.68-.9 1.46-1.1.4-.1.65-.2.83-.33.13-.099.65-.579 1.14-1.069l.9-.9-.7-.7-.7-.7-1.95.54c-1.07.3-1.96.53-1.97.53-.03 0-2.23 2.48-2.63 2.97l-.29.35.28 1.03c.16.56.3 1.16.31 1.34l.03.3-.34.23c-.37.23-2.22 1.3-2.84 1.63-.36.2-.37.2-.44.1-.08-.1-.23-.6-.32-1.03-.18-.86-.17-2.75.02-3.73a8.84 8.839 0 0 1 7.9-6.93c.43-.03.77-.08.78-.1.06-.17.5-2.999.47-3.039-.01-.02-.1-.02-.2-.03Zm3.68.67c-.2 0-.3.1-.37.38-.06.23-.46 2.42-.46 2.52 0 .04.1.11.22.16a8.51 8.499 0 0 1 2.99 2 8.38 8.379 0 0 1 2.16 3.449 6.9 6.9 0 0 1 .4 2.8c0 1.07 0 1.27-.1 1.73a9.37 9.369 0 0 1-1.76 3.769c-.32.4-.98 1.06-1.37 1.38-.38.32-1.54 1.1-1.7 1.14-.1.03-.1.06-.07.26.03.18.64 2.56.7 2.78l.06.06a12.07 12.058 0 0 0 7.27-9.4c.13-.77.13-2.58 0-3.4a11.96 11.948 0 0 0-5.73-8.578c-.7-.42-2.05-1.06-2.25-1.06Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#mods">Skip to the mods</a>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <svg class="preloader__mark" viewBox="0 0 64 64"><use href="#logo-mark"/></svg>
+    <span class="preloader__word">KoHs</span>
+    <span class="preloader__bar"><span></span></span>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <div class="backdrop" aria-hidden="true">
+    <span class="backdrop__glow backdrop__glow--a"></span>
+    <span class="backdrop__glow backdrop__glow--b"></span>
+    <span class="backdrop__glow backdrop__glow--c"></span>
+    <span class="backdrop__grid"></span>
+    <span class="backdrop__noise"></span>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="brand" href="#top" aria-label="KoHs Mod Suite — back to top">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <span class="brand__text"><span class="brand__kohs">KoHs</span><span class="brand__suite">Mod Suite</span></span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="#mods" data-nav="mods"><span class="nav__num">01</span>Mods</a></li>
+          <li><a href="#showcase" data-nav="showcase"><span class="nav__num">02</span>Showcase</a></li>
+          <li><a href="#about" data-nav="about"><span class="nav__num">03</span>About</a></li>
+          <li><a href="#discord" data-nav="discord"><span class="nav__num">04</span>Community</a></li>
+        </ul>
+        <div class="nav__menu-foot">
+          <a class="btn btn--primary" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>Join the Discord
+          </a>
+        </div>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn--primary btn--sm nav__cta magnetic" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg><span>Discord</span>
+        </a>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero__particles" id="particles" aria-hidden="true"></canvas>
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="hero__prompt">~/kohs $</span> minecraft fabric mods &amp; paper plugins<span class="caret" aria-hidden="true"></span>
+          </p>
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__kohs glitch" data-text="KoHs">KoHs</span>
+            <span class="hero__suite">Mod Suite</span>
+          </h1>
+          <p class="hero__lead reveal" style="--d: 120ms">
+            Handcrafted Minecraft mods &amp; plugins for
+            <span class="typer-line" aria-hidden="true"><span class="typer" id="typer">crystal PvP</span></span>
+            <span class="sr-only">crystal PvP, snappier hotbars, cleaner inventories, epic death effects, Bedrock crossplay and low-health alerts.</span>
+          </p>
+          <p class="hero__sub reveal" style="--d: 180ms">Every approved project by <strong>Zymery Dria</strong>, synced live from Modrinth.</p>
+          <div class="hero__ctas reveal" style="--d: 240ms">
+            <a class="btn btn--primary btn--lg magnetic" href="#mods">
+              Explore the mods<svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg magnetic" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>Join the Discord
+            </a>
+          </div>
+          <dl class="stats reveal" style="--d: 300ms">
+            <div class="stat">
+              <dt>Downloads</dt>
+              <dd><span class="counter" data-stat="downloads" data-format="compact">0</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Projects</dt>
+              <dd><span class="counter" data-stat="projects">0</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Releases</dt>
+              <dd><span class="counter" data-stat="releases">0</span></dd>
+            </div>
+            <div class="stat">
+              <dt>MC versions</dt>
+              <dd><span class="counter" data-stat="versions">0</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="core">
+            <svg class="core__sigil" viewBox="0 0 400 400"><use href="#sigil"/></svg>
+            <div class="core__halo"></div>
+            <img class="core__img" src="assets/img/core.webp" alt="" width="900" height="900" fetchpriority="high">
+            <span class="core__slash"></span>
+          </div>
+          <div class="orbit" id="orbit"></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#mods" aria-label="Scroll to the mods"><span></span></a>
+    </section>
+
+    <!-- TAPES -->
+    <div class="tapes" aria-hidden="true">
+      <div class="tape tape--a"><div class="tape__track" id="tape-a"></div></div>
+      <div class="tape tape--b"><div class="tape__track" id="tape-b"></div></div>
+    </div>
+
+    <!-- MODS -->
+    <section class="section" id="mods" aria-labelledby="mods-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span>01</span> // the arsenal</p>
+          <h2 class="section__title" id="mods-title">Mods &amp; Plugins</h2>
+          <p class="section__sub">Every KoHs project approved on Modrinth. Open a card to read the full description, browse the screenshots and grab the download.</p>
+          <p class="live-pill" id="data-status" data-state="loading"><span class="live-pill__dot"></span><span class="live-pill__text">Connecting to Modrinth…</span></p>
+        </header>
+
+        <div class="toolbar reveal" style="--d: 80ms">
+          <label class="search">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="search" type="search" placeholder="Search mods…" autocomplete="off" spellcheck="false" aria-label="Search mods and plugins">
+            <kbd aria-hidden="true">/</kbd>
+          </label>
+          <div class="chips" id="filters" role="group" aria-label="Filter projects"></div>
+          <label class="select">
+            <span class="sr-only">Sort by</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-sliders-horizontal"/></svg>
+            <select id="sort">
+              <option value="downloads">Most downloaded</option>
+              <option value="updated">Recently updated</option>
+              <option value="published">Newest</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="results" id="results" aria-live="polite"></p>
+        <div class="grid" id="mod-grid">
+          <div class="card card--skeleton"></div><div class="card card--skeleton"></div><div class="card card--skeleton"></div>
+        </div>
+        <div class="empty" id="mod-empty" hidden>
+          <p>No project matches that search.</p>
+          <button class="btn btn--ghost btn--sm" type="button" id="reset-filters"><svg class="icon" aria-hidden="true"><use href="#i-rotate-ccw"/></svg>Reset filters</button>
+        </div>
+        <noscript><p class="empty">This page needs JavaScript to list the projects. You can find them all on <a href="https://modrinth.com/user/zymery_dria">Modrinth</a>.</p></noscript>
+      </div>
+    </section>
+
+    <!-- SHOWCASE -->
+    <section class="section" id="showcase" aria-labelledby="showcase-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span>02</span> // in-game</p>
+          <h2 class="section__title" id="showcase-title">Showcase</h2>
+          <p class="section__sub">Screenshots and clips straight from the Modrinth pages. Click any image to see it full size.</p>
+        </header>
+        <div class="chips chips--center reveal" id="showcase-filters" role="group" aria-label="Filter screenshots by project"></div>
+        <div class="bento" id="showcase-grid"></div>
+        <div class="center">
+          <button class="btn btn--ghost" type="button" id="showcase-more" hidden>
+            <svg class="icon" aria-hidden="true"><use href="#i-images"/></svg>Show more
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__inner">
+        <div class="about__art reveal">
+          <svg class="zd" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="zd-title">
+            <title id="zd-title">Zymery Dria: a hooded figure with glowing eyes and a code sigil</title>
+            <defs>
+              <radialGradient id="zd-aura" cx=".5" cy=".42" r=".55">
+                <stop offset="0" stop-color="#ff4fb8" stop-opacity=".55"/>
+                <stop offset=".45" stop-color="#a855f7" stop-opacity=".35"/>
+                <stop offset="1" stop-color="#6d28d9" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="zd-hood" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3b1470"/>
+                <stop offset=".5" stop-color="#1c0935"/>
+                <stop offset="1" stop-color="#0d0419"/>
+              </linearGradient>
+              <linearGradient id="zd-face" x1="0" y1="158" x2="0" y2="268" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#07020d"/>
+                <stop offset=".45" stop-color="#2a1040"/>
+                <stop offset=".8" stop-color="#b86aa6"/>
+                <stop offset="1" stop-color="#f6c6e4"/>
+              </linearGradient>
+              <linearGradient id="zd-hair" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1a0833"/>
+                <stop offset=".7" stop-color="#2e1065"/>
+                <stop offset="1" stop-color="#5b21b6"/>
+              </linearGradient>
+              <linearGradient id="zd-slash" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+                <stop offset=".25" stop-color="#ffd1ec"/>
+                <stop offset=".6" stop-color="#ff4fb8"/>
+                <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="zd-code" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f5d0fe"/>
+                <stop offset="1" stop-color="#ff4fb8"/>
+              </linearGradient>
+              <linearGradient id="zd-fade" x1="0" y1="0" x2="0" y2="1">
+                <stop offset=".86" stop-color="#fff"/>
+                <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+              </linearGradient>
+              <mask id="zd-fade-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="460">
+                <rect width="400" height="460" fill="url(#zd-fade)"/>
+              </mask>
+              <filter id="zd-rim" x="-5%" y="-5%" width="110%" height="110%">
+                <feOffset in="SourceAlpha" dx="3.5" dy="1.5" result="l"/>
+                <feComposite in="SourceAlpha" in2="l" operator="out" result="le"/>
+                <feFlood flood-color="#ff5cc0"/>
+                <feComposite in2="le" operator="in" result="lc"/>
+                <feOffset in="SourceAlpha" dx="-3.5" dy="1.5" result="r"/>
+                <feComposite in="SourceAlpha" in2="r" operator="out" result="re"/>
+                <feFlood flood-color="#c4b5fd"/>
+                <feComposite in2="re" operator="in" result="rc"/>
+                <feMerge result="rims"><feMergeNode in="lc"/><feMergeNode in="rc"/></feMerge>
+                <feGaussianBlur in="rims" stdDeviation=".7" result="soft"/>
+                <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="soft"/></feMerge>
+              </filter>
+              <filter id="zd-bloom" x="-100%" y="-200%" width="300%" height="500%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b1"/>
+                <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="b2"/>
+                <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="zd-soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.5"/></filter>
+            </defs>
+
+            <circle cx="200" cy="196" r="190" fill="url(#zd-aura)"/>
+            <g class="zd-sigil" fill="none" stroke="#c084fc" stroke-opacity=".55">
+              <circle cx="200" cy="196" r="150" stroke-width="1.5"/>
+              <circle cx="200" cy="196" r="128" stroke-width="1" stroke-dasharray="2 6"/>
+              <path d="M334 196L342 196M336.48 207.94L340.46 208.29M334.92 219.79L338.86 220.48M332.33 231.46L336.2 232.49M328.74 242.86L332.5 244.22M324.16 253.9L327.79 255.59M316.05 263L322.98 267M312.22 274.58L315.5 276.87M304.95 284.06L308.01 286.63M296.87 292.87L299.7 295.7M288.06 300.95L290.63 304.01M278.58 308.22L280.87 311.5M267 312.05L271 318.98M257.9 320.16L259.59 323.79M246.86 324.74L248.22 328.5M235.46 328.33L236.49 332.2M223.79 330.92L224.48 334.86M211.94 332.48L212.29 336.46M200 330L200 338M188.06 332.48L187.71 336.46M176.21 330.92L175.52 334.86M164.54 328.33L163.51 332.2M153.14 324.74L151.78 328.5M142.1 320.16L140.41 323.79M133 312.05L129 318.98M121.42 308.22L119.13 311.5M111.94 300.95L109.37 304.01M103.13 292.87L100.3 295.7M95.05 284.06L91.99 286.63M87.78 274.58L84.5 276.87M83.95 263L77.02 267M75.84 253.9L72.21 255.59M71.26 242.86L67.5 244.22M67.67 231.46L63.8 232.49M65.08 219.79L61.14 220.48M63.52 207.94L59.54 208.29M66 196L58 196M63.52 184.06L59.54 183.71M65.08 172.21L61.14 171.52M67.67 160.54L63.8 159.51M71.26 149.14L67.5 147.78M75.84 138.1L72.21 136.41M83.95 129L77.02 125M87.78 117.42L84.5 115.13M95.05 107.94L91.99 105.37M103.13 99.13L100.3 96.3M111.94 91.05L109.37 87.99M121.42 83.78L119.13 80.5M133 79.95L129 73.02M142.1 71.84L140.41 68.21M153.14 67.26L151.78 63.5M164.54 63.67L163.51 59.8M176.21 61.08L175.52 57.14M188.06 59.52L187.71 55.54M200 62L200 54M211.94 59.52L212.29 55.54M223.79 61.08L224.48 57.14M235.46 63.67L236.49 59.8M246.86 67.26L248.22 63.5M257.9 71.84L259.59 68.21M267 79.95L271 73.02M278.58 83.78L280.87 80.5M288.06 91.05L290.63 87.99M296.87 99.13L299.7 96.3M304.95 107.94L308.01 105.37M312.22 117.42L315.5 115.13M316.05 129L322.98 125M324.16 138.1L327.79 136.41M328.74 149.14L332.5 147.78M332.33 160.54L336.2 159.51M334.92 172.21L338.86 171.52M336.48 184.06L340.46 183.71" stroke-width="1.5"/>
+              <path d="M193.25 46.15L200 26L206.75 46.15ZM222.62 47.71L231.02 40.06L235.85 50.35ZM251.11 54.98L265.06 38.94L263.58 60.14ZM277.64 67.66L288.34 63.8L288.86 75.15ZM301.19 85.27L320.21 75.79L310.73 94.81ZM320.85 107.14L332.2 107.66L328.34 118.36ZM335.86 132.42L357.06 130.94L341.02 144.89ZM345.65 160.15L355.94 164.98L348.29 173.38ZM349.85 189.25L370 196L349.85 202.75ZM348.29 218.62L355.94 227.02L345.65 231.85ZM341.02 247.11L357.06 261.06L335.86 259.58ZM328.34 273.64L332.2 284.34L320.85 284.86ZM310.73 297.19L320.21 316.21L301.19 306.73ZM288.86 316.85L288.34 328.2L277.64 324.34ZM263.58 331.86L265.06 353.06L251.11 337.02ZM235.85 341.65L231.02 351.94L222.62 344.29ZM206.75 345.85L200 366L193.25 345.85ZM177.38 344.29L168.98 351.94L164.15 341.65ZM148.89 337.02L134.94 353.06L136.42 331.86ZM122.36 324.34L111.66 328.2L111.14 316.85ZM98.81 306.73L79.79 316.21L89.27 297.19ZM79.15 284.86L67.8 284.34L71.66 273.64ZM64.14 259.58L42.94 261.06L58.98 247.11ZM54.35 231.85L44.06 227.02L51.71 218.62ZM50.15 202.75L30 196L50.15 189.25ZM51.71 173.38L44.06 164.98L54.35 160.15ZM58.98 144.89L42.94 130.94L64.14 132.42ZM71.66 118.36L67.8 107.66L79.15 107.14ZM89.27 94.81L79.79 75.79L98.81 85.27ZM111.14 75.15L111.66 63.8L122.36 67.66ZM136.42 60.14L134.94 38.94L148.89 54.98ZM164.15 50.35L168.98 40.06L177.38 47.71Z" fill="#a855f7" fill-opacity=".5" stroke="none"/>
+            </g>
+
+            <g class="zd-slash-g">
+              <path d="M384 20 L392 26 L34 440 L22 436 Z" fill="url(#zd-slash)" filter="url(#zd-soft)" opacity=".9"/>
+              <path d="M386 22 L389 25 L30 438 L27 437 Z" fill="#fff" opacity=".85"/>
+            </g>
+
+            <g mask="url(#zd-fade-mask)">
+              <path class="zd-hood" d="M200 24 C186 34 150 54 132 92 C118 120 110 152 110 188 C110 226 117 256 119 280 C121 302 104 318 80 330 C52 344 28 368 18 404 L10 460 L200 460 L390 460 L382 404 C372 368 348 344 320 330 C296 318 279 302 281 280 C283 256 290 226 290 188 C290 152 282 120 268 92 C250 54 214 34 200 24 Z" fill="url(#zd-hood)" filter="url(#zd-rim)"/>
+              <path d="M200 82 C180 84 158 102 150 130 C144 154 143 192 151 222 C159 252 178 280 200 298 C222 280 241 252 249 222 C257 192 256 154 250 130 C242 102 220 84 200 82 Z" fill="#06010c"/>
+              <path d="M200 262 L187 258 C188 274 187 288 184 302 L200 306 L216 302 C213 288 212 274 213 258 L200 262 Z" fill="#1a0a2e"/>
+              <path d="M200 158 L161 158 C160 198 168 230 184 250 C190 258 195 265 200 268 C205 265 210 258 216 250 C232 230 240 198 239 158 L200 158 Z" fill="url(#zd-face)"/>
+              <path d="M189 247 C193 245.5 197 246 200 247.6 C203 246 207 245.5 211 247 C207 250.6 203.6 252.4 200 252.4 C196.4 252.4 193 250.6 189 247 Z" fill="#9d174d"/>
+              <path d="M192 250.2 C196 251.6 204 251.6 208 250.2 C205 252.8 195 252.8 192 250.2 Z" fill="#f472b6" opacity=".7"/>
+              <polygon points="153,128 145,170 143,220 147,262 146,300 138,340 130,382 140,366 144,400 152,360 160,392 163,350 166,306 168,262 170,222 170,180 166,146" fill="url(#zd-hair)"/>
+              <polygon points="247,128 256,170 258,222 254,264 255,304 263,344 272,388 261,370 257,404 249,362 241,390 238,348 235,304 233,262 231,222 231,180 235,146" fill="url(#zd-hair)"/>
+              <g fill="none" stroke="#f472b6" stroke-opacity=".55" stroke-width="1.2" stroke-linecap="round">
+                <path d="M156 150 C150 200 152 250 150 300 C149 330 144 356 139 376"/>
+                <path d="M244 150 C250 200 248 250 250 300 C251 330 257 356 263 380"/>
+              </g>
+              <polygon points="146,134 154,110 172,92 200,84 228,92 246,110 254,134 251,200 242,162 234,178 224,154 214,172 206,150 200,210 194,150 187,172 177,154 167,178 158,162 149,200" fill="#14062a"/>
+              <g fill="none" stroke="#a855f7" stroke-opacity=".7" stroke-width="1.1" stroke-linecap="round">
+                <path d="M176 100 L186 150 M200 92 L200 180 M224 100 L214 150 M160 124 L165 162 M240 124 L235 162"/>
+              </g>
+              <g class="zd-eyes" filter="url(#zd-bloom)">
+                <polygon points="162,184 190,190 187,195 168,194" fill="#ff4fb8"/>
+                <polygon points="238,184 210,190 213,195 232,194" fill="#ff4fb8"/>
+                <polygon points="166,186 186,190.5 184,193 170,192.5" fill="#fff0fa"/>
+                <polygon points="234,186 214,190.5 216,193 230,192.5" fill="#fff0fa"/>
+              </g>
+              <g class="zd-emblem" transform="translate(200 382)">
+                <path d="M0 -30 L30 0 L0 30 L-30 0 Z" fill="#12051f" stroke="url(#zd-code)" stroke-width="2"/>
+                <path d="M0 -22 L22 0 L0 22 L-22 0 Z" fill="none" stroke="#f472b6" stroke-opacity=".5" stroke-width="1"/>
+                <g filter="url(#zd-bloom)" fill="none" stroke="url(#zd-code)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M-7 -8 L-15 0 L-7 8"/><path d="M4 -11 L-4 11"/><path d="M7 -8 L15 0 L7 8"/>
+                </g>
+              </g>
+            </g>
+
+            <g class="zd-shards" fill="#f9a8d4" filter="url(#zd-bloom)">
+              <polygon points="52,120 66,104 60,132" opacity=".85"/><polygon points="336,96 352,88 344,112" opacity=".85"/><polygon points="326,250 344,262 330,270" opacity=".85"/><polygon points="70,250 58,272 78,266" opacity=".85"/><polygon points="98,58 110,50 106,70" opacity=".85"/><polygon points="300,40 314,48 302,56" opacity=".85"/>
+            </g>
+          </svg>
+        </div>
+        <div class="about__copy">
+          <header class="reveal">
+            <p class="eyebrow"><span>03</span> // the creator</p>
+            <h2 class="section__title" id="about-title">Zymery Dria</h2>
+            <p class="about__aka">a.k.a. <span>zymekoh</span> · <span>kohzemyora</span></p>
+          </header>
+          <p class="reveal" style="--d: 80ms">KoHs Mod Suite is a one-person studio. Every mod and plugin on this page — the code, the configuration screens, the artwork and every single update — is designed, built and maintained by <strong>Zymery Dria</strong>.</p>
+          <p class="reveal" style="--d: 120ms">The goal is simple: tools that make Minecraft PvP feel sharper and look better, built with fair play in mind. Bugs, ideas and feedback are always welcome on Discord.</p>
+          <div class="about__links reveal" style="--d: 160ms">
+            <a class="btn btn--primary magnetic" href="https://modrinth.com/user/zymery_dria" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-modrinth"/></svg>Modrinth profile
+            </a>
+            <a class="btn btn--ghost magnetic" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>Discord
+            </a>
+            <a class="btn btn--ghost magnetic" href="https://github.com/kerlycanelita" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub
+            </a>
+          </div>
+          <ul class="values">
+            <li class="value reveal" style="--d: 0ms">
+              <svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg>
+              <h3>Fair play first</h3>
+              <p>No auras, no auto-totems, no hidden automation. Each description says exactly what changes.</p>
+            </li>
+            <li class="value reveal" style="--d: 60ms">
+              <svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>
+              <h3>Client-side mods</h3>
+              <p>Every Fabric mod runs on your client only — nothing to install on the server.</p>
+            </li>
+            <li class="value reveal" style="--d: 120ms">
+              <svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>
+              <h3>Always up to date</h3>
+              <p>Builds from Minecraft 1.21 up to the latest 26.x releases, version by version.</p>
+            </li>
+            <li class="value reveal" style="--d: 180ms">
+              <svg class="icon" aria-hidden="true"><use href="#i-code-xml"/></svg>
+              <h3>Open source</h3>
+              <p>Most projects keep their source code public on GitHub.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCORD -->
+    <section class="section" id="discord" aria-labelledby="discord-title">
+      <div class="container">
+        <div class="discord reveal">
+          <div class="discord__inner">
+            <div class="discord__icon">
+              <img id="discord-icon" alt="" width="96" height="96" hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>
+            </div>
+            <div class="discord__copy">
+              <p class="eyebrow"><span>04</span> // community</p>
+              <h2 class="section__title" id="discord-title">Join <span data-discord="name">ZymeKoHs Cave</span></h2>
+              <p>Get help with any KoHs mod, report bugs, suggest features and be the first to hear about new releases.</p>
+              <p class="discord__live" id="discord-live" hidden>
+                <span><i class="dot dot--online"></i><b data-discord="online">0</b> online</span>
+                <span><i class="dot"></i><b data-discord="members">0</b> members</span>
+              </p>
+            </div>
+            <a class="btn btn--primary btn--lg magnetic" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>Join the server
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="#top" aria-label="Back to top">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="brand__text"><span class="brand__kohs">KoHs</span><span class="brand__suite">Mod Suite</span></span>
+        </a>
+        <p>Minecraft mods &amp; plugins by Zymery Dria.</p>
+      </div>
+      <nav class="footer__col" aria-label="Explore">
+        <h3>Explore</h3>
+        <a href="#mods">Mods &amp; plugins</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#about">About</a>
+        <a href="#discord">Community</a>
+      </nav>
+      <nav class="footer__col" aria-label="Elsewhere">
+        <h3>Elsewhere</h3>
+        <a href="https://modrinth.com/user/zymery_dria" target="_blank" rel="noopener">Modrinth</a>
+        <a href="https://github.com/kerlycanelita" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">Discord</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">
+      <p>© <span id="year">2026</span> KoHs Mod Suite. Project data from the <a href="https://docs.modrinth.com/api/" target="_blank" rel="noopener">Modrinth API</a>.</p>
+      <p>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
+    </div>
+  </footer>
+
+  <button class="to-top icon-btn" id="to-top" type="button" aria-label="Back to top">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </button>
+
+  <!-- PROJECT DIALOG -->
+  <dialog class="pd" id="project-dialog" aria-labelledby="pd-title">
+    <div class="pd__panel">
+      <button class="pd__close icon-btn" type="button" data-close aria-label="Close">
+        <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+      <div class="pd__scroll">
+        <header class="pd__hero">
+          <div class="pd__hero-bg" aria-hidden="true"></div>
+          <img class="pd__icon" id="pd-icon" alt="" width="112" height="112">
+          <div class="pd__heading">
+            <div class="pd__badges" id="pd-badges"></div>
+            <h2 class="pd__title" id="pd-title"></h2>
+            <p class="pd__summary" id="pd-summary"></p>
+          </div>
+        </header>
+        <div class="pd__actions" id="pd-actions"></div>
+        <dl class="pd__stats" id="pd-stats"></dl>
+        <div class="pd__versions">
+          <p class="pd__label">Minecraft versions</p>
+          <ul class="vchips" id="pd-versions"></ul>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Project details">
+          <button class="tab" role="tab" id="tab-desc" aria-controls="pd-desc" aria-selected="true" type="button">Description</button>
+          <button class="tab" role="tab" id="tab-gallery" aria-controls="pd-gallery" aria-selected="false" tabindex="-1" type="button">Gallery <span class="tab__count" id="pd-gallery-count"></span></button>
+        </div>
+        <div class="md" id="pd-desc" role="tabpanel" aria-labelledby="tab-desc"></div>
+        <div class="pd__gallery" id="pd-gallery" role="tabpanel" aria-labelledby="tab-gallery" hidden></div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- LIGHTBOX -->
+  <dialog class="lb" id="lightbox" aria-label="Image viewer">
+    <button class="lb__close icon-btn" type="button" data-close aria-label="Close image viewer">
+      <svg class="icon" aria-hidden="true"><use href="#i-x"/></svg>
+    </button>
+    <button class="lb__nav lb__nav--prev icon-btn" type="button" data-step="-1" aria-label="Previous image">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron-left"/></svg>
+    </button>
+    <figure class="lb__stage">
+      <img class="lb__img" id="lb-img" alt="">
+      <figcaption class="lb__caption">
+        <span class="lb__title" id="lb-title"></span>
+        <span class="lb__meta"><span id="lb-counter"></span><a id="lb-project" href="#"></a></span>
+      </figcaption>
+    </figure>
+    <button class="lb__nav lb__nav--next icon-btn" type="button" data-step="1" aria-label="Next image">
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+    </button>
+  </dialog>
+</body>
+</html>
