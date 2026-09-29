@@ -1200,11 +1200,14 @@ kbd {
 /* ---------- Request form ---------- */
 
 .order { position: relative; padding: 2px; border-radius: 30px; overflow: hidden; isolation: isolate; scroll-margin-top: calc(var(--nav-h) + 16px); }
+/* The gradient turns instead of the element, so the border stays whole on tall phone layouts. */
+@property --order-angle { syntax: '<angle>'; inherits: false; initial-value: 90deg; }
 .order::before {
-  content: ''; position: absolute; inset: -80%; z-index: -1;
-  background: conic-gradient(from 90deg, #7c3aed, #ff4fb8, #a855f7, #e879f9, #7c3aed);
-  animation: spin 14s linear infinite;
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background: conic-gradient(from var(--order-angle, 90deg), #7c3aed, #ff4fb8, #a855f7, #e879f9, #7c3aed);
+  animation: order-spin 14s linear infinite;
 }
+@keyframes order-spin { to { --order-angle: 450deg; } }
 .order__inner {
   display: grid; gap: 32px;
   padding: clamp(22px, 4.5vw, 52px); border-radius: 28px;
@@ -1267,7 +1270,11 @@ kbd {
 
 .order__error { grid-column: 1 / -1; margin: 0; padding: 10px 14px; font-size: 14px; color: #fecaca; background: rgba(248, 113, 113, .12); border: 1px solid rgba(248, 113, 113, .35); border-radius: var(--radius-sm); }
 [data-theme="light"] .order__error { color: #b91c1c; }
-.order__submit { grid-column: 1 / -1; justify-self: start; }
+.order__actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.order__or { font-family: var(--font-mono); font-size: 13px; color: var(--text-3); }
+.order__dm { grid-column: 1 / -1; margin: -4px 0 0; font-size: 13px; color: var(--text-3); }
+.order__dm b { font-weight: 600; color: var(--text-2); }
+.order__dm a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
 .order__submit:disabled { cursor: progress; }
 .order__submit.is-busy .icon { animation: send 1s ease-in-out infinite; }
 .order__honey { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
@@ -1285,7 +1292,8 @@ kbd {
 @media (min-width: 960px) { .order__inner { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 48px; } }
 @media (max-width: 599.98px) {
   .order__form { grid-template-columns: minmax(0, 1fr); }
-  .order__submit { justify-self: stretch; }
+  .order__actions { flex-direction: column; align-items: stretch; }
+  .order__or { text-align: center; }
 }
 
 /* ---------- Reveal ---------- */
