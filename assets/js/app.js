@@ -16,6 +16,16 @@
     },
     typer: ['crystal PvP', 'snappier hotbars', 'cleaner inventories', 'epic death effects', 'Bedrock crossplay', 'low-health alerts'],
     showcaseStep: 10,
+    // Self-hosted copy of the Discord server icon; the CDN is only used if the server changes it.
+    discordIcon: 'a73690eeefc7e15b668e726d9fa848b9',
+    // Request form endpoint (FormSubmit). After confirming FormSubmit's activation email, replace the
+    // address with the random string it sends so the inbox never appears in the page.
+    formEndpoint: `https://formsubmit.co/${['zymekoh', 'gmail.com'].join('@')}`,
+    upload: {
+      maxFiles: 5,
+      maxBytes: 10 * 1000 * 1000,
+      types: ['png', 'jpg', 'jpeg', 'gif', 'webp', 'pdf', 'txt', 'log', 'md', 'yml', 'yaml', 'json', 'toml', 'properties', 'cfg', 'conf', 'csv'],
+    },
   };
 
   const PLUGIN_LOADERS = new Set(['paper', 'spigot', 'bukkit', 'purpur', 'folia', 'sponge', 'velocity', 'bungeecord', 'waterfall']);
@@ -29,6 +39,8 @@
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+  // Only absolute http(s) URLs from API data ever reach href/src attributes.
+  const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\/[^\s"'<>]+$/i.test(u.trim()) ? u.trim() : '');
   const label = (key) => NAMES[key] || String(key).replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const motionOK = () => !matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -53,6 +65,9 @@
     showcaseFilter: 'all',
     showcaseList: [],
     showcaseShown: 0,
+    sizes: {},
+    readmes: new Map(),
+    current: null,
   };
 
   function timeAgo(date) {
@@ -76,16 +91,42 @@
 
   const versionRange = (v) => (v.length > 1 ? `${v[0]} – ${v[v.length - 1]}` : v[0] || '');
 
-  async function fetchJSON(url, timeout = 10000) {
+  async function request(url, timeout, read) {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), timeout);
     try {
-      const res = await fetch(url, { signal: ctrl.signal });
+      const res = await fetch(url, { signal: ctrl.signal, credentials: 'omit', referrerPolicy: 'no-referrer' });
       if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-      return await res.json();
+      return await read(res);
     } finally {
       clearTimeout(timer);
     }
+  }
+
+  const fetchJSON = (url, timeout = 10000) => request(url, timeout, (res) => res.json());
+  const fetchText = (url, timeout = 10000) => request(url, timeout, (res) => res.text());
+
+  // GitHub repository helpers (READMEs are read straight from raw.githubusercontent.com).
+  function repoOf(url) {
+    const m = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)(?:\.git)?\/?$/i.exec(url || '');
+    return m ? { owner: m[1], name: m[2] } : null;
+  }
+  const rawBase = (r) => `https://raw.githubusercontent.com/${r.owner}/${r.name}/HEAD/`;
+  const blobBase = (r) => `https://github.com/${r.owner}/${r.name}/blob/HEAD/`;
+
+  // Same image referenced from Modrinth and GitHub (any branch) counts once.
+  function mediaKey(url) {
+    const hash = url.match(/[0-9a-f]{40}/);
+    if (hash) return hash[0];
+    const gh = /raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/[^/]+\/(.+)$/i.exec(url)
+      || /github\.com\/([^/]+)\/([^/]+)\/(?:raw|blob)\/[^/]+\/(.+)$/i.exec(url);
+    return gh ? `${gh[1]}/${gh[2]}/${gh[3]}`.toLowerCase() : url;
+  }
+
+  // Resolves README-relative paths; root-relative ones are relative to the repository root.
+  function resolveUrl(value, base) {
+    if (!value || !base || /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(value)) return value;
+    try { return new URL(value.replace(/^\/+/, ''), base).href; } catch (err) { return value; }
   }
 
   /* ---------- Data ---------- */
@@ -94,30 +135,51 @@
   const cleanAlt = (t) => (t && !/replace this with a description/i.test(t) ? t.trim() : '');
   const worthy = (m) => !m.w || (m.w >= 200 && m.h >= 150 && m.w / m.h <= 3.2 && m.h / m.w <= 3.2);
 
-  function collectMedia(p, sizes) {
-    const out = [];
-    const seen = new Set();
-    const add = (thumb, full, title) => {
-      if (!full || /shields\.io|\.svg(\?|$)|\/icon\.png$/i.test(full)) return;
-      const key = (full.match(/[0-9a-f]{40}/) || [full])[0];
-      if (seen.has(key)) return;
-      seen.add(key);
-      const size = sizes[full] || sizes[thumb];
-      out.push({ thumb: thumb || full, full, title: cleanAlt(title), w: size ? size[0] : 0, h: size ? size[1] : 0 });
-    };
-    [...(p.gallery || [])]
-      .sort((a, b) => (b.featured - a.featured) || ((a.ordering ?? 0) - (b.ordering ?? 0)))
-      .forEach((g) => add(g.url, g.raw_url || g.url, g.title || g.description));
-    for (const m of (p.body || '').matchAll(IMG_RE)) {
+  // Images referenced by Markdown/HTML text, resolved against `base` when relative.
+  function imagesIn(text, base) {
+    const found = [];
+    for (const m of String(text || '').matchAll(IMG_RE)) {
       if (m[2]) {
-        add(m[2], m[2], m[1]);
+        found.push([resolveUrl(m[2], base), m[1]]);
       } else {
         const src = /\bsrc=["']([^"']+)/i.exec(m[0]);
         const alt = /\balt=["']([^"']*)/i.exec(m[0]);
-        if (src) add(src[1], src[1], alt && alt[1]);
+        if (src) found.push([resolveUrl(src[1], base), alt && alt[1]]);
       }
     }
+    return found;
+  }
+
+  function mediaList(entries, sizes, seen = new Set()) {
+    const out = [];
+    for (const [thumbRaw, fullRaw, title] of entries) {
+      const full = safeUrl(fullRaw);
+      const thumb = safeUrl(thumbRaw) || full;
+      if (!full || /shields\.io|\.svg(\?|$)|\/icon\.png$/i.test(full)) continue;
+      const key = mediaKey(full);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const size = sizes[full] || sizes[thumb];
+      out.push({ thumb, full, title: cleanAlt(title), w: size ? size[0] : 0, h: size ? size[1] : 0 });
+    }
     return out;
+  }
+
+  function collectMedia(p, sizes) {
+    const gallery = [...(p.gallery || [])]
+      .sort((a, b) => (b.featured - a.featured) || ((a.ordering ?? 0) - (b.ordering ?? 0)))
+      .map((g) => [g.url, g.raw_url || g.url, g.title || g.description]);
+    const body = imagesIn(p.body).map(([url, alt]) => [url, url, alt]);
+    return mediaList([...gallery, ...body], sizes);
+  }
+
+  // Modrinth media first, then any extra screenshots from the GitHub README.
+  function allMedia(p) {
+    const text = state.readmes.get(p.slug);
+    if (!text || !p.repo) return p.media;
+    const seen = new Set(p.media.map((m) => mediaKey(m.full)));
+    const extra = imagesIn(text, rawBase(p.repo)).map(([url, alt]) => [url, url, alt]);
+    return [...p.media, ...mediaList(extra, state.sizes, seen)];
   }
 
   function envLabel(client, server) {
@@ -138,13 +200,14 @@
   function normalize(p, sizes) {
     const loaders = p.loaders || [];
     const type = loaders.some((l) => PLUGIN_LOADERS.has(l)) ? 'plugin' : (p.project_type || 'mod');
-    const github = (p.source_url || '').replace(/\.git$/, '').replace(/\/$/, '') || CONFIG.repos[p.slug] || null;
+    const mapped = Object.hasOwn(CONFIG.repos, p.slug) ? CONFIG.repos[p.slug] : null;
+    const github = safeUrl((p.source_url || '').replace(/\.git$/, '').replace(/\/$/, '')) || mapped;
     return {
-      slug: p.slug,
-      title: p.title,
+      slug: String(p.slug),
+      title: String(p.title || p.slug),
       summary: p.description || '',
       body: p.body || '',
-      icon: p.icon_url || 'assets/img/favicon.svg',
+      icon: safeUrl(p.icon_url) || 'assets/img/favicon.svg',
       type,
       loaders,
       categories: p.categories || [],
@@ -156,10 +219,11 @@
       published: new Date(p.published),
       updated: new Date(p.updated),
       license: p.license,
-      url: `https://modrinth.com/${type}/${p.slug}`,
+      url: `https://modrinth.com/${encodeURIComponent(type)}/${encodeURIComponent(p.slug)}`,
       github,
-      issues: p.issues_url || null,
-      wiki: p.wiki_url || null,
+      repo: repoOf(github),
+      issues: safeUrl(p.issues_url) || null,
+      wiki: safeUrl(p.wiki_url) || null,
       media: collectMedia(p, sizes),
     };
   }
@@ -169,17 +233,43 @@
     const liveReq = fetchJSON(`${CONFIG.api}/user/${CONFIG.user}/projects`, 9000).catch(() => null);
     const snapshot = await snapshotReq;
     const sizes = (snapshot && snapshot.images) || {};
+    state.sizes = sizes;
+    if (snapshot && snapshot.readmes) {
+      for (const [slug, text] of Object.entries(snapshot.readmes)) {
+        if (typeof text === 'string') state.readmes.set(slug, text);
+      }
+    }
     const early = await Promise.race([liveReq, wait(1200).then(() => undefined)]);
 
-    if (early) return apply(early, sizes, 'live');
-    if (snapshot) {
+    if (early) {
+      apply(early, sizes, 'live');
+    } else if (snapshot) {
       apply(snapshot.projects, sizes, 'snapshot', snapshot.generated);
       liveReq.then((live) => live && apply(live, sizes, 'live'));
-      return;
+    } else {
+      const live = await liveReq;
+      if (!live) { showLoadError(); return; }
+      apply(live, sizes, 'live');
     }
-    const live = await liveReq;
-    if (live) apply(live, sizes, 'live');
-    else showLoadError();
+    loadReadmes();
+  }
+
+  // Pulls each public README live so README edits show up without touching the site.
+  async function loadReadmes() {
+    const jobs = state.projects.filter((p) => p.repo).map(async (p) => {
+      try {
+        const text = await fetchText(`${rawBase(p.repo)}README.md`, 9000);
+        if (text.length > 400000 || text === state.readmes.get(p.slug)) return;
+        state.readmes.set(p.slug, text);
+        if (state.current === p.slug) renderReadme(p);
+      } catch (err) {
+        /* keep the snapshot copy */
+      }
+    });
+    await Promise.all(jobs);
+    renderShowcase(state.projects.slice().sort((a, b) => b.downloads - a.downloads));
+    const open = state.current && state.bySlug.get(state.current);
+    if (open) renderGallery(open);
   }
 
   function apply(raw, sizes, source, generated) {
@@ -750,7 +840,7 @@
   }
 
   function renderShowcase(list) {
-    const lists = list.map((p) => p.media.filter(worthy).map((m) => ({ ...m, project: p })));
+    const lists = list.map((p) => allMedia(p).filter(worthy).map((m) => ({ ...m, project: p })));
     const items = [];
     for (let i = 0; lists.some((l) => i < l.length); i++) {
       for (const l of lists) if (l[i]) items.push(l[i]);
@@ -800,43 +890,87 @@
   }
 
   let purifyHooked = false;
+  const EMBED_RE = /^https:\/\/(www\.youtube-nocookie\.com\/embed\/|player\.vimeo\.com\/video\/)[\w-]+/;
+
+  function hookPurify(DOMPurify) {
+    if (purifyHooked) return;
+    purifyHooked = true;
+    DOMPurify.addHook('uponSanitizeElement', (node, data) => {
+      if (data.tagName !== 'iframe') return;
+      const src = (node.getAttribute('src') || '').replace(/^https:\/\/(www\.)?youtube\.com\/embed\//, 'https://www.youtube-nocookie.com/embed/');
+      if (EMBED_RE.test(src)) node.setAttribute('src', src);
+      else if (node.parentNode) node.parentNode.removeChild(node);
+    });
+    DOMPurify.addHook('afterSanitizeAttributes', (node) => {
+      if (node.tagName === 'IFRAME') {
+        node.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation allow-popups');
+        node.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+        node.setAttribute('loading', 'lazy');
+      }
+    });
+  }
 
   function renderMarkdown(md) {
     const { marked, DOMPurify } = window;
     if (!marked || !DOMPurify) return null;
-    if (!purifyHooked) {
-      purifyHooked = true;
-      DOMPurify.addHook('uponSanitizeElement', (node, data) => {
-        if (data.tagName !== 'iframe') return;
-        const src = node.getAttribute('src') || '';
-        if (!/^https:\/\/(www\.)?(youtube(-nocookie)?\.com\/embed\/|player\.vimeo\.com\/video\/)/.test(src)) node.remove();
-      });
-    }
+    hookPurify(DOMPurify);
     // Every Discord link points to the current community invite.
     const source = String(md || '').replace(/https?:\/\/(?:www\.)?discord(?:\.gg|(?:app)?\.com\/invite)\/[\w-]+/gi, CONFIG.discord);
     const html = marked.parse(source, { gfm: true, breaks: false });
     return DOMPurify.sanitize(html, {
       ADD_TAGS: ['iframe'],
       ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'target'],
-      FORBID_TAGS: ['style', 'form', 'input', 'button', 'textarea', 'select'],
+      FORBID_TAGS: ['style', 'form', 'input', 'button', 'textarea', 'select', 'object', 'embed', 'base', 'meta', 'link'],
       FORBID_ATTR: ['style'],
+      SANITIZE_NAMED_PROPS: true,
     });
   }
 
-  function enhanceDescription(root, p) {
+  const slugify = (t) => String(t).toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+
+  // Post-processes sanitized Markdown: resolves repo-relative URLs, hardens links, makes images zoomable.
+  function enhanceMarkdown(root, p, bases = {}) {
     root.querySelectorAll('a[href]').forEach((a) => {
-      if (/^https?:/i.test(a.getAttribute('href'))) {
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
+      const raw = a.getAttribute('href');
+      if (raw.startsWith('#')) {
+        let id = raw.slice(1);
+        try { id = decodeURIComponent(id); } catch (err) { /* keep it encoded */ }
+        a.dataset.anchor = slugify(id);
+        a.setAttribute('href', '#');
+        return;
       }
+      if (/^mailto:[^\s"'<>]+$/i.test(raw)) return;
+      const href = safeUrl(resolveUrl(raw, bases.blob));
+      if (!href) { a.removeAttribute('href'); return; }
+      a.setAttribute('href', href);
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
     });
+    root.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((h) => { h.dataset.anchorId = slugify(h.textContent); });
+    root.querySelectorAll('source[srcset]').forEach((s) => {
+      const set = s.getAttribute('srcset').split(',').map((part) => {
+        const [url, ...rest] = part.trim().split(/\s+/);
+        return [safeUrl(resolveUrl(url, bases.raw)), ...rest].join(' ');
+      });
+      if (set.every((entry) => entry && !entry.startsWith(' '))) s.setAttribute('srcset', set.join(', '));
+      else s.remove();
+    });
+    root.querySelectorAll('table').forEach((table) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'md-table';
+      table.replaceWith(wrap);
+      wrap.append(table);
+    });
+
     const items = [];
-    const hashOf = (url) => (url.match(/[0-9a-f]{40}/) || [url])[0];
-    const originals = new Map(p.media.map((m) => [hashOf(m.full), m.full]));
+    const originals = new Map(allMedia(p).map((m) => [mediaKey(m.full), m.full]));
     root.querySelectorAll('img').forEach((img) => {
+      const src = safeUrl(resolveUrl(img.getAttribute('src') || '', bases.raw));
+      if (!src) { img.remove(); return; }
+      img.setAttribute('src', src);
       img.loading = 'lazy';
       img.decoding = 'async';
-      const src = img.getAttribute('src') || '';
+      img.referrerPolicy = 'no-referrer';
       if (/shields\.io/i.test(src)) { img.classList.add('md-badge'); return; }
       const title = cleanAlt(img.getAttribute('alt'));
       img.alt = title;
@@ -848,21 +982,52 @@
       btn.setAttribute('aria-label', title ? `Enlarge image: ${title}` : 'Enlarge image');
       img.replaceWith(btn);
       btn.append(img);
-      items.push({ full: originals.get(hashOf(src)) || src, title, project: p });
+      items.push({ full: originals.get(mediaKey(src)) || src, title, project: p });
     });
     root.media = items;
   }
 
+  function renderReadme(p) {
+    const panel = $('#pd-readme');
+    if (!p.repo) { panel.innerHTML = ''; panel.media = []; return; }
+    const text = state.readmes.get(p.slug);
+    const source = `${blobBase(p.repo)}README.md`;
+    const link = `<p class="md-source"><a href="${esc(source)}" target="_blank" rel="noopener noreferrer">${icon('github')}View this README on GitHub</a></p>`;
+    const html = text ? renderMarkdown(text) : null;
+    if (html == null) {
+      panel.innerHTML = `<p class="md-fallback">${text ? 'The README could not be displayed here.' : 'Loading the README…'}</p>${link}`;
+      panel.media = [];
+      return;
+    }
+    panel.innerHTML = html + link;
+    enhanceMarkdown(panel, p, { raw: rawBase(p.repo), blob: blobBase(p.repo) });
+  }
+
+  function renderGallery(p) {
+    const media = allMedia(p).filter(worthy);
+    const gallery = $('#pd-gallery');
+    $('#pd-gallery-count').textContent = media.length;
+    $('#tab-gallery').hidden = media.length === 0;
+    gallery.innerHTML = media.map((m, i) => `
+      <figure class="tile">
+        <button class="tile__btn" type="button" data-index="${i}" aria-label="${esc(m.title ? `View ${m.title}` : 'View screenshot')}">
+          <img class="tile__img" src="${esc(m.thumb)}" alt="" loading="lazy" decoding="async">
+        </button>
+      </figure>`).join('');
+    $$('.tile', gallery).forEach((tile) => wireTile(tile, null));
+    gallery.media = media.map((m) => ({ full: m.full, title: m.title, project: p }));
+  }
+
+  const TABS = { desc: ['#tab-desc', '#pd-desc'], readme: ['#tab-readme', '#pd-readme'], gallery: ['#tab-gallery', '#pd-gallery'] };
+
   function selectTab(which) {
-    const desc = which === 'desc';
-    const tDesc = $('#tab-desc');
-    const tGallery = $('#tab-gallery');
-    tDesc.setAttribute('aria-selected', String(desc));
-    tGallery.setAttribute('aria-selected', String(!desc));
-    tDesc.tabIndex = desc ? 0 : -1;
-    tGallery.tabIndex = desc ? -1 : 0;
-    $('#pd-desc').hidden = !desc;
-    $('#pd-gallery').hidden = desc;
+    for (const [name, [tabSel, panelSel]] of Object.entries(TABS)) {
+      const on = name === which;
+      const tab = $(tabSel);
+      tab.setAttribute('aria-selected', String(on));
+      tab.tabIndex = on ? 0 : -1;
+      $(panelSel).hidden = !on;
+    }
   }
 
   function showProject(p) {
@@ -879,7 +1044,7 @@
       `<span class="badge">${icon('monitor')}${esc(p.env)}</span>`,
     ].join('');
 
-    const ext = 'target="_blank" rel="noopener"';
+    const ext = 'target="_blank" rel="noopener noreferrer"';
     $('#pd-actions').innerHTML = [
       `<a class="btn btn--primary" href="${esc(p.url)}" ${ext}>${icon('download')}Download on Modrinth</a>`,
       p.github ? `<a class="btn btn--ghost" href="${esc(p.github)}" ${ext}>${icon('github')}Source code</a>` : '',
@@ -899,28 +1064,20 @@
     $('#pd-stats').innerHTML = stats.map(([ic, k, v]) => `<div><dt>${icon(ic)}${k}</dt><dd>${esc(v)}</dd></div>`).join('');
     $('#pd-versions').innerHTML = p.versions.map((v) => `<li>${esc(v)}</li>`).join('') || '<li>—</li>';
 
+    state.current = p.slug;
     const desc = $('#pd-desc');
     const html = renderMarkdown(p.body);
     if (html != null) {
       desc.innerHTML = html;
-      enhanceDescription(desc, p);
+      enhanceMarkdown(desc, p);
     } else {
       desc.innerHTML = `<p>${esc(p.summary)}</p><p class="md-fallback"><a href="${esc(p.url)}" ${ext}>Read the full description on Modrinth</a></p>`;
       desc.media = [];
     }
 
-    const media = p.media.filter(worthy);
-    const gallery = $('#pd-gallery');
-    $('#pd-gallery-count').textContent = media.length;
-    $('#tab-gallery').hidden = media.length === 0;
-    gallery.innerHTML = media.map((m, i) => `
-      <figure class="tile">
-        <button class="tile__btn" type="button" data-index="${i}" aria-label="${esc(m.title ? `View ${m.title}` : 'View screenshot')}">
-          <img class="tile__img" src="${esc(m.thumb)}" alt="" loading="lazy" decoding="async">
-        </button>
-      </figure>`).join('');
-    $$('.tile', gallery).forEach((tile) => wireTile(tile, null));
-    gallery.media = media.map((m) => ({ full: m.full, title: m.title, project: p }));
+    $('#tab-readme').hidden = !p.repo;
+    renderReadme(p);
+    renderGallery(p);
 
     selectTab('desc');
     if (!d.open) {
@@ -1013,26 +1170,36 @@
     d.addEventListener('cancel', (e) => { e.preventDefault(); closeProject(); });
     d.addEventListener('click', (e) => {
       if (e.target === d || e.target.closest('[data-close]')) { closeProject(); return; }
+      const anchor = e.target.closest('a[data-anchor]');
+      if (anchor) {
+        e.preventDefault();
+        const panel = anchor.closest('.md');
+        const target = panel && $$('[data-anchor-id]', panel).find((h) => h.dataset.anchorId === anchor.dataset.anchor);
+        if (target) target.scrollIntoView({ block: 'start', behavior: motionOK() ? 'smooth' : 'auto' });
+        return;
+      }
       const zoom = e.target.closest('.md-zoom');
-      if (zoom) openLightbox($('#pd-desc').media || [], Number(zoom.dataset.index));
+      if (zoom) openLightbox(zoom.closest('.md').media || [], Number(zoom.dataset.index));
       const tileBtn = e.target.closest('#pd-gallery .tile__btn');
       if (tileBtn) openLightbox($('#pd-gallery').media || [], Number(tileBtn.dataset.index));
     });
     d.addEventListener('close', () => {
+      state.current = null;
       document.title = baseTitle;
       syncLock();
       if (lastFocus && lastFocus.isConnected) lastFocus.focus({ preventScroll: true });
     });
 
-    const tabs = [$('#tab-desc'), $('#tab-gallery')];
-    tabs.forEach((tab) => {
-      tab.addEventListener('click', () => selectTab(tab.id === 'tab-desc' ? 'desc' : 'gallery'));
+    const tabs = Object.entries(TABS).map(([name, [tabSel]]) => [name, $(tabSel)]);
+    tabs.forEach(([name, tab]) => {
+      tab.addEventListener('click', () => selectTab(name));
       tab.addEventListener('keydown', (e) => {
         if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-        const other = tabs.find((t) => t !== tab && !t.hidden);
-        if (!other) return;
-        other.focus();
-        selectTab(other.id === 'tab-desc' ? 'desc' : 'gallery');
+        const visible = tabs.filter(([, t]) => !t.hidden);
+        const at = visible.findIndex(([, t]) => t === tab);
+        const [nextName, nextTab] = visible[(at + (e.key === 'ArrowRight' ? 1 : -1) + visible.length) % visible.length];
+        nextTab.focus();
+        selectTab(nextName);
       });
     });
 
@@ -1133,7 +1300,7 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && document.body.classList.contains('menu-open')) setMenu(false);
     });
-    matchMedia('(min-width: 900px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+    matchMedia('(min-width: 1100px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
     let ticking = false;
     const onScroll = () => {
@@ -1157,7 +1324,7 @@
         links.forEach((a) => a.classList.toggle('is-active', a.dataset.nav === entry.target.id));
       }
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['mods', 'showcase', 'about', 'discord'].forEach((id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+    ['mods', 'soon', 'showcase', 'about', 'services', 'discord'].forEach((id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
     spy.observe($('.hero'));
   }
 
@@ -1180,21 +1347,180 @@
     try {
       const data = await fetchJSON(`https://discord.com/api/v10/invites/${CONFIG.discordCode}?with_counts=true`, 8000);
       const guild = data.guild || {};
-      if (guild.name) $$('[data-discord="name"]').forEach((el) => { el.textContent = guild.name; });
-      if (data.approximate_member_count) {
+      if (typeof guild.name === 'string' && guild.name) $$('[data-discord="name"]').forEach((el) => { el.textContent = guild.name; });
+      if (Number.isFinite(data.approximate_member_count)) {
         $('[data-discord="members"]').textContent = plain.format(data.approximate_member_count);
-        $('[data-discord="online"]').textContent = plain.format(data.approximate_presence_count || 0);
+        $('[data-discord="online"]').textContent = plain.format(Number(data.approximate_presence_count) || 0);
         $('#discord-live').hidden = false;
       }
-      if (guild.id && guild.icon) {
+      // Only switch away from the bundled icon if the server changed it (ids validated before use).
+      if (/^\d+$/.test(guild.id || '') && /^(a_)?[0-9a-f]{32}$/.test(guild.icon || '') && guild.icon !== CONFIG.discordIcon) {
         const img = $('#discord-icon');
-        img.onload = () => { img.hidden = false; };
-        img.alt = `${guild.name || 'Discord'} server icon`;
-        img.src = `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.${guild.icon.startsWith('a_') ? 'gif' : 'webp'}?size=128`;
+        const next = new Image();
+        next.onload = () => { img.src = next.src; };
+        next.src = `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.${guild.icon.startsWith('a_') ? 'gif' : 'webp'}?size=256`;
       }
     } catch (err) {
       /* Discord unreachable: the static invite still works. */
     }
+  }
+
+  /* ---------- Services & request form ---------- */
+
+  const fmtBytes = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1e3))} KB`);
+
+  function initOrder() {
+    const form = $('#order-form');
+    if (!form) return;
+    const select = $('#f-service');
+    const message = $('#f-message');
+    const counter = $('#f-message-count');
+    const picker = $('#f-files');
+    const drop = $('#drop');
+    const list = $('#files');
+    const error = $('#order-error');
+    const submit = $('#order-submit');
+    const done = $('#order-done');
+    const limits = CONFIG.upload;
+    const canAttach = (() => { try { return Boolean(new DataTransfer().items); } catch (err) { return false; } })();
+    let files = [];
+
+    $$('[data-service]').forEach((btn) => btn.addEventListener('click', () => {
+      select.value = btn.dataset.service;
+      $('#request').scrollIntoView({ behavior: motionOK() ? 'smooth' : 'auto', block: 'start' });
+      setTimeout(() => message.focus({ preventScroll: true }), motionOK() ? 700 : 0);
+    }));
+
+    const showError = (text) => { error.textContent = text; error.hidden = !text; };
+    const count = () => { counter.textContent = `${message.value.length} / ${message.maxLength}`; };
+    message.addEventListener('input', count);
+    count();
+
+    const renderFiles = () => {
+      list.replaceChildren(...files.map((file, i) => {
+        const li = document.createElement('li');
+        li.className = 'file';
+        if (/^image\/(png|jpeg|gif|webp)$/.test(file.type)) {
+          const img = document.createElement('img');
+          img.alt = '';
+          img.src = URL.createObjectURL(file);
+          img.onload = () => URL.revokeObjectURL(img.src);
+          li.append(img);
+        } else {
+          li.insertAdjacentHTML('beforeend', icon('file-text'));
+        }
+        const name = document.createElement('span');
+        name.className = 'file__name';
+        name.textContent = file.name;
+        const size = document.createElement('small');
+        size.textContent = fmtBytes(file.size);
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.className = 'file__remove';
+        remove.setAttribute('aria-label', `Remove ${file.name}`);
+        remove.insertAdjacentHTML('beforeend', icon('trash-2'));
+        remove.addEventListener('click', () => { files.splice(i, 1); renderFiles(); showError(''); });
+        li.append(name, size, remove);
+        return li;
+      }));
+      drop.classList.toggle('has-files', files.length > 0);
+    };
+
+    const addFiles = (incoming) => {
+      const problems = [];
+      for (const file of incoming) {
+        const ext = (file.name.includes('.') ? file.name.split('.').pop() : '').toLowerCase();
+        const total = files.reduce((n, f) => n + f.size, 0);
+        if (!limits.types.includes(ext)) problems.push(`${file.name}: this file type is not allowed`);
+        else if (files.some((f) => f.name === file.name && f.size === file.size)) continue;
+        else if (files.length >= limits.maxFiles) problems.push(`You can attach up to ${limits.maxFiles} files`);
+        else if (total + file.size > limits.maxBytes) problems.push(`${file.name}: attachments are limited to 10 MB in total`);
+        else files.push(file);
+      }
+      renderFiles();
+      showError([...new Set(problems)].join(' · '));
+    };
+
+    if (canAttach) {
+      picker.addEventListener('change', () => { addFiles([...picker.files]); picker.value = ''; });
+      ['dragenter', 'dragover'].forEach((type) => drop.addEventListener(type, (e) => { e.preventDefault(); drop.classList.add('is-over'); }));
+      ['dragleave', 'drop'].forEach((type) => drop.addEventListener(type, (e) => { e.preventDefault(); drop.classList.remove('is-over'); }));
+      drop.addEventListener('drop', (e) => addFiles([...((e.dataTransfer && e.dataTransfer.files) || [])]));
+    } else {
+      picker.name = 'attachment';
+      picker.multiple = false;
+    }
+
+    const setBusy = (busy) => {
+      submit.disabled = busy;
+      submit.classList.toggle('is-busy', busy);
+      $('span', submit).textContent = busy ? 'Sending…' : 'Send request';
+    };
+    addEventListener('pageshow', (e) => { if (e.persisted) setBusy(false); });
+
+    const problemWith = (field) => {
+      if (field.id === 'f-name') return 'Please enter your name.';
+      if (field.id === 'f-email') return 'Please enter a valid email so Zymekoh can reply.';
+      return field.validity.tooShort ? 'Please describe your request in at least 20 characters.' : 'Please write a message.';
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showError('');
+      const fields = [$('#f-name'), $('#f-email'), message];
+      fields.forEach((f) => {
+        f.value = f.value.trim();
+        f.setAttribute('aria-invalid', String(!f.checkValidity()));
+      });
+      const invalid = fields.find((f) => !f.checkValidity());
+      if (invalid) { showError(problemWith(invalid)); invalid.focus(); return; }
+      if (form.elements.namedItem('_honey').value) return;
+
+      let last = 0;
+      try { last = Number(sessionStorage.getItem('kohs-order-at')) || 0; } catch (err) { /* storage unavailable */ }
+      if (Date.now() - last < 60000) { showError('Please wait a minute before sending another request.'); return; }
+
+      $$('.order__attachment', form).forEach((el) => el.remove());
+      if (canAttach) {
+        files.forEach((file, i) => {
+          const input = document.createElement('input');
+          input.type = 'file';
+          input.name = i ? `attachment_${i + 1}` : 'attachment';
+          input.className = 'order__attachment';
+          input.hidden = true;
+          const dt = new DataTransfer();
+          dt.items.add(file);
+          input.files = dt.files;
+          form.append(input);
+        });
+      }
+
+      const page = `${location.origin}${location.pathname}`;
+      form.elements.namedItem('_next').value = `${page}?sent=1#request`;
+      form.elements.namedItem('_url').value = page;
+      form.action = CONFIG.formEndpoint;
+      setBusy(true);
+      try { sessionStorage.setItem('kohs-order-at', String(Date.now())); } catch (err) { /* storage unavailable */ }
+      HTMLFormElement.prototype.submit.call(form);
+    });
+
+    if (new URLSearchParams(location.search).get('sent') === '1') {
+      form.hidden = true;
+      done.hidden = false;
+      history.replaceState(null, '', location.pathname + location.hash);
+      requestAnimationFrame(() => done.focus({ preventScroll: true }));
+    }
+    $('#order-again').addEventListener('click', () => {
+      form.reset();
+      files = [];
+      renderFiles();
+      count();
+      showError('');
+      setBusy(false);
+      done.hidden = true;
+      form.hidden = false;
+      $('#f-name').focus();
+    });
   }
 
   function init() {
@@ -1209,6 +1535,7 @@
     initTyper();
     initParticles();
     initMagnetic();
+    initOrder();
     $$('.reveal').forEach(reveal);
     $$('.counter').forEach((el) => counterIO.observe(el));
     setTimeout(hidePreloader, 1800);

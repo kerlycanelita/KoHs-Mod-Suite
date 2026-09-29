@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; form-action 'none'; base-uri 'self'; object-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found — KoHs Mod Suite</title>
   <meta name="robots" content="noindex">
@@ -45,12 +46,7 @@
     <h1 class="code">404</h1>
     <p class="prompt"><b>~/kohs $</b> find page → not found</p>
     <p>This block doesn't exist — it may have been mined away.</p>
-    <a id="home" href="/KoHs-Mod-Suite/">Back to KoHs Mod Suite</a>
+    <a href="/KoHs-Mod-Suite/">Back to KoHs Mod Suite</a>
   </main>
-  <script>
-    // Project sites live under /<repo>/; anything else (custom domain) lives at the root.
-    var seg = location.pathname.split('/')[1];
-    document.getElementById('home').href = /github\.io$/.test(location.hostname) && seg ? '/' + seg + '/' : '/';
-  </script>
 </body>
 </html>

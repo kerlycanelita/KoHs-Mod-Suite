@@ -65,14 +65,41 @@ async function probe(url) {
   }
 }
 
+// Public repositories for projects whose Modrinth page has no source link
+// (keep in sync with CONFIG.repos in assets/js/app.js).
+const REPOS = {
+  'healt-alert-tweaks': 'https://github.com/kerlycanelita/Alert-Tweaks-KoHs',
+  'keyboard-place-fix': 'https://github.com/kerlycanelita/KoHs-Keyboard-Place-Fix',
+  'kohs-offhand-whitelist': 'https://github.com/kerlycanelita/KoHs-Offhand-Whitelist',
+};
+
+function rawBase(p) {
+  const url = (p.source_url || '').replace(/\.git$/, '') || REPOS[p.slug] || '';
+  const m = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)\/?$/i.exec(url);
+  return m ? `https://raw.githubusercontent.com/${m[1]}/${m[2]}/HEAD/` : null;
+}
+
+function resolve(url, base) {
+  if (!base || /^(?:[a-z][a-z\d+.-]*:|\/\/|#)/i.test(url)) return url;
+  try { return new URL(url.replace(/^\/+/, ''), base).href; } catch { return url; }
+}
+
 const projects = (await api(`/user/${USER}/projects`))
   .filter((p) => p.status === 'approved')
   .map((p) => Object.fromEntries(FIELDS.map((key) => [key, p[key] ?? null])));
 
 const urls = new Set();
+const readmes = {};
 for (const p of projects) {
   for (const g of p.gallery) urls.add(g.raw_url || g.url);
   for (const m of (p.body || '').matchAll(IMAGE_RE)) urls.add(m[1] || m[2]);
+
+  const base = rawBase(p);
+  if (!base) continue;
+  const res = await fetch(`${base}README.md`, { headers: HEADERS });
+  if (!res.ok) continue;
+  readmes[p.slug] = await res.text();
+  for (const m of readmes[p.slug].matchAll(IMAGE_RE)) urls.add(resolve(m[1] || m[2], base));
 }
 
 const images = {};
@@ -82,6 +109,6 @@ for (const url of urls) {
   if (size) images[url] = size;
 }
 
-const data = { generated: new Date().toISOString(), user: USER, projects, images };
+const data = { generated: new Date().toISOString(), user: USER, projects, readmes, images };
 await writeFile(OUT, JSON.stringify(data, null, 2) + '\n');
-console.log(`Saved ${projects.length} approved projects and ${Object.keys(images).length} image sizes.`);
+console.log(`Saved ${projects.length} approved projects, ${Object.keys(readmes).length} READMEs and ${Object.keys(images).length} image sizes.`);

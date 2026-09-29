@@ -2,9 +2,11 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' https:; connect-src 'self' https://api.modrinth.com https://raw.githubusercontent.com https://discord.com; frame-src https://www.youtube-nocookie.com https://player.vimeo.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>KoHs Mod Suite — Minecraft mods &amp; plugins by Zymery Dria</title>
-  <meta name="description" content="Every approved KoHs Minecraft mod and plugin by Zymery Dria — Crystal Tweaks, Inventory Tweaks, Herzium, Death Effects and more, synced live from Modrinth.">
+  <meta name="description" content="Every approved KoHs Minecraft mod and plugin by Zymery Dria, plus custom mods, plugins and advanced servers (SMP, Paper, BungeeCord, Velocity) on request.">
   <meta name="theme-color" content="#a855f7">
   <meta name="color-scheme" content="dark light">
   <link rel="canonical" href="https://kerlycanelita.github.io/KoHs-Mod-Suite/">
@@ -31,10 +33,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500..900&amp;family=JetBrains+Mono:wght@400..700&amp;family=Outfit:wght@300..800&amp;display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <script>
-    document.documentElement.classList.add('js');
-    try { var t = localStorage.getItem('kohs-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
-  </script>
+  <script src="assets/js/theme.js"></script>
   <script src="assets/vendor/marked.min.js" defer></script>
   <script src="assets/vendor/purify.min.js" defer></script>
   <script src="assets/js/app.js" defer></script>
@@ -98,6 +97,25 @@
     <symbol id="i-discord" viewBox="0 0 24 24"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></symbol>
     <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
     <symbol id="i-modrinth" viewBox="0 0 24 24"><path fill="currentColor" d="M12.252.004a11.78 11.768 0 0 0-8.92 3.73 11 10.999 0 0 0-2.17 3.11 11.37 11.359 0 0 0-1.16 5.169c0 1.42.17 2.5.6 3.77.24.759.77 1.899 1.17 2.529a12.3 12.298 0 0 0 8.85 5.639c.44.05 2.54.07 2.76.02.2-.04.22.1-.26-1.7l-.36-1.37-1.01-.06a8.5 8.489 0 0 1-5.18-1.8 5.34 5.34 0 0 1-1.3-1.26c0-.05.34-.28.74-.5a37.572 37.545 0 0 1 2.88-1.629c.03 0 .5.45 1.06.98l1 .97 2.07-.43 2.06-.43 1.47-1.47c.8-.8 1.48-1.5 1.48-1.52 0-.09-.42-1.63-.46-1.7-.04-.06-.2-.03-1.02.18-.53.13-1.2.3-1.45.4l-.48.15-.53.53-.53.53-.93.1-.93.07-.52-.5a2.7 2.7 0 0 1-.96-1.7l-.13-.6.43-.57c.68-.9.68-.9 1.46-1.1.4-.1.65-.2.83-.33.13-.099.65-.579 1.14-1.069l.9-.9-.7-.7-.7-.7-1.95.54c-1.07.3-1.96.53-1.97.53-.03 0-2.23 2.48-2.63 2.97l-.29.35.28 1.03c.16.56.3 1.16.31 1.34l.03.3-.34.23c-.37.23-2.22 1.3-2.84 1.63-.36.2-.37.2-.44.1-.08-.1-.23-.6-.32-1.03-.18-.86-.17-2.75.02-3.73a8.84 8.839 0 0 1 7.9-6.93c.43-.03.77-.08.78-.1.06-.17.5-2.999.47-3.039-.01-.02-.1-.02-.2-.03Zm3.68.67c-.2 0-.3.1-.37.38-.06.23-.46 2.42-.46 2.52 0 .04.1.11.22.16a8.51 8.499 0 0 1 2.99 2 8.38 8.379 0 0 1 2.16 3.449 6.9 6.9 0 0 1 .4 2.8c0 1.07 0 1.27-.1 1.73a9.37 9.369 0 0 1-1.76 3.769c-.32.4-.98 1.06-1.37 1.38-.38.32-1.54 1.1-1.7 1.14-.1.03-.1.06-.07.26.03.18.64 2.56.7 2.78l.06.06a12.07 12.058 0 0 0 7.27-9.4c.13-.77.13-2.58 0-3.4a11.96 11.948 0 0 0-5.73-8.578c-.7-.42-2.05-1.06-2.25-1.06Z"/></symbol>
+    <symbol id="i-blocks" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"/> <rect x="14" y="2" width="8" height="8" rx="1"/></g></symbol>
+    <symbol id="i-cable" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/> <path d="M17 21v-2"/> <path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/> <path d="M21 21v-2"/> <path d="M3 5V3"/> <path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/> <path d="M7 5V3"/></g></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <path d="m16 9-5.5 5.5L8 12"/></g></symbol>
+    <symbol id="i-circle-help" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/> <path d="M12 17h.01"/></g></symbol>
+    <symbol id="i-cloud-upload" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/> <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/> <path d="m8 17 4-4 4 4"/></g></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M10 9H8"/> <path d="M16 13H8"/> <path d="M16 17H8"/></g></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/></g></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/> <path d="m18 15 4-4"/> <path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></g></symbol>
+    <symbol id="i-loader-circle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></g></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/> <path d="M7 11V7a5 5 0 0 1 10 0v4"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/> <rect x="2" y="4" width="20" height="16" rx="2"/></g></symbol>
+    <symbol id="i-message-square" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></g></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/> <rect x="2" y="16" width="6" height="6" rx="1"/> <rect x="9" y="2" width="6" height="6" rx="1"/> <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/> <path d="M12 12V8"/></g></symbol>
+    <symbol id="i-paperclip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"/></g></symbol>
+    <symbol id="i-scan-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/> <path d="M17 3h2a2 2 0 0 1 2 2v2"/> <path d="M21 17v2a2 2 0 0 1-2 2h-2"/> <path d="M7 21H5a2 2 0 0 1-2-2v-2"/> <circle cx="12" cy="12" r="3"/> <path d="m16 16-1.9-1.9"/></g></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/> <path d="m21.854 2.147-10.94 10.939"/></g></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/> <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/> <line x1="6" x2="6.01" y1="6" y2="6"/> <line x1="6" x2="6.01" y1="18" y2="18"/></g></symbol>
+    <symbol id="i-trash-2" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11v6"/> <path d="M14 11v6"/> <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/> <path d="M3 6h18"/> <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></g></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/> <circle cx="12" cy="7" r="4"/></g></symbol>
   </svg>
 
   <a class="skip-link" href="#mods">Skip to the mods</a>
@@ -130,7 +148,8 @@
           <li><a href="#mods" data-nav="mods"><span class="nav__num">01</span>Mods</a></li>
           <li><a href="#showcase" data-nav="showcase"><span class="nav__num">02</span>Showcase</a></li>
           <li><a href="#about" data-nav="about"><span class="nav__num">03</span>About</a></li>
-          <li><a href="#discord" data-nav="discord"><span class="nav__num">04</span>Community</a></li>
+          <li><a href="#services" data-nav="services"><span class="nav__num">04</span>Services</a></li>
+          <li><a href="#discord" data-nav="discord"><span class="nav__num">05</span>Community</a></li>
         </ul>
         <div class="nav__menu-foot">
           <a class="btn btn--primary" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
@@ -177,8 +196,8 @@
             <a class="btn btn--primary btn--lg magnetic" href="#mods">
               Explore the mods<svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
             </a>
-            <a class="btn btn--ghost btn--lg magnetic" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
-              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>Join the Discord
+            <a class="btn btn--ghost btn--lg magnetic" href="#services">
+              <svg class="icon" aria-hidden="true"><use href="#i-hammer"/></svg>Request a project
             </a>
           </div>
           <dl class="stats reveal" style="--d: 300ms">
@@ -258,6 +277,45 @@
           <button class="btn btn--ghost btn--sm" type="button" id="reset-filters"><svg class="icon" aria-hidden="true"><use href="#i-rotate-ccw"/></svg>Reset filters</button>
         </div>
         <noscript><p class="empty">This page needs JavaScript to list the projects. You can find them all on <a href="https://modrinth.com/user/zymery_dria">Modrinth</a>.</p></noscript>
+      </div>
+    </section>
+
+    <!-- COMING SOON -->
+    <section class="section section--tight" id="soon" aria-labelledby="soon-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span>✦</span> // in the forge</p>
+          <h2 class="section__title" id="soon-title">Coming soon</h2>
+          <p class="section__sub">What Zymery Dria is building next. News lands on Discord first.</p>
+        </header>
+        <div class="soon">
+          <article class="soon-card reveal">
+            <div class="soon-card__art" aria-hidden="true">
+              <svg class="soon-card__sigil" viewBox="0 0 400 400"><use href="#sigil"/></svg>
+              <span class="soon-card__q glitch" data-text="?">?</span>
+            </div>
+            <div class="soon-card__body">
+              <p class="soon-card__status"><span class="soon-card__dot"></span>In development</p>
+              <h3 class="soon-card__title">KoHs Anchors</h3>
+              <p class="soon-card__text">Details are still under wraps. Stay tuned — it is being forged right now.</p>
+              <div class="soon-card__redacted" aria-hidden="true"><span></span><span></span><span></span></div>
+              <dl class="soon-card__meta">
+                <div><dt>Release</dt><dd>???</dd></div>
+                <div><dt>Platform</dt><dd>???</dd></div>
+                <div><dt>Versions</dt><dd>???</dd></div>
+              </dl>
+              <div class="soon-card__forge" aria-hidden="true"><span></span></div>
+            </div>
+          </article>
+          <article class="soon-card soon-card--more reveal" style="--d: 100ms">
+            <svg class="icon" aria-hidden="true"><use href="#i-hammer"/></svg>
+            <h3>More in the forge</h3>
+            <p>New projects are always on the anvil. Follow the Discord to hear about them first.</p>
+            <a class="btn btn--ghost btn--sm" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>Get notified
+            </a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -403,7 +461,19 @@
           </header>
           <p class="reveal" style="--d: 80ms">KoHs Mod Suite is a one-person studio. Every mod and plugin on this page — the code, the configuration screens, the artwork and every single update — is designed, built and maintained by <strong>Zymery Dria</strong>.</p>
           <p class="reveal" style="--d: 120ms">The goal is simple: tools that make Minecraft PvP feel sharper and look better, built with fair play in mind. Bugs, ideas and feedback are always welcome on Discord.</p>
-          <div class="about__links reveal" style="--d: 160ms">
+          <p class="reveal" style="--d: 140ms"><strong>Zymekoh specializes in advanced-level Minecraft servers</strong> — from custom plugins to full networks — and in the bridges that let client mods and server plugins work together.</p>
+          <div class="skills reveal" style="--d: 160ms">
+            <p class="skills__label">Specialties</p>
+            <ul class="skills__list">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg>Advanced server development</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-puzzle"/></svg>Plugin development · Paper &amp; Spigot</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-cable"/></svg>Mod ↔ plugin bridges</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-package"/></svg>Fabric mod development</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-network"/></svg>BungeeCord &amp; Velocity networks</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-scan-search"/></svg>Server audits</li>
+            </ul>
+          </div>
+          <div class="about__links reveal" style="--d: 180ms">
             <a class="btn btn--primary magnetic" href="https://modrinth.com/user/zymery_dria" target="_blank" rel="noopener">
               <svg class="icon" aria-hidden="true"><use href="#i-modrinth"/></svg>Modrinth profile
             </a>
@@ -440,17 +510,154 @@
       </div>
     </section>
 
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span>04</span> // commissions</p>
+          <h2 class="section__title" id="services-title">Custom work</h2>
+          <p class="section__sub">Need a mod, a plugin or a whole server? Zymekoh builds and audits Minecraft projects of every size — from a single plugin to full SMP, Paper, BungeeCord and Velocity networks.</p>
+          <p class="live-pill" data-state="live"><span class="live-pill__dot"></span><span class="live-pill__text">Taking requests</span></p>
+        </header>
+
+        <ul class="services__grid">
+          <li class="service reveal" style="--d: 0ms">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-package"/></svg></span>
+            <h3 class="service__title">Custom mods</h3>
+            <p class="service__text">Fabric mods built around your idea: PvP tweaks, visual effects, HUDs and polished config menus.</p>
+            <ul class="service__tags"><li>Fabric</li><li>Client-side</li></ul>
+            <button class="service__cta" type="button" data-service="Custom mod">Request this<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </li>
+          <li class="service reveal" style="--d: 60ms">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-puzzle"/></svg></span>
+            <h3 class="service__title">Custom plugins</h3>
+            <p class="service__text">Paper and Spigot plugins with the mechanics, commands and systems your server needs.</p>
+            <ul class="service__tags"><li>Paper</li><li>Spigot</li></ul>
+            <button class="service__cta" type="button" data-service="Custom plugin">Request this<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </li>
+          <li class="service reveal" style="--d: 120ms">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-cable"/></svg></span>
+            <h3 class="service__title">Mod ↔ plugin bridges</h3>
+            <p class="service__text">Client mods and server plugins that talk to each other, for features neither side can do alone.</p>
+            <ul class="service__tags"><li>Fabric</li><li>Paper</li></ul>
+            <button class="service__cta" type="button" data-service="Mod ↔ plugin bridge">Request this<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </li>
+          <li class="service reveal" style="--d: 180ms">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg></span>
+            <h3 class="service__title">Server creation</h3>
+            <p class="service__text">Complete servers built from scratch — SMP, minigames or full networks on BungeeCord and Velocity, of any kind.</p>
+            <ul class="service__tags"><li>SMP</li><li>BungeeCord</li><li>Velocity</li></ul>
+            <button class="service__cta" type="button" data-service="Server creation">Request this<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </li>
+          <li class="service reveal" style="--d: 240ms">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-scan-search"/></svg></span>
+            <h3 class="service__title">Server audits</h3>
+            <p class="service__text">A deep review of an existing server — plugins, configuration and performance — with a clear list of fixes.</p>
+            <ul class="service__tags"><li>Performance</li><li>Config</li></ul>
+            <button class="service__cta" type="button" data-service="Server audit">Request this<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </li>
+          <li class="service reveal" style="--d: 300ms">
+            <span class="service__icon"><svg class="icon" aria-hidden="true"><use href="#i-circle-help"/></svg></span>
+            <h3 class="service__title">Something else?</h3>
+            <p class="service__text">Have an idea that does not fit a box? Describe it and find out what is possible.</p>
+            <ul class="service__tags"><li>Any size</li></ul>
+            <button class="service__cta" type="button" data-service="Something else">Request this<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+          </li>
+        </ul>
+
+        <div class="platforms reveal">
+          <span class="platforms__label">Works with</span>
+          <ul class="platforms__list">
+            <li>SMP</li><li>Paper</li><li>Spigot</li><li>BungeeCord</li><li>Velocity</li><li>Fabric</li>
+          </ul>
+        </div>
+
+        <div class="order reveal" id="request">
+          <div class="order__inner">
+            <div class="order__intro">
+              <p class="eyebrow"><span>✦</span> // start a request</p>
+              <h3 class="order__title">Tell Zymekoh what you need</h3>
+              <ol class="steps">
+                <li><span class="steps__n">1</span><div><b>Describe the project</b><p>What it should do, the platform and the Minecraft versions.</p></div></li>
+                <li><span class="steps__n">2</span><div><b>Attach what helps</b><p>Screenshots, configs or logs — up to 5 files, 10 MB in total.</p></div></li>
+                <li><span class="steps__n">3</span><div><b>Get a reply by email</b><p>Every request is read and answered personally.</p></div></li>
+              </ol>
+              <p class="order__privacy"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg><span>Your request is delivered by email to Zymekoh through <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">FormSubmit</a>. Never include passwords or server credentials.</span></p>
+            </div>
+
+            <form class="order__form" id="order-form" method="POST" enctype="multipart/form-data" novalidate>
+              <input type="hidden" name="_subject" value="New request from KoHs Mod Suite">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="">
+              <input type="hidden" name="_url" value="">
+              <div class="order__honey" aria-hidden="true">
+                <label>Leave this field empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+              </div>
+
+              <div class="field">
+                <label for="f-name">Name</label>
+                <input id="f-name" name="name" type="text" required maxlength="80" autocomplete="name" placeholder="Your name or nickname">
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.com">
+              </div>
+              <div class="field field--full">
+                <label for="f-service">What do you need?</label>
+                <span class="select select--field">
+                  <select id="f-service" name="service">
+                    <option>Not sure yet</option>
+                    <option>Custom mod</option>
+                    <option>Custom plugin</option>
+                    <option>Mod ↔ plugin bridge</option>
+                    <option>Server creation</option>
+                    <option>Server audit</option>
+                    <option>Something else</option>
+                  </select>
+                </span>
+              </div>
+              <div class="field field--full">
+                <label for="f-message">Message</label>
+                <textarea id="f-message" name="message" required minlength="20" maxlength="4000" rows="6" placeholder="Describe your idea: platform (Fabric, Paper, Velocity…), Minecraft version, features and anything else that helps."></textarea>
+                <span class="field__hint" id="f-message-count" aria-live="polite">0 / 4000</span>
+              </div>
+              <div class="field field--full">
+                <span class="field__label" id="f-files-label">Attachments <small>(optional)</small></span>
+                <label class="drop" id="drop">
+                  <svg class="icon" aria-hidden="true"><use href="#i-cloud-upload"/></svg>
+                  <span class="drop__text"><b>Drop files here</b> or <u>browse</u></span>
+                  <small>PNG, JPG, GIF, WebP, PDF, TXT, LOG, YML, JSON, TOML, PROPERTIES · 5 files · 10 MB total</small>
+                  <input id="f-files" type="file" multiple accept=".png,.jpg,.jpeg,.gif,.webp,.pdf,.txt,.log,.md,.yml,.yaml,.json,.toml,.properties,.cfg,.conf,.csv" aria-labelledby="f-files-label">
+                </label>
+                <ul class="files" id="files"></ul>
+              </div>
+              <p class="order__error" id="order-error" role="alert" hidden></p>
+              <button class="btn btn--primary btn--lg order__submit" type="submit" id="order-submit">
+                <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg><span>Send request</span>
+              </button>
+            </form>
+
+            <div class="order__done" id="order-done" tabindex="-1" hidden>
+              <svg class="icon" aria-hidden="true"><use href="#i-circle-check"/></svg>
+              <h3>Request sent</h3>
+              <p>Thanks! Zymekoh will reply to the email you provided. Keep an eye on your inbox — and the spam folder, just in case.</p>
+              <button class="btn btn--ghost" type="button" id="order-again">Send another request</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- DISCORD -->
     <section class="section" id="discord" aria-labelledby="discord-title">
       <div class="container">
         <div class="discord reveal">
           <div class="discord__inner">
             <div class="discord__icon">
-              <img id="discord-icon" alt="" width="96" height="96" hidden>
-              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg>
+              <img id="discord-icon" src="assets/img/discord-server.webp" alt="ZymeKoHs Cave server icon" width="256" height="256" decoding="async">
             </div>
             <div class="discord__copy">
-              <p class="eyebrow"><span>04</span> // community</p>
+              <p class="eyebrow"><span>05</span> // community</p>
               <h2 class="section__title" id="discord-title">Join <span data-discord="name">ZymeKoHs Cave</span></h2>
               <p>Get help with any KoHs mod, report bugs, suggest features and be the first to hear about new releases.</p>
               <p class="discord__live" id="discord-live" hidden>
@@ -479,8 +686,10 @@
       <nav class="footer__col" aria-label="Explore">
         <h3>Explore</h3>
         <a href="#mods">Mods &amp; plugins</a>
+        <a href="#soon">Coming soon</a>
         <a href="#showcase">Showcase</a>
         <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#discord">Community</a>
       </nav>
       <nav class="footer__col" aria-label="Elsewhere">
@@ -524,9 +733,11 @@
         </div>
         <div class="tabs" role="tablist" aria-label="Project details">
           <button class="tab" role="tab" id="tab-desc" aria-controls="pd-desc" aria-selected="true" type="button">Description</button>
+          <button class="tab" role="tab" id="tab-readme" aria-controls="pd-readme" aria-selected="false" tabindex="-1" type="button" hidden>README <span class="tab__count">GitHub</span></button>
           <button class="tab" role="tab" id="tab-gallery" aria-controls="pd-gallery" aria-selected="false" tabindex="-1" type="button">Gallery <span class="tab__count" id="pd-gallery-count"></span></button>
         </div>
         <div class="md" id="pd-desc" role="tabpanel" aria-labelledby="tab-desc"></div>
+        <div class="md" id="pd-readme" role="tabpanel" aria-labelledby="tab-readme" hidden></div>
         <div class="pd__gallery" id="pd-gallery" role="tabpanel" aria-labelledby="tab-gallery" hidden></div>
       </div>
     </div>
