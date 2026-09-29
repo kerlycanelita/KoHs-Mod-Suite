@@ -18,9 +18,9 @@
     showcaseStep: 10,
     // Self-hosted copy of the Discord server icon; the CDN is only used if the server changes it.
     discordIcon: 'a73690eeefc7e15b668e726d9fa848b9',
-    // Request form endpoint (FormSubmit). After confirming FormSubmit's activation email, replace the
-    // address with the random string it sends so the inbox never appears in the page.
-    formEndpoint: `https://formsubmit.co/${['zymekoh', 'gmail.com'].join('@')}`,
+    // Request form endpoint (FormSubmit). The address is kept encoded so it never appears in the page;
+    // after confirming FormSubmit's activation email, replace it with the random string FormSubmit sends.
+    formEndpoint: `https://formsubmit.co/${atob('enltZWtvaEBnbWFpbC5jb20=')}`,
     upload: {
       maxFiles: 5,
       maxBytes: 10 * 1000 * 1000,
@@ -39,8 +39,11 @@
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
   const icon = (name) => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
-  // Only absolute http(s) URLs from API data ever reach href/src attributes.
-  const safeUrl = (u) => (typeof u === 'string' && /^https?:\/\/[^\s"'<>]+$/i.test(u.trim()) ? u.trim() : '');
+  // Only absolute https URLs from API data ever reach href/src attributes; plain http is upgraded.
+  const safeUrl = (u) => {
+    const url = typeof u === 'string' ? u.trim().replace(/^http:\/\//i, 'https://') : '';
+    return /^https:\/\/[^\s"'<>]+$/i.test(url) ? url : '';
+  };
   const label = (key) => NAMES[key] || String(key).replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const motionOK = () => !matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -904,6 +907,7 @@
     DOMPurify.addHook('afterSanitizeAttributes', (node) => {
       if (node.tagName === 'IFRAME') {
         node.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation allow-popups');
+        node.setAttribute('allow', 'autoplay; encrypted-media; fullscreen; picture-in-picture');
         node.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
         node.setAttribute('loading', 'lazy');
       }
@@ -919,7 +923,7 @@
     const html = marked.parse(source, { gfm: true, breaks: false });
     return DOMPurify.sanitize(html, {
       ADD_TAGS: ['iframe'],
-      ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'target'],
+      ADD_ATTR: ['allowfullscreen', 'frameborder', 'target'],
       FORBID_TAGS: ['style', 'form', 'input', 'button', 'textarea', 'select', 'object', 'embed', 'base', 'meta', 'link'],
       FORBID_ATTR: ['style'],
       SANITIZE_NAMED_PROPS: true,
@@ -939,7 +943,6 @@
         a.setAttribute('href', '#');
         return;
       }
-      if (/^mailto:[^\s"'<>]+$/i.test(raw)) return;
       const href = safeUrl(resolveUrl(raw, bases.blob));
       if (!href) { a.removeAttribute('href'); return; }
       a.setAttribute('href', href);
@@ -947,12 +950,13 @@
       a.rel = 'noopener noreferrer';
     });
     root.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((h) => { h.dataset.anchorId = slugify(h.textContent); });
-    root.querySelectorAll('source[srcset]').forEach((s) => {
+    root.querySelectorAll('source[srcset], img[srcset]').forEach((s) => {
       const set = s.getAttribute('srcset').split(',').map((part) => {
         const [url, ...rest] = part.trim().split(/\s+/);
         return [safeUrl(resolveUrl(url, bases.raw)), ...rest].join(' ');
       });
       if (set.every((entry) => entry && !entry.startsWith(' '))) s.setAttribute('srcset', set.join(', '));
+      else if (s.tagName === 'IMG') s.removeAttribute('srcset');
       else s.remove();
     });
     root.querySelectorAll('table').forEach((table) => {
@@ -1368,6 +1372,7 @@
   /* ---------- Services & request form ---------- */
 
   const fmtBytes = (n) => (n >= 1e6 ? `${(n / 1e6).toFixed(1)} MB` : `${Math.max(1, Math.round(n / 1e3))} KB`);
+  const extOf = (name) => (name.includes('.') ? name.split('.').pop() : '').toLowerCase();
 
   function initOrder() {
     const form = $('#order-form');
@@ -1429,9 +1434,8 @@
     const addFiles = (incoming) => {
       const problems = [];
       for (const file of incoming) {
-        const ext = (file.name.includes('.') ? file.name.split('.').pop() : '').toLowerCase();
         const total = files.reduce((n, f) => n + f.size, 0);
-        if (!limits.types.includes(ext)) problems.push(`${file.name}: this file type is not allowed`);
+        if (!limits.types.includes(extOf(file.name))) problems.push(`${file.name}: this file type is not allowed`);
         else if (files.some((f) => f.name === file.name && f.size === file.size)) continue;
         else if (files.length >= limits.maxFiles) problems.push(`You can attach up to ${limits.maxFiles} files`);
         else if (total + file.size > limits.maxBytes) problems.push(`${file.name}: attachments are limited to 10 MB in total`);
@@ -1474,6 +1478,10 @@
       });
       const invalid = fields.find((f) => !f.checkValidity());
       if (invalid) { showError(problemWith(invalid)); invalid.focus(); return; }
+      // Browsers without DataTransfer submit the picker itself, so its file is checked here instead.
+      const single = !canAttach && picker.files[0];
+      if (single && !limits.types.includes(extOf(single.name))) { showError(`${single.name}: this file type is not allowed`); return; }
+      if (single && single.size > limits.maxBytes) { showError(`${single.name}: attachments are limited to 10 MB in total`); return; }
       if (form.elements.namedItem('_honey').value) return;
 
       let last = 0;
