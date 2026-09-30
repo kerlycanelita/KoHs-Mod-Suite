@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' https:; connect-src 'self' https://api.modrinth.com https://raw.githubusercontent.com https://discord.com; frame-src https://www.youtube-nocookie.com https://player.vimeo.com; form-action 'self' https://formsubmit.co; base-uri 'self'; object-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KoHs Laboratories — tests, figures and charts of the new KoHs mods</title>
+  <meta name="description" content="KoHs Laboratories: complete tests, with documentation, figures and charts, of the new generation of KoHs Minecraft mods — measured against Grim Anticheat with Ravenclaw's Ping Equalizer.">
+  <meta name="theme-color" content="#a855f7">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://kerlycanelita.github.io/KoHs-Mod-Suite/labs.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KoHs Mod Suite">
+  <meta property="og:title" content="KoHs Laboratories">
+  <meta property="og:description" content="Complete tests, with documentation, figures and charts, of the new generation of KoHs mods.">
+  <meta property="og:url" content="https://kerlycanelita.github.io/KoHs-Mod-Suite/labs.html">
+  <meta property="og:image" content="https://kerlycanelita.github.io/KoHs-Mod-Suite/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="KoHs Laboratories — KoHs Mod Suite">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.modrinth.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500..900&amp;family=JetBrains+Mono:wght@400..700&amp;family=Outfit:wght@300..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/labs.css">
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/labs.js" defer></script>
+</head>
+<body class="labs-page">
+  <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#d8b4fe"/>
+        <stop offset=".5" stop-color="#a855f7"/>
+        <stop offset="1" stop-color="#ff4fb8"/>
+      </linearGradient>
+      <linearGradient id="flask-liquid" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ff4fb8"/>
+        <stop offset=".55" stop-color="#a855f7"/>
+        <stop offset="1" stop-color="#4c1d95"/>
+      </linearGradient>
+      <clipPath id="flask-clip"><path d="M46 12h28v38l34 74a10 10 0 0 1-9 14H21a10 10 0 0 1-9-14l34-74z"/></clipPath>
+    </defs>
+    <symbol id="logo-mark" viewBox="0 0 64 64">
+      <path d="M32 1.5 62.5 32 32 62.5 1.5 32Z" fill="url(#logo-grad)"/>
+      <path d="M32 8.5 55.5 32 32 55.5 8.5 32Z" fill="#12051f"/>
+      <path d="M32 13 51 32 32 51 13 32Z" fill="none" stroke="url(#logo-grad)" stroke-width="1" stroke-opacity=".45"/>
+      <path d="M41.5 13.5 46 16 24.5 50.5 20 48Z" fill="url(#logo-grad)"/>
+      <path d="M42.6 15.2 44 16 23.2 48.8 21.8 48Z" fill="#fff" fill-opacity=".85"/>
+    </symbol>
+    <symbol id="sigil" viewBox="0 0 400 400">
+      <g fill="none" stroke="currentColor">
+        <circle cx="200" cy="200" r="172" stroke-width="1.6"/>
+        <circle cx="200" cy="200" r="146" stroke-width="1" stroke-dasharray="2 7"/>
+        <path d="M352 200L364 200M355.62 210.88L361.61 211.3M354.48 221.71L360.42 222.55M352.59 232.43L358.46 233.68M349.96 243L355.72 244.65M342.83 251.99L354.11 256.09M342.51 263.45L347.99 265.89M337.74 273.24L343.04 276.05M332.3 282.67L337.38 285.85M326.21 291.69L331.06 295.22M316.44 297.7L325.63 305.42M312.22 308.37L316.53 312.53M304.38 315.93L308.4 320.39M296.04 322.93L299.74 327.66M287.23 329.33L290.59 334.3M276 331.64L282 342.03M268.39 340.21L271.02 345.6M258.44 344.64L260.69 350.2M248.21 348.36L250.06 354.07M237.74 351.37L239.19 357.19M226.39 349.69L228.48 361.51M216.31 355.15L216.93 361.11M205.44 355.9L205.65 361.9M194.56 355.9L194.35 361.9M183.69 355.15L183.07 361.11M173.61 349.69L171.52 361.51M162.26 351.37L160.81 357.19M151.79 348.36L149.94 354.07M141.56 344.64L139.31 350.2M131.61 340.21L128.98 345.6M124 331.64L118 342.03M112.77 329.33L109.41 334.3M103.96 322.93L100.26 327.66M95.62 315.93L91.6 320.39M87.78 308.37L83.47 312.53M83.56 297.7L74.37 305.42M73.79 291.69L68.94 295.22M67.7 282.67L62.62 285.85M62.26 273.24L56.96 276.05M57.49 263.45L52.01 265.89M57.17 251.99L45.89 256.09M50.04 243L44.28 244.65M47.41 232.43L41.54 233.68M45.52 221.71L39.58 222.55M44.38 210.88L38.39 211.3M48 200L36 200M44.38 189.12L38.39 188.7M45.52 178.29L39.58 177.45M47.41 167.57L41.54 166.32M50.04 157L44.28 155.35M57.17 148.01L45.89 143.91M57.49 136.55L52.01 134.11M62.26 126.76L56.96 123.95M67.7 117.33L62.62 114.15M73.79 108.31L68.94 104.78M83.56 102.3L74.37 94.58M87.78 91.63L83.47 87.47M95.62 84.07L91.6 79.61M103.96 77.07L100.26 72.34M112.77 70.67L109.41 65.7M124 68.36L118 57.97M131.61 59.79L128.98 54.4M141.56 55.36L139.31 49.8M151.79 51.64L149.94 45.93M162.26 48.63L160.81 42.81M173.61 50.31L171.52 38.49M183.69 44.85L183.07 38.89M194.56 44.1L194.35 38.1M205.44 44.1L205.65 38.1M216.31 44.85L216.93 38.89M226.39 50.31L228.48 38.49M237.74 48.63L239.19 42.81M248.21 51.64L250.06 45.93M258.44 55.36L260.69 49.8M268.39 59.79L271.02 54.4M276 68.36L282 57.97M287.23 70.67L290.59 65.7M296.04 77.07L299.74 72.34M304.38 84.07L308.4 79.61M312.22 91.63L316.53 87.47M316.44 102.3L325.63 94.58M326.21 108.31L331.06 104.78M332.3 117.33L337.38 114.15M337.74 126.76L343.04 123.95M342.51 136.55L347.99 134.11M342.83 148.01L354.11 143.91M349.96 157L355.72 155.35M352.59 167.57L358.46 166.32M354.48 178.29L360.42 177.45M355.62 189.12L361.61 188.7" stroke-width="1.4"/>
+        <path d="M309.02 245.16L331.19 254.34M245.16 309.02L254.34 331.19M154.84 309.02L145.66 331.19M90.98 245.16L68.81 254.34M90.98 154.84L68.81 145.66M154.84 90.98L145.66 68.81M245.16 90.98L254.34 68.81M309.02 154.84L331.19 145.66" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path d="M193.12 28.14L200 8L206.88 28.14ZM220.09 29.18L228.31 21.23L233.68 31.33ZM246.57 34.42L259.33 17.4L259.65 38.67ZM271.9 43.75L282.17 38.73L284.15 49.99ZM295.45 56.92L312.85 44.67L306.58 65ZM316.66 73.61L327.99 72.01L326.39 83.34ZM335 93.42L355.33 87.15L343.08 104.55ZM350.01 115.85L361.27 117.83L356.25 128.1ZM361.33 140.35L382.6 140.67L365.58 153.43ZM368.67 166.32L378.77 171.69L370.82 179.91ZM371.86 193.12L392 200L371.86 206.88ZM370.82 220.09L378.77 228.31L368.67 233.68ZM365.58 246.57L382.6 259.33L361.33 259.65ZM356.25 271.9L361.27 282.17L350.01 284.15ZM343.08 295.45L355.33 312.85L335 306.58ZM326.39 316.66L327.99 327.99L316.66 326.39ZM306.58 335L312.85 355.33L295.45 343.08ZM284.15 350.01L282.17 361.27L271.9 356.25ZM259.65 361.33L259.33 382.6L246.57 365.58ZM233.68 368.67L228.31 378.77L220.09 370.82ZM206.88 371.86L200 392L193.12 371.86ZM179.91 370.82L171.69 378.77L166.32 368.67ZM153.43 365.58L140.67 382.6L140.35 361.33ZM128.1 356.25L117.83 361.27L115.85 350.01ZM104.55 343.08L87.15 355.33L93.42 335ZM83.34 326.39L72.01 327.99L73.61 316.66ZM65 306.58L44.67 312.85L56.92 295.45ZM49.99 284.15L38.73 282.17L43.75 271.9ZM38.67 259.65L17.4 259.33L34.42 246.57ZM31.33 233.68L21.23 228.31L29.18 220.09ZM28.14 206.88L8 200L28.14 193.12ZM29.18 179.91L21.23 171.69L31.33 166.32ZM34.42 153.43L17.4 140.67L38.67 140.35ZM43.75 128.1L38.73 117.83L49.99 115.85ZM56.92 104.55L44.67 87.15L65 93.42ZM73.61 83.34L72.01 72.01L83.34 73.61ZM93.42 65L87.15 44.67L104.55 56.92ZM115.85 49.99L117.83 38.73L128.1 43.75ZM140.35 38.67L140.67 17.4L153.43 34.42ZM166.32 31.33L171.69 21.23L179.91 29.18Z" fill="currentColor" fill-opacity=".55"/>
+    </symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/> <path d="m19 12-7 7-7-7"/></g></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></g></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/> <path d="M12 19V5"/></g></symbol>
+    <symbol id="i-book-open" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16"/> <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/></g></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-9"/> <path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/> <path d="M14.12 3.88 16 2"/> <path d="M21 21a4 4 0 0 0-3.81-4"/> <path d="M21 5a4 4 0 0 1-3.55 3.97"/> <path d="M22 13h-4"/> <path d="M3 21a4 4 0 0 1 3.81-4"/> <path d="M3 5a4 4 0 0 0 3.55 3.97"/> <path d="M6 13H2"/> <path d="m8 2 1.88 1.88"/> <path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></g></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v3"/> <path d="M16 2v3"/> <rect x="3" y="3" width="18" height="18" rx="2"/> <path d="M3 9h18"/></g></symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></g></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <path d="M12 6v6l4 2"/></g></symbol>
+    <symbol id="i-code-xml" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/> <path d="m6 8-4 4 4 4"/> <path d="m14.5 4-5 16"/></g></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/> <path d="m7 10 5 5 5-5"/></g></symbol>
+    <symbol id="i-external-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/> <path d="M10 14 21 3"/> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></g></symbol>
+    <symbol id="i-filter" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></g></symbol>
+    <symbol id="i-images" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16"/> <path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2"/> <circle cx="13" cy="7" r="1" fill="currentColor"/> <rect x="8" y="2" width="14" height="14" rx="2"/></g></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></g></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/> <path d="M4 12h16"/> <path d="M4 19h16"/></g></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/> <line x1="8" x2="16" y1="21" y2="21"/> <line x1="12" x2="12" y1="17" y2="21"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></g></symbol>
+    <symbol id="i-package" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/> <path d="M12 22V12"/> <polyline points="3.29 7 12 12 20.71 7"/> <path d="m7.5 4.27 9 5.15"/></g></symbol>
+    <symbol id="i-puzzle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></g></symbol>
+    <symbol id="i-rotate-ccw" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/> <path d="M3 3v5h5"/></g></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/> <path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/> <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/> <path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/> <path d="M7 21h10"/></g></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/> <circle cx="11" cy="11" r="8"/></g></symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/> <path d="m9 12 2 2 4-4"/></g></symbol>
+    <symbol id="i-sliders-horizontal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H3"/> <path d="M12 19H3"/> <path d="M14 3v4"/> <path d="M16 17v4"/> <path d="M21 12h-9"/> <path d="M21 19h-5"/> <path d="M21 5h-7"/> <path d="M8 10v4"/> <path d="M8 12H3"/></g></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/> <path d="M20 2v4"/> <path d="M22 4h-4"/> <circle cx="4" cy="20" r="2"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/> <path d="M12 2v2"/> <path d="M12 20v2"/> <path d="m4.93 4.93 1.41 1.41"/> <path d="m17.66 17.66 1.41 1.41"/> <path d="M2 12h2"/> <path d="M20 12h2"/> <path d="m6.34 17.66-1.41 1.41"/> <path d="m19.07 4.93-1.41 1.41"/></g></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/> <path d="M16 3.128a4 4 0 0 1 0 7.744"/> <path d="M22 21v-2a4 4 0 0 0-3-3.87"/> <circle cx="9" cy="7" r="4"/></g></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/> <path d="m6 6 12 12"/></g></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></g></symbol>
+    <symbol id="i-discord" viewBox="0 0 24 24"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-modrinth" viewBox="0 0 24 24"><path fill="currentColor" d="M12.252.004a11.78 11.768 0 0 0-8.92 3.73 11 10.999 0 0 0-2.17 3.11 11.37 11.359 0 0 0-1.16 5.169c0 1.42.17 2.5.6 3.77.24.759.77 1.899 1.17 2.529a12.3 12.298 0 0 0 8.85 5.639c.44.05 2.54.07 2.76.02.2-.04.22.1-.26-1.7l-.36-1.37-1.01-.06a8.5 8.489 0 0 1-5.18-1.8 5.34 5.34 0 0 1-1.3-1.26c0-.05.34-.28.74-.5a37.572 37.545 0 0 1 2.88-1.629c.03 0 .5.45 1.06.98l1 .97 2.07-.43 2.06-.43 1.47-1.47c.8-.8 1.48-1.5 1.48-1.52 0-.09-.42-1.63-.46-1.7-.04-.06-.2-.03-1.02.18-.53.13-1.2.3-1.45.4l-.48.15-.53.53-.53.53-.93.1-.93.07-.52-.5a2.7 2.7 0 0 1-.96-1.7l-.13-.6.43-.57c.68-.9.68-.9 1.46-1.1.4-.1.65-.2.83-.33.13-.099.65-.579 1.14-1.069l.9-.9-.7-.7-.7-.7-1.95.54c-1.07.3-1.96.53-1.97.53-.03 0-2.23 2.48-2.63 2.97l-.29.35.28 1.03c.16.56.3 1.16.31 1.34l.03.3-.34.23c-.37.23-2.22 1.3-2.84 1.63-.36.2-.37.2-.44.1-.08-.1-.23-.6-.32-1.03-.18-.86-.17-2.75.02-3.73a8.84 8.839 0 0 1 7.9-6.93c.43-.03.77-.08.78-.1.06-.17.5-2.999.47-3.039-.01-.02-.1-.02-.2-.03Zm3.68.67c-.2 0-.3.1-.37.38-.06.23-.46 2.42-.46 2.52 0 .04.1.11.22.16a8.51 8.499 0 0 1 2.99 2 8.38 8.379 0 0 1 2.16 3.449 6.9 6.9 0 0 1 .4 2.8c0 1.07 0 1.27-.1 1.73a9.37 9.369 0 0 1-1.76 3.769c-.32.4-.98 1.06-1.37 1.38-.38.32-1.54 1.1-1.7 1.14-.1.03-.1.06-.07.26.03.18.64 2.56.7 2.78l.06.06a12.07 12.058 0 0 0 7.27-9.4c.13-.77.13-2.58 0-3.4a11.96 11.948 0 0 0-5.73-8.578c-.7-.42-2.05-1.06-2.25-1.06Z"/></symbol>
+    <symbol id="i-blocks" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"/> <rect x="14" y="2" width="8" height="8" rx="1"/></g></symbol>
+    <symbol id="i-cable" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/> <path d="M17 21v-2"/> <path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/> <path d="M21 21v-2"/> <path d="M3 5V3"/> <path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/> <path d="M7 5V3"/></g></symbol>
+    <symbol id="i-circle-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <path d="m16 9-5.5 5.5L8 12"/></g></symbol>
+    <symbol id="i-circle-help" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/> <path d="M12 17h.01"/></g></symbol>
+    <symbol id="i-cloud-upload" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/> <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/> <path d="m8 17 4-4 4 4"/></g></symbol>
+    <symbol id="i-file-text" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M10 9H8"/> <path d="M16 13H8"/> <path d="M16 17H8"/></g></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/></g></symbol>
+    <symbol id="i-hammer" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"/> <path d="m18 15 4-4"/> <path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></g></symbol>
+    <symbol id="i-loader-circle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></g></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/> <path d="M7 11V7a5 5 0 0 1 10 0v4"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/> <rect x="2" y="4" width="20" height="16" rx="2"/></g></symbol>
+    <symbol id="i-message-square" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/></g></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/> <rect x="2" y="16" width="6" height="6" rx="1"/> <rect x="9" y="2" width="6" height="6" rx="1"/> <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/> <path d="M12 12V8"/></g></symbol>
+    <symbol id="i-paperclip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 6-8.414 8.586a2 2 0 0 0 2.829 2.829l8.414-8.586a4 4 0 1 0-5.657-5.657l-8.379 8.551a6 6 0 1 0 8.485 8.485l8.379-8.551"/></g></symbol>
+    <symbol id="i-scan-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/> <path d="M17 3h2a2 2 0 0 1 2 2v2"/> <path d="M21 17v2a2 2 0 0 1-2 2h-2"/> <path d="M7 21H5a2 2 0 0 1-2-2v-2"/> <circle cx="12" cy="12" r="3"/> <path d="m16 16-1.9-1.9"/></g></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/> <path d="m21.854 2.147-10.94 10.939"/></g></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/> <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/> <line x1="6" x2="6.01" y1="6" y2="6"/> <line x1="6" x2="6.01" y1="18" y2="18"/></g></symbol>
+    <symbol id="i-trash-2" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 11v6"/> <path d="M14 11v6"/> <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/> <path d="M3 6h18"/> <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></g></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/> <circle cx="12" cy="7" r="4"/></g></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/> <path d="M6.453 15h11.094"/> <path d="M8.5 2h7"/></g></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/> <path d="M2 12h20"/></g></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></g></symbol>
+    <symbol id="i-scale-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/> <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/> <path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/> <path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/> <path d="M7 21h10"/></g></symbol>
+  </svg>
+
+  <a class="skip-link" href="#labs" data-i18n="skip">Skip to the labs</a>
+
+  <!-- ENTRY NOTICE -->
+  <div class="lab-intro" id="lab-intro" role="dialog" aria-modal="true" aria-labelledby="lab-intro-title" aria-describedby="lab-intro-msg" hidden>
+    <div class="lab-intro__door lab-intro__door--top" aria-hidden="true"></div>
+    <div class="lab-intro__door lab-intro__door--bottom" aria-hidden="true"></div>
+    <div class="lab-intro__scan" aria-hidden="true"></div>
+    <div class="lab-intro__stage">
+      <div class="lab-intro__emblem" aria-hidden="true">
+        <svg class="lab-intro__sigil" viewBox="0 0 400 400"><use href="#sigil"/></svg>
+        <svg class="lab-intro__flask flask" viewBox="0 0 120 150"><g clip-path="url(#flask-clip)">
+              <path class="flask__liquid" fill="url(#flask-liquid)" d="M-60 86 Q-45 80 -30 86 T0 86 T30 86 T60 86 T90 86 T120 86 T150 86 T180 86 V170 H-60Z"/>
+              <circle class="flask__bubble flask__bubble--1" cx="44" cy="132" r="4"/>
+              <circle class="flask__bubble flask__bubble--2" cx="62" cy="138" r="3"/>
+              <circle class="flask__bubble flask__bubble--3" cx="78" cy="130" r="5"/>
+              <circle class="flask__bubble flask__bubble--4" cx="55" cy="142" r="2.5"/>
+              <circle class="flask__bubble flask__bubble--5" cx="70" cy="140" r="3.5"/>
+            </g>
+            <path class="flask__glass" d="M46 12h28v38l34 74a10 10 0 0 1-9 14H21a10 10 0 0 1-9-14l34-74z"/>
+            <path class="flask__lip" d="M38 12h44"/>
+            <path class="flask__shine" d="M53 22v24M37 86l-11 24"/></svg>
+        <span class="lab-intro__ring"></span>
+      </div>
+      <p class="lab-intro__eyebrow"><span class="lab-intro__lock"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span><span data-i18n="intro.eyebrow">// restricted area · access granted</span></p>
+      <h2 class="lab-intro__title" id="lab-intro-title">
+        <span class="lab-intro__kohs glitch" data-text="KoHs">KoHs</span>
+        <span class="lab-intro__word">Laboratories</span>
+      </h2>
+      <pre class="lab-intro__term" id="lab-intro-term" aria-hidden="true"></pre>
+      <p class="lab-intro__msg" id="lab-intro-msg" data-i18n="intro.msg">Here you will find complete tests — with documentation, figures and charts — of the new generation of KoHs mods.</p>
+      <div class="lab-intro__actions">
+        <button class="btn btn--primary btn--lg lab-intro__enter" id="lab-intro-enter" type="button">
+          <svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg><span data-i18n="intro.enter">Enter the lab</span>
+        </button>
+        <button class="lab-intro__lang" type="button" data-lang-toggle aria-label="Cambiar a español"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><span data-lang-label>ES</span></button>
+      </div>
+      <button class="lab-intro__skip" id="lab-intro-skip" type="button" data-i18n="intro.skip">Skip intro</button>
+    </div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <div class="backdrop" aria-hidden="true">
+    <span class="backdrop__glow backdrop__glow--a"></span>
+    <span class="backdrop__glow backdrop__glow--b"></span>
+    <span class="backdrop__glow backdrop__glow--c"></span>
+    <span class="backdrop__grid"></span>
+    <span class="backdrop__noise"></span>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="brand" href="index.html" aria-label="KoHs Mod Suite — home">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <span class="brand__text"><span class="brand__kohs">KoHs</span><span class="brand__suite">Mod Suite</span></span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="index.html#mods"><span class="nav__num">01</span><span data-i18n="nav.mods">Mods</span></a></li>
+          <li><a href="index.html#showcase"><span class="nav__num">02</span><span data-i18n="nav.showcase">Showcase</span></a></li>
+          <li><a href="index.html#about"><span class="nav__num">03</span><span data-i18n="nav.about">About</span></a></li>
+          <li><a href="index.html#services"><span class="nav__num">04</span><span data-i18n="nav.services">Services</span></a></li>
+          <li><a href="index.html#discord"><span class="nav__num">05</span><span data-i18n="nav.community">Community</span></a></li>
+          <li><a href="labs.html" class="is-active nav__labs" aria-current="page"><span class="nav__num">06</span>Labs</a></li>
+        </ul>
+        <div class="nav__menu-foot">
+          <a class="btn btn--primary" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg><span data-i18n="cta.discord">Join the Discord</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="icon-btn lang-toggle" type="button" data-lang-toggle aria-label="Cambiar a español">
+          <span class="lang-toggle__label" data-lang-label>ES</span>
+        </button>
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn--primary btn--sm nav__cta magnetic" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg><span>Discord</span>
+        </a>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero labs-hero" aria-labelledby="labs-title">
+      <canvas class="hero__particles labs-hero__bubbles" id="bubbles" aria-hidden="true"></canvas>
+      <div class="hero__inner container">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="hero__prompt">~/kohs/labs $</span> ./bench --all --grim --ping 0..150<span class="caret" aria-hidden="true"></span>
+          </p>
+          <h1 class="hero__title" id="labs-title">
+            <span class="hero__kohs glitch" data-text="KoHs">KoHs</span>
+            <span class="hero__suite labs-hero__word">Laboratories</span>
+          </h1>
+          <p class="hero__lead labs-hero__lead reveal" style="--d: 120ms" data-i18n="hero.lead">Complete tests — with documentation, figures and charts — of the new generation of KoHs mods.</p>
+          <p class="hero__sub reveal" style="--d: 180ms" data-i18n-html="hero.sub">Every number comes from a real run against <strong>Grim Anticheat</strong>, with latency from <strong>Ravenclaw's Ping Equalizer</strong>.</p>
+          <div class="hero__ctas reveal" style="--d: 240ms">
+            <a class="btn btn--primary btn--lg magnetic" href="#labs">
+              <span data-i18n="hero.cta">Open the labs</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+            </a>
+            <button class="btn btn--ghost btn--lg magnetic" type="button" id="replay-intro">
+              <svg class="icon" aria-hidden="true"><use href="#i-rotate-ccw"/></svg><span data-i18n="hero.replay">Replay the entry</span>
+            </button>
+          </div>
+          <dl class="stats reveal" style="--d: 300ms">
+            <div class="stat">
+              <dt data-i18n="stat.labs">Labs</dt>
+              <dd><span class="counter" data-count="3">0</span></dd>
+            </div>
+            <div class="stat">
+              <dt data-i18n="stat.cycles">Cycles</dt>
+              <dd><span class="counter" data-count="7860" data-format="compact">0</span>+</dd>
+            </div>
+            <div class="stat">
+              <dt data-i18n="stat.lag">Lag tested</dt>
+              <dd><span class="counter" data-count="150">0</span><small> ms</small></dd>
+            </div>
+            <div class="stat">
+              <dt data-i18n="stat.alerts">Grim alerts</dt>
+              <dd><span class="counter" data-count="0">0</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual labs-hero__visual" aria-hidden="true">
+          <div class="core">
+            <svg class="core__sigil" viewBox="0 0 400 400"><use href="#sigil"/></svg>
+            <div class="core__halo"></div>
+            <svg class="labs-hero__flask flask" viewBox="0 0 120 150"><g clip-path="url(#flask-clip)">
+              <path class="flask__liquid" fill="url(#flask-liquid)" d="M-60 86 Q-45 80 -30 86 T0 86 T30 86 T60 86 T90 86 T120 86 T150 86 T180 86 V170 H-60Z"/>
+              <circle class="flask__bubble flask__bubble--1" cx="44" cy="132" r="4"/>
+              <circle class="flask__bubble flask__bubble--2" cx="62" cy="138" r="3"/>
+              <circle class="flask__bubble flask__bubble--3" cx="78" cy="130" r="5"/>
+              <circle class="flask__bubble flask__bubble--4" cx="55" cy="142" r="2.5"/>
+              <circle class="flask__bubble flask__bubble--5" cx="70" cy="140" r="3.5"/>
+            </g>
+            <path class="flask__glass" d="M46 12h28v38l34 74a10 10 0 0 1-9 14H21a10 10 0 0 1-9-14l34-74z"/>
+            <path class="flask__lip" d="M38 12h44"/>
+            <path class="flask__shine" d="M53 22v24M37 86l-11 24"/></svg>
+            <span class="core__slash"></span>
+          </div>
+          <div class="labs-orbit" id="labs-orbit"></div>
+          <div class="readout readout--a"><span class="readout__k">PacketOrderE</span><span class="readout__v">0</span></div>
+          <div class="readout readout--b"><span class="readout__k">ping</span><span class="readout__v">+150 ms</span></div>
+          <div class="readout readout--c"><span class="readout__k">cycles</span><span class="readout__v">7,860</span></div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#labs" aria-label="Scroll to the labs"><span></span></a>
+    </section>
+
+    <!-- TAPES -->
+    <div class="tapes" aria-hidden="true">
+      <div class="tape tape--a"><div class="tape__track" id="tape-a"></div></div>
+      <div class="tape tape--b"><div class="tape__track" id="tape-b"></div></div>
+    </div>
+
+    <!-- LABS -->
+    <section class="section" id="labs" aria-labelledby="labs-list-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span>✦</span> <span data-i18n="labs.eyebrow">// on the bench</span></p>
+          <h2 class="section__title" id="labs-list-title" data-i18n="labs.title">The labs</h2>
+          <p class="section__sub" data-i18n="labs.sub">One lab per mod of the new generation. Pick a chart, read the note under it, and open the full write-up for the method and the raw numbers.</p>
+        </header>
+        <div class="labs" id="labs-list">
+          <div class="labs__loading" id="labs-loading"><span class="labs__spinner"></span><span data-i18n="labs.loading">Warming up the rig…</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW A LAB RUNS -->
+    <section class="section rig" id="rig" aria-labelledby="rig-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span>✦</span> <span data-i18n="rig.eyebrow">// the rig</span></p>
+          <h2 class="section__title" id="rig-title" data-i18n="rig.title">How a lab runs</h2>
+          <p class="section__sub" data-i18n="rig.sub">A real client and a real server on one machine, one clock for both, and nothing trusted until the anticheat proves it is listening.</p>
+        </header>
+
+        <figure class="flow reveal" aria-labelledby="flow-caption">
+          <svg class="flow__svg" viewBox="0 0 1000 300" role="img" aria-labelledby="flow-caption">
+            <defs>
+              <linearGradient id="flow-grad" x1="0" x2="1">
+                <stop offset="0" stop-color="#7c3aed"/><stop offset=".5" stop-color="#e879f9"/><stop offset="1" stop-color="#ff4fb8"/>
+              </linearGradient>
+            </defs>
+            <path id="flow-path-a" class="flow__wire" d="M200 110 C 290 110, 330 110, 400 110"/>
+            <path id="flow-path-b" class="flow__wire" d="M600 110 C 670 110, 710 110, 800 110"/>
+            <path id="flow-path-c" class="flow__wire flow__wire--back" d="M400 190 C 330 190, 290 190, 200 190"/>
+            <path id="flow-path-d" class="flow__wire" d="M500 150 C 500 215, 500 230, 500 262"/>
+            <g class="flow__node" transform="translate(40 70)">
+              <rect width="160" height="160" rx="22"/>
+              <text x="80" y="62" class="flow__title" data-i18n="flow.client">CLIENT</text>
+              <text x="80" y="90" class="flow__small" data-i18n="flow.c1">KoHs mod</text>
+              <text x="80" y="110" class="flow__small">Ping Equalizer</text>
+              <text x="80" y="130" class="flow__small" data-i18n="flow.c3">bench · real keys</text>
+            </g>
+            <g class="flow__node flow__node--hot" transform="translate(400 70)">
+              <rect width="200" height="160" rx="22"/>
+              <text x="100" y="62" class="flow__title" data-i18n="flow.server">SERVER 26.2</text>
+              <text x="100" y="92" class="flow__small">Grim Anticheat</text>
+              <text x="100" y="112" class="flow__small" data-i18n="flow.s2">verbose alerts</text>
+              <text x="100" y="132" class="flow__small" data-i18n="flow.s3">µs packet trace</text>
+            </g>
+            <g class="flow__node" transform="translate(800 70)">
+              <rect width="160" height="160" rx="22"/>
+              <text x="80" y="62" class="flow__title" data-i18n="flow.analysis">ANALYSIS</text>
+              <text x="80" y="90" class="flow__small" data-i18n="flow.a1">item per click</text>
+              <text x="80" y="110" class="flow__small" data-i18n="flow.a2">packets per tick</text>
+              <text x="80" y="130" class="flow__small" data-i18n="flow.a3">alerts · charts</text>
+            </g>
+            <g class="flow__probe" transform="translate(420 262)">
+              <rect width="160" height="32" rx="16"/>
+              <text x="80" y="21" class="flow__small">probe → BadPacketsA ✓</text>
+            </g>
+            <circle class="flow__dot flow__dot--a" r="6"/>
+            <circle class="flow__dot flow__dot--a2" r="6"/>
+            <circle class="flow__dot flow__dot--b" r="6"/>
+            <circle class="flow__dot flow__dot--c" r="5"/>
+          </svg>
+          <figcaption id="flow-caption" class="flow__caption" data-i18n="rig.caption">Keys go in through Minecraft's own keyboard and mouse handlers; packets and Grim's alerts come out in one trace, stamped by the same microsecond clock.</figcaption>
+        </figure>
+
+        <div class="gates">
+          <article class="gate reveal">
+            <span class="gate__icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></span>
+            <h3 data-i18n="gate.local.t">Local only</h3>
+            <p data-i18n="gate.local.p">The bench refuses any server that is not on the same machine, and does nothing unless the game was started for the lab.</p>
+          </article>
+          <article class="gate reveal" style="--d: 80ms">
+            <span class="gate__icon"><svg class="icon" aria-hidden="true"><use href="#i-scan-search"/></svg></span>
+            <h3 data-i18n="gate.probe.t">Calibrated</h3>
+            <p data-i18n="gate.probe.p">Every session sends one deliberately wrong packet. If Grim does not flag it, the session's "no alerts" does not count.</p>
+          </article>
+          <article class="gate reveal" style="--d: 160ms">
+            <span class="gate__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg></span>
+            <h3 data-i18n="gate.fair.t">Fair play first</h3>
+            <p data-i18n="gate.fair.p">Nothing a mod ships may create, repeat or send a click early. An idea that trips the anticheat is measured, written up — and dropped.</p>
+          </article>
+          <article class="gate reveal" style="--d: 240ms">
+            <span class="gate__icon"><svg class="icon" aria-hidden="true"><use href="#i-file-text"/></svg></span>
+            <h3 data-i18n="gate.open.t">Written up</h3>
+            <p data-i18n="gate.open.p">Each lab ends in a public write-up in the mod's repository: the setup, the tables, what failed and why.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="section section--tight" id="tools" aria-labelledby="tools-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow"><span>✦</span> <span data-i18n="tools.eyebrow">// open source on the bench</span></p>
+          <h2 class="section__title" id="tools-title" data-i18n="tools.title">Tools we test with</h2>
+          <p class="section__sub" data-i18n="tools.sub">Public projects the labs are built on. They belong to their authors and keep their own licenses — go give them a star.</p>
+        </header>
+        <div class="tools" id="tools-list"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight labs-cta" aria-labelledby="labs-cta-title">
+      <div class="container">
+        <div class="labs-cta__card reveal">
+          <svg class="labs-cta__sigil" viewBox="0 0 400 400" aria-hidden="true"><use href="#sigil"/></svg>
+          <h2 class="labs-cta__title" id="labs-cta-title" data-i18n="cta.title">Found something odd?</h2>
+          <p data-i18n="cta.text">Bring it to the Discord. A good report becomes the next bench — and the next chart on this page.</p>
+          <div class="labs-cta__actions">
+            <a class="btn btn--primary btn--lg magnetic" href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg><span data-i18n="cta.discord">Join the Discord</span>
+            </a>
+            <a class="btn btn--ghost btn--lg magnetic" href="index.html#mods">
+              <svg class="icon" aria-hidden="true"><use href="#i-package"/></svg><span data-i18n="cta.mods">Browse the mods</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="index.html" aria-label="KoHs Mod Suite — home">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="brand__text"><span class="brand__kohs">KoHs</span><span class="brand__suite">Mod Suite</span></span>
+        </a>
+        <p data-i18n="footer.tag">Minecraft mods &amp; plugins by Zymery Dria.</p>
+      </div>
+      <nav class="footer__col" aria-label="Explore">
+        <h3 data-i18n="footer.explore">Explore</h3>
+        <a href="index.html#mods" data-i18n="footer.mods">Mods &amp; plugins</a>
+        <a href="index.html#soon" data-i18n="footer.soon">Coming soon</a>
+        <a href="index.html#showcase" data-i18n="nav.showcase">Showcase</a>
+        <a href="index.html#services" data-i18n="nav.services">Services</a>
+        <a href="labs.html">Labs</a>
+      </nav>
+      <nav class="footer__col" aria-label="Elsewhere">
+        <h3 data-i18n="footer.elsewhere">Elsewhere</h3>
+        <a href="https://modrinth.com/user/zymery_dria" target="_blank" rel="noopener">Modrinth</a>
+        <a href="https://github.com/kerlycanelita" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://discord.gg/9t2VxEF7UU" target="_blank" rel="noopener">Discord</a>
+      </nav>
+    </div>
+    <div class="container footer__legal">
+      <p>© <span id="year">2026</span> KoHs Mod Suite. <span data-i18n="footer.data">Lab figures from the write-ups linked on each lab.</span></p>
+      <p data-i18n="footer.legal">Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p>
+    </div>
+  </footer>
+
+  <button class="to-top icon-btn" id="to-top" type="button" aria-label="Back to top">
+    <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </button>
+
+  <div class="chart-tip" id="chart-tip" role="status" aria-live="polite" hidden></div>
+
+  <noscript>
+    <div class="container labs-noscript">
+      <p>The charts on this page need JavaScript. The write-ups: <a href="https://github.com/kerlycanelita/Herzium/blob/main/docs/audits/LAB-1.11-burst-options.md">Herzium lab</a> · <a href="https://github.com/kerlycanelita/KoHs-Anchors/blob/main/docs/research/server-lab-0.2.0.md">KoHs Anchor's server lab</a>.</p>
+    </div>
+  </noscript>
+</body>
+</html>
