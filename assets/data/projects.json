@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T00:36:46.615Z",
+  "generated": "2026-09-30T21:24:54.454Z",
   "user": "zymery_dria",
   "projects": [
     {
@@ -7,7 +7,7 @@
       "slug": "herzium",
       "title": "Herzium",
       "description": "Your hotbar switches on the very next frame, and you choose which slot wins.",
-      "body": "\n<!-- Modrinth summary: Your hotbar switches on the very next frame, and you choose which slot wins. --> <p align=\"center\"> <img src=\"https://raw.githubusercontent.com/kerlycanelita/Herzium/main/src/main/resources/assets/herzium/icon.png\" alt=\"Herzium icon\" width=\"220\"> </p> <p align=\"center\"> <a href=\"https://github.com/kerlycanelita/Herzium\"><img src=\"https://img.shields.io/badge/GitHub-Source-6f2cff?style=for-the-badge&logo=github\" alt=\"GitHub\"></a> <a href=\"https://github.com/kerlycanelita/Herzium/issues\"><img src=\"https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues\" alt=\"Issues\"></a> <a href=\"https://discord.gg/9t2VxEF7UU\"><img src=\"https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord\"></a> </p>\nHerzium\nYour hotbar switches on the very next frame — and you choose which slot wins.\n\nMinecraft waits for its next game update to show a hotbar switch. Herzium draws it on the next frame: up to about 50 ms sooner on a high-refresh monitor. Ordinary items appear in hand right away; weapons and tools keep their normal animation.\n\nPick how your hotbar chooses\nPress two hotbar keys at once and Minecraft has to pick one. One button in Mod Menu cycles the three options, no restart.\n\n🟪 Herzium — last input  ·  this is the default\n![boton herzium Last input](https://cdn.modrinth.com/data/cached_images/58b165c1a1985fe8ca852a076d1aaf36e1f216b3.png)\n\nThe key you pressed last wins. Press 9 then 1, you get slot 1 — the one you actually meant.\n\n🟪 Vanilla\n![Boton Vanilla herzium](https://cdn.modrinth.com/data/cached_images/dfd0b849c7c08ad91b2bc9485399a1d7444a0bda.png)\n\nThe highest slot wins, exactly like Minecraft without any mods. Press 1 and 9 together, you get slot 9.\n\n🟪 Vanilla reversed\n![Boton Vanilla reverso herzium](https://cdn.modrinth.com/data/cached_images/d32fbf7e176c0f4797b0bea692d22f25a52170dc.png)\n\nThe lowest slot wins. Press 1 and 9 together, you get slot 1.\n\n\n⚠️ Read this once\nHerzium (last input) is on by default. It changes the slot you really hold, not just what you see — so the item you use can change, and the server sees it. Switch to Vanilla in Mod Menu if you don't want that, and check your server's rules on client mods. Herzium also tells you this on first launch.\n\nAlso included\nNo equip dip on blocks, food and ordinary tools, and placing a block still plays Minecraft's quick hand dip. Swords, axes, bows, shields and other combat items keep their full animation.\nSmoother attack indicator — the cooldown bar glides instead of stepping. Your real attack timing is untouched.\nSnappier start-up — skips the title fade and the pause after world creation. Nothing real is skipped, only the waiting.\nNot a performance mod. No FPS gain, and your settings — VSync, max framerate, Raw Input, sensitivity, cursor — are never touched.\n\nDownload\nPick the file matching your Minecraft version. Client-side only.\n\nMinecraft\tJava\n1.21.10 · 1.21.11\t21\n26.1 · 26.1.1 · 26.1.2 · 26.2 · 26.3\t25\nNeeds Fabric Loader 0.19.3+. Get Fabric API too, or Minecraft won't load Herzium's text and the screens show raw codes. Mod Menu is where the order button lives — without it you're stuck on the default.\n\n⚠️ Exordium: Herzium skips its HUD cache to redraw the hotbar each frame, so that cache stops working. Don't run both if you'd rather keep it.\n\nEnglish + all seven Spanish variants Minecraft ships.\n\nMade by zymekoh · MIT License\n\n",
+      "body": "\n<!-- Modrinth summary: Your hotbar switches on the very next frame, and you choose which slot wins. --> <p align=\"center\"> <img src=\"https://raw.githubusercontent.com/kerlycanelita/Herzium/main/src/main/resources/assets/herzium/icon.png\" alt=\"Herzium icon\" width=\"220\"> </p> <p align=\"center\"> <a href=\"https://github.com/kerlycanelita/Herzium\"><img src=\"https://img.shields.io/badge/GitHub-Source-6f2cff?style=for-the-badge&logo=github\" alt=\"GitHub\"></a> <a href=\"https://github.com/kerlycanelita/Herzium/issues\"><img src=\"https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues\" alt=\"Issues\"></a> <a href=\"https://discord.gg/9t2VxEF7UU\"><img src=\"https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord\"></a> </p>\nHerzium\nYour hotbar switches on the very next frame — and you choose which slot wins.\n\nMinecraft waits for its next game update to show a hotbar switch. Herzium draws it on the next frame: up to about 50 ms sooner on a high-refresh monitor. Ordinary items appear in hand right away; weapons and tools keep their normal animation.\n\nPick how your hotbar chooses\nPress two hotbar keys at once and Minecraft has to pick one. One button in Mod Menu cycles the three options, no restart.\n\n🟪 Herzium — last input  ·  this is the default\n![boton herzium Last input](https://cdn.modrinth.com/data/cached_images/58b165c1a1985fe8ca852a076d1aaf36e1f216b3.png)\n\nThe key you pressed last wins. Press 9 then 1, you get slot 1 — the one you actually meant.\n\n🟪 Vanilla\n![Boton Vanilla herzium](https://cdn.modrinth.com/data/cached_images/dfd0b849c7c08ad91b2bc9485399a1d7444a0bda.png)\n\nThe highest slot wins, exactly like Minecraft without any mods. Press 1 and 9 together, you get slot 9.\n\n🟪 Vanilla reversed\n![Boton Vanilla reverso herzium](https://cdn.modrinth.com/data/cached_images/d32fbf7e176c0f4797b0bea692d22f25a52170dc.png)\n\nThe lowest slot wins. Press 1 and 9 together, you get slot 1.\n\nFast bursts, the right item every time\nThree more switches in Mod Menu, all on by default.\n\n🟪 Split bursts — obsidian, use, crystal, use inside one tick places the obsidian, then the crystal right on top of it on the next tick. Vanilla lands only one of them. Same for anchor → glowstone → detonate and rail → TNT minecart.\n\n🟪 Strict attacks — your hit uses the item you held when you clicked, not a key you pressed a few milliseconds later.\n\n🟪 Offhand sync — totem key and swap in the same tick puts the totem in your offhand, not the item you held before.\n\nEvery tick still switches slot at most once, before its clicks, just like Vanilla. A click can only ever wait one tick: nothing is sent earlier, nothing is repeated. Tested against Grim Anticheat, with and without its experimental checks, and with Ping Equalizer: no alerts.\n\n\n⚠️ Read this once\nHerzium (last input) is on by default. It changes the slot you really hold, not just what you see — so the item you use can change, and the server sees it. Switch to Vanilla in Mod Menu if you don't want that, and check your server's rules on client mods. Herzium also tells you this on first launch.\n\nAlso included\nNo equip dip on blocks, food and ordinary tools, and placing a block still plays Minecraft's quick hand dip. Swords, axes, bows, shields and other combat items keep their full animation.\nSmoother attack indicator — the cooldown bar glides instead of stepping. Your real attack timing is untouched.\nSnappier start-up — skips the title fade and the pause after world creation. Nothing real is skipped, only the waiting.\nNot a performance mod. No FPS gain, and your settings — VSync, max framerate, Raw Input, sensitivity, cursor — are never touched.\n\nDownload\nPick the file matching your Minecraft version. Client-side only.\n\nMinecraft\tJava\n1.21.10 · 1.21.11\t21\n26.1 · 26.1.1 · 26.1.2 · 26.2 · 26.3\t25\nNeeds Fabric Loader 0.19.3+. Get Fabric API too, or Minecraft won't load Herzium's text and the screens show raw codes. Mod Menu is where the order button lives — without it you're stuck on the default.\n\n⚠️ Exordium: Herzium skips its HUD cache to redraw the hotbar each frame, so that cache stops working. Don't run both if you'd rather keep it.\n\nEnglish + all seven Spanish variants Minecraft ships.\n\nMade by zymekoh · MIT License\n\n",
       "icon_url": "https://cdn.modrinth.com/data/5yMyq4qM/b0542d85334b69b86511375d42a8b3e0ccfe092a_96.webp",
       "project_type": "mod",
       "categories": [
@@ -27,10 +27,10 @@
       ],
       "client_side": "required",
       "server_side": "unsupported",
-      "downloads": 161,
+      "downloads": 205,
       "followers": 1,
       "published": "2026-08-03T08:23:41.537078Z",
-      "updated": "2026-09-28T02:40:30.539902Z",
+      "updated": "2026-09-30T19:19:35.503169Z",
       "license": {
         "id": "MIT",
         "name": "MIT License",
@@ -66,393 +66,25 @@
         "hSYGQNFt",
         "FJQysaF0",
         "w0jd5rcv",
-        "OJhf6d52"
+        "OJhf6d52",
+        "GtbH0hO0",
+        "2xdGFcZ8",
+        "dMdtXp7R",
+        "YiKcMdfh",
+        "ZrZ6reev",
+        "gNKSIJHq",
+        "WihcfqRD",
+        "Mupl7mRK",
+        "HlS2rMx4",
+        "bFD6I3OO",
+        "2ReSK8XZ",
+        "vAcQAT7i",
+        "XjKuGoKR",
+        "zzm1EytM"
       ],
       "source_url": "https://github.com/kerlycanelita/Herzium",
       "issues_url": "https://github.com/kerlycanelita/Herzium/issues",
       "wiki_url": "https://github.com/kerlycanelita/Herzium#readme",
-      "discord_url": "https://discord.gg/9t2VxEF7UU",
-      "status": "approved"
-    },
-    {
-      "id": "npCfqe2V",
-      "slug": "kohs-bedrock-essentials-pvp",
-      "title": "KoHs Bedrock Essentials pvp",
-      "description": "Bedrock-only optimization for Paper crossplay servers.",
-      "body": "# Bedrock Essentials\n\nBedrock Essentials is a Paper plugin built for servers that use Geyser and Floodgate.\n\nIts goal is simple: make Bedrock players feel better on Java-based Paper servers without changing the Java experience and without adding unfair automation.\n\nThis plugin only affects Bedrock players detected through Floodgate and Geyser.\nJava players are left untouched.\n\n## What It Does\n\nBedrock Essentials currently focuses on four problem areas that are especially noticeable for Bedrock players on crossplay servers:\n\n### Ghost Block Mitigation\n\nWhen the server rejects or cancels an action, Bedrock clients can temporarily see the wrong block state or inventory state.\n\nThis plugin resynchronizes nearby blocks and inventory state to reduce:\n\n- ghost blocks\n- delayed visual corrections\n- failed interaction feedback\n\n### End Crystal Combat Assist\n\nBedrock crystal combat often feels worse than Java because place and break interactions do not line up as cleanly.\n\nThis plugin improves manual crystal combat by helping with:\n\n- faster manual place and break flow\n- better targeting around recent crystal placement\n- reduced desync during rapid PvP actions\n\nImportant:\n\n- this is not crystal aura\n- this is not auto-break\n- the player still has to manually right click and left click\n\n### Totem Offhand Optimizer\n\nMoving a totem into the offhand can feel visually delayed for Bedrock players, even when the inventory state is already changing on the server.\n\nThis plugin improves offhand synchronization so the totem appears faster and more consistently during manual inventory actions.\n\nImportant:\n\n- this is not autototem\n- the plugin does not equip a totem by itself\n- it only improves the synchronization of the player's own action\n\n### Respawn Anchor Optimizer\n\nRespawn anchor placement and glowstone charging can feel inconsistent on Bedrock clients, especially under fast PvP or repeated interactions.\n\nThis plugin improves:\n\n- respawn anchor placement feedback\n- glowstone charge synchronization\n- reduced ghosting around anchor interactions\n\n## What It Does Not Do\n\nTo keep the scope clear, Bedrock Essentials does not:\n\n- affect Java players\n- bypass protection plugins\n- replace Geyser or Floodgate\n- fully fix every Bedrock-side or protocol-side issue\n- automate PvP actions for the player\n\n## Requirements\n\n- Java 21\n- Paper 1.21.11\n- Floodgate\n- Geyser-Spigot\n\n## Installation\n\n1. Install Floodgate and Geyser-Spigot on your Paper server.\n2. Drop `BedrockEssentials-<version>.jar` into the `plugins/` folder.\n3. Start the server once to generate the plugin configuration.\n4. Review `plugins/BedrockEssentials/config.yml`.\n5. Restart the server fully after changing important settings.\n\nDo not use `/reload`.\n\n## Configuration\n\nThe plugin ships with a configurable `config.yml` that controls:\n\n- generic block and inventory resync behavior\n- Bedrock-only trigger conditions\n- crystal combat assistance\n- totem offhand synchronization\n- respawn anchor interaction handling\n\nIf you want the full configuration explanation, use the repository README and the source config as reference.\n\n## Compatibility Notes\n\n- Designed for Paper 1.21.11\n- Intended for crossplay servers using Geyser and Floodgate\n- Bedrock-only logic is applied through runtime player detection\n- Best results come from real-world tuning on the target server\n\n## Beta Notice\n\nThis release is still beta software.\n\nIt is already functional and structured, but it should still be treated as a plugin that benefits from testing under live Bedrock gameplay conditions.\n\n## Source Code and Issues\n\n- Source code: GitHub repository\n- Issue tracker: GitHub Issues\n\nIf you run a Bedrock-heavy crossplay server and want to improve feel without touching Java players, this plugin is built for that exact use case.\n",
-      "icon_url": "https://cdn.modrinth.com/data/npCfqe2V/5533c4e73bb25f6e85fe5b674fcf6e921da5eece_96.webp",
-      "project_type": "mod",
-      "categories": [
-        "game-mechanics",
-        "optimization",
-        "utility"
-      ],
-      "loaders": [
-        "paper"
-      ],
-      "game_versions": [
-        "1.21.10",
-        "1.21.11"
-      ],
-      "client_side": "unsupported",
-      "server_side": "required",
-      "downloads": 241,
-      "followers": 0,
-      "published": "2026-03-20T19:55:47.717792Z",
-      "updated": "2026-03-26T18:11:09.718392Z",
-      "license": {
-        "id": "GPL-3.0-only",
-        "name": "GNU General Public License v3.0 only",
-        "url": null
-      },
-      "gallery": [],
-      "versions": [
-        "9GtYyXTN",
-        "fjnGxE3E"
-      ],
-      "source_url": "https://github.com/kerlycanelita/bedrock-essentials.git",
-      "issues_url": "https://github.com/kerlycanelita/bedrock-essentials/issues",
-      "wiki_url": null,
-      "discord_url": "https://discord.gg/KEgv6EZxFn",
-      "status": "approved"
-    },
-    {
-      "id": "DNMK5gVu",
-      "slug": "healt-alert-tweaks",
-      "title": "Healt Alert Tweaks",
-      "description": "Customizable low-health vignette and heartbeat alerts.",
-      "body": "# Healt Alert Tweaks\n\n**Healt Alert Tweaks** is a client-side Fabric mod that helps you react faster when your health gets low by adding configurable visual and audio alerts.\n\nThe main feature is a customizable low-health vignette that fades onto your screen when your health drops below a configurable threshold. You can choose the color, transparency, size, intensity behavior, and animation style directly from the Mod Menu configuration screen.\n\nThe mod also includes heartbeat effects. The vignette can pulse like a heartbeat, and an optional heartbeat sound can play when your health is low. Both the visual pulse and the sound speed can react to your current health, becoming more intense as your health gets lower, or they can stay static if you prefer a calmer alert.\n\nEverything is configurable through a custom Mod Menu screen with separated tabs for visual tweaks and sound settings.\n\n## Features\n\n- Custom low-health vignette.\n- Custom vignette color picker.\n- Adjustable health threshold.\n- Adjustable vignette transparency.\n- Adjustable vignette size.\n- Smooth vignette fade animation.\n- Static Color mode.\n- Static color intensity slider.\n- Heartbeat-style vignette pulse.\n- Optional low-health heartbeat scaling.\n- Heartbeat sound alert.\n- Adjustable heartbeat sound volume.\n- Adjustable heartbeat sound intensity.\n- Sound preview player.\n- Vignette preview panel.\n- Mod Menu support.\n- Client-side only.\n\n## Low Health Vignette\n\nThe vignette appears when your health goes below the value you choose in the config menu.  \nYou can customize its color, transparency, size, and how strongly it reacts to your health.\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/60a284c6f6a5140b49fa595812637f4c5b7c95ec.gif)\n\n## Custom Color Picker\n\nChoose the vignette color directly from a palette-style selector.  \nThis lets you make the alert subtle, intense, dark, bright, or matching your own style.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/4cf1e5074886801425d236f946c70f76675a9c4e.png)\n\n## Static Color Mode\n\nBy default, the vignette becomes stronger as your health gets lower.  \nIf you prefer a fixed intensity, enable **Static Color** and adjust the intensity slider.\n\n\n## Smooth Fade\n\nThe vignette can appear and disappear smoothly instead of popping onto the screen suddenly.\n\n## Heartbeat Vignette\n\nThe vignette can pulse like a heartbeat.  \nWhen low-health integration is enabled, the pulse becomes faster as your health gets lower.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/22a29843a41aa97b27ad3a00757b03ec8c1f29d2.png)\n\n## Heartbeat Sound\n\nThe mod can also play a heartbeat sound when your health is low.  \nYou can adjust the volume and the heartbeat intensity from the Sound tab.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/c1b46ca53611491de44db6eb1e079f9809aaad44.png)\n\n## Mod Menu Configuration\n\nAll options are available from a custom Mod Menu screen with tabs for visual tweaks and sound settings.\n\nRequires:\n\n- Fabric Loader\n- Fabric API\n- Mod Menu is recommended for configuration\n",
-      "icon_url": "https://cdn.modrinth.com/data/DNMK5gVu/5417bc5a9ef27f79a7060e642801302a9454420e_96.webp",
-      "project_type": "mod",
-      "categories": [
-        "utility"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "game_versions": [
-        "1.21",
-        "1.21.1",
-        "1.21.2",
-        "1.21.3",
-        "1.21.4",
-        "1.21.5",
-        "1.21.6",
-        "1.21.7",
-        "1.21.8",
-        "1.21.9",
-        "1.21.10",
-        "1.21.11"
-      ],
-      "client_side": "required",
-      "server_side": "unsupported",
-      "downloads": 596,
-      "followers": 0,
-      "published": "2026-04-27T06:15:05.390927Z",
-      "updated": "2026-04-27T19:44:53.548095Z",
-      "license": {
-        "id": "LicenseRef-All-Rights-Reserved",
-        "name": "",
-        "url": null
-      },
-      "gallery": [
-        {
-          "url": "https://cdn.modrinth.com/data/DNMK5gVu/images/c06cde7f2d550459114538482bbf9cd072255a7b_350.webp",
-          "raw_url": "https://cdn.modrinth.com/data/DNMK5gVu/images/c06cde7f2d550459114538482bbf9cd072255a7b.png",
-          "featured": false,
-          "title": "config screen",
-          "description": "a config screen",
-          "created": "2026-04-27T06:21:01.882610Z",
-          "ordering": 0
-        }
-      ],
-      "versions": [
-        "scOyeVyY",
-        "vHYktX8X",
-        "l4rZaRfl",
-        "sVzgSTkd",
-        "ejWtpclh",
-        "k65BbULj"
-      ],
-      "source_url": null,
-      "issues_url": null,
-      "wiki_url": null,
-      "discord_url": "https://discord.gg/GyqVQdgKWt",
-      "status": "approved"
-    },
-    {
-      "id": "FYUHG5B7",
-      "slug": "death-effects-kohs",
-      "title": "Death Effects KoHs",
-      "description": "Customizable player death effects featuring Silhouette, Ghost Player, Faint, Morph and Kids, with animations, sounds, multiplayer support, live previews and a responsive configuration menu.",
-      "body": "# KoHs Death Effects\n\nMake every defeat memorable.\n\n**KoHs Death Effects** replaces Minecraft's standard player death with stylish, dramatic and funny visual effects—without gore. Choose your favorite effect, customize its behavior and preview everything directly from the configuration menu.\n\n## Effects\n\n### Silhouette\n\nA colorful spirit rises from the defeated player and slowly fades away.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/6b9a0daa21d44e6e61e0f5f270a12946f35f9207.png\" alt=\"Silhouette death effect\" width=\"520\"></p>\n\n### Ghost Player\n\nCreates a fading ghost copy with optional armor, held items and rising movement.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/f3b9c2345a257fea43758ff85143606166e01031.png\" alt=\"Ghost Player death effect\" width=\"520\"></p>\n\n### Faint\n\nChoose **Fall** to collapse onto the ground or **Crawl** to move toward your opponent.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a_0.webp\" alt=\"Fall death effect\" width=\"520\"></p>\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/ce18f700c69e5cebd8a352dfa8c3f505778fec54.png\" alt=\"Crawl death effect\" width=\"520\"></p>\n\n### Morph\n\nTransform defeated players into Minecraft mobs with configurable transparency, movement and sounds.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png\" alt=\"Morph death effect\" width=\"520\"></p>\n\n### Kids\n\nTurn defeated players into miniature dolls. Carry two on your shoulders while additional dolls follow as a rope-connected train.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/1379b147468fe51214831d42dfa912e5860ac15d.png\" alt=\"Shoulder dolls and train effect\" width=\"520\"></p>\n\n## Features\n\n- Animated previews\n- Custom MP3 death sounds\n- Multiplayer synchronization\n- Timers, sliders and hover descriptions\n- Configurable colors, sizes, opacity and duration\n- Responsive purple configuration menu\n\n> Currently available for **Minecraft 1.21.11**.",
-      "icon_url": "https://cdn.modrinth.com/data/FYUHG5B7/f79f6702c7b9c5db48f816d4dea836a6c509039f_96.webp",
-      "project_type": "mod",
-      "categories": [
-        "cursed",
-        "equipment",
-        "utility"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "game_versions": [
-        "1.21.11",
-        "26.1",
-        "26.1.1",
-        "26.1.2",
-        "26.2"
-      ],
-      "client_side": "required",
-      "server_side": "unsupported",
-      "downloads": 638,
-      "followers": 2,
-      "published": "2026-07-14T02:00:45.373072Z",
-      "updated": "2026-08-31T05:53:34.540003Z",
-      "license": {
-        "id": "LicenseRef-All-Rights-Reserved",
-        "name": "",
-        "url": null
-      },
-      "gallery": [
-        {
-          "url": "https://cdn.modrinth.com/data/FYUHG5B7/images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a_350.webp",
-          "raw_url": "https://cdn.modrinth.com/data/FYUHG5B7/images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a.png",
-          "featured": false,
-          "title": "Fall effect",
-          "description": null,
-          "created": "2026-07-14T02:15:59.615292Z",
-          "ordering": 0
-        },
-        {
-          "url": "https://cdn.modrinth.com/data/FYUHG5B7/images/1379b147468fe51214831d42dfa912e5860ac15d_350.webp",
-          "raw_url": "https://cdn.modrinth.com/data/FYUHG5B7/images/1379b147468fe51214831d42dfa912e5860ac15d.png",
-          "featured": false,
-          "title": "TRAIN",
-          "description": "Train Death effect",
-          "created": "2026-07-14T02:15:33.223237Z",
-          "ordering": 0
-        },
-        {
-          "url": "https://cdn.modrinth.com/data/FYUHG5B7/images/4e4f08e045c90e320ac8ea81f26d744bd745f992_350.webp",
-          "raw_url": "https://cdn.modrinth.com/data/FYUHG5B7/images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png",
-          "featured": false,
-          "title": "Morph effect",
-          "description": null,
-          "created": "2026-07-14T02:16:14.604853Z",
-          "ordering": 0
-        }
-      ],
-      "versions": [
-        "63kNd20q",
-        "zu0GbQzI",
-        "jBj7qj9U",
-        "exo4N8JT",
-        "TFszfWXO",
-        "nwWGALhv",
-        "mBy4LfzK",
-        "z6DMH2I5",
-        "3DiYD6KF"
-      ],
-      "source_url": null,
-      "issues_url": null,
-      "wiki_url": null,
-      "discord_url": "https://discord.gg/pxM4nQk36a",
-      "status": "approved"
-    },
-    {
-      "id": "6IMVkzdT",
-      "slug": "keyboard-place-fix",
-      "title": "Keyboard Place Fix",
-      "description": "Fixes inventory right-click behavior for external Keyboard Place setups without changing core KBP functionality.",
-      "body": "# Keyboard Place Fix\n\nis a client-side Fabric mod for players who already use **Keyboard Place (KBP)** with external mouse/software remapping.\n\nIt restores vanilla right-click behavior in inventories while keeping your normal KBP gameplay flow.\n\n## What this mod fixes\n\nWhen KBP is used via external remap, inventory right-click actions can fail (or feel inconsistent), such as:\n\n- Splitting stacks (64 -> 32)\n- Right-click interactions in chests and other containers\n  \nThis mod fixes those inventory/container interactions.\n# ![KB](https://cdn.modrinth.com/data/cached_images/5e1182d457acb67de3ee1f5a06a2713ecc483d2f.gif)-![KB](https://cdn.modrinth.com/data/cached_images/a86530479cd0e07d9ee83191da72ff6d57b2b2ef.gif)-![KB](https://cdn.modrinth.com/data/cached_images/a141a4f37b91f19ef826ab34003dfa60325ff36e.gif)\n## What this mod does **not** change\n\n- It does **not** change core KBP functionality\n- It does **not** generate KBP by itself\n\n## Features\n\n- Virtual right-click keybind (default: `.`)\n- Works in inventory, chests, and storage containers\n- Optional Mod Menu config screen\n- Lightweight, client-side only\n\n## Requirements\n\n- KBP enabled externally (mouse software/remapper)\n  ![Replace this with a description](https://cdn.modrinth.com/data/cached_images/f68cbb58d0f52eb9305981004ed2314f0415d476_0.webp)\n\n## Usage\n\n1. Install the mod in your `mods` folder.\n2. Bind `Virtual Right Click` to your preferred key (or keep default).\n3. Use your KBP setup normally.\n\n## Important warning\n\nThis mod only works as intended if **Keyboard Place is already enabled externally** with your mouse/software remapper.\n",
-      "icon_url": "https://cdn.modrinth.com/data/6IMVkzdT/4f0b00a88a73f08f736017e7a92d8be02f4f3ad5_96.webp",
-      "project_type": "mod",
-      "categories": [
-        "game-mechanics",
-        "optimization",
-        "utility"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "game_versions": [
-        "1.21",
-        "1.21.1",
-        "1.21.2",
-        "1.21.3",
-        "1.21.4",
-        "1.21.5",
-        "1.21.6",
-        "1.21.7",
-        "1.21.8",
-        "1.21.9",
-        "1.21.10",
-        "1.21.11",
-        "26.1",
-        "26.1.1",
-        "26.1.2",
-        "26.2"
-      ],
-      "client_side": "required",
-      "server_side": "unsupported",
-      "downloads": 1199,
-      "followers": 1,
-      "published": "2026-03-10T07:09:55.160976Z",
-      "updated": "2026-08-17T22:37:48.829878Z",
-      "license": {
-        "id": "MIT",
-        "name": "MIT License",
-        "url": null
-      },
-      "gallery": [],
-      "versions": [
-        "1EwKvKVF",
-        "6KNbr3au",
-        "LgxyeCjH",
-        "VDak4OQm",
-        "RR8eiKCc",
-        "dFDqnONh",
-        "jGI9Uqje",
-        "hgj3h54f"
-      ],
-      "source_url": null,
-      "issues_url": null,
-      "wiki_url": null,
-      "discord_url": "https://discord.gg/TpBbyxhFSF",
-      "status": "approved"
-    },
-    {
-      "id": "pxbRbYs8",
-      "slug": "kohs-offhand-whitelist",
-      "title": "KoHs Offhand Whitelist",
-      "description": "Client-side offhand whitelist with searchable items and custom presets.",
-      "body": "# KoHs Offhand Whitelist\n\n**KoHs Offhand Whitelist** is a client-side Fabric mod that controls which items you can move into the offhand slot.\n\nInstead of allowing every item, the mod uses a whitelist.  \nIf an item is not allowed, the mod blocks offhand insertion/swap actions for that item.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/544d133d21012e7b7fd0d457336801273ddfe06a_0.webp)\n\n## What this mod does\n- Blocks non-whitelisted items from being placed in offhand\n- Allows editing the whitelist from an in-game GUI\n- Shows all Minecraft items (including potion variants) with search\n- Lets you quickly add/remove items with `+` and `-`\n- Supports presets (built-in + custom)\n- Auto-saves changes instantly (no manual save needed)\n\n## GUI Tabs\n- **Whitelist**: manage allowed and non-allowed items\n- **Create Preset**: build/edit a preset from selected items\n- **Custom Presets**: use, edit, or delete saved presets\n- **Report Issues**: support/help section with Discord button\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/a143fbb2848fa7c2f872200eac9e28f6dcdfcd5a.png)\n\n## Why use it\nUseful for PvP and utility clients when you want strict offhand control (for example only totem, shield, crystals, specific potions, etc.).\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/43d947d708f08147f086507e519d2a26f47e6bb6.gif)\n\n\n\n\n## Support\nFor support or help creating mods/plugins:  \n**https://discord.gg/TpBbyxhFSF**\n",
-      "icon_url": "https://cdn.modrinth.com/data/pxbRbYs8/cc15f582883311658571236d8ca4310275bbcbdd_96.webp",
-      "project_type": "mod",
-      "categories": [
-        "game-mechanics",
-        "utility"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "game_versions": [
-        "1.21",
-        "1.21.1",
-        "1.21.2",
-        "1.21.3",
-        "1.21.4",
-        "1.21.5",
-        "1.21.6",
-        "1.21.7",
-        "1.21.8",
-        "1.21.9",
-        "1.21.10",
-        "1.21.11"
-      ],
-      "client_side": "required",
-      "server_side": "unsupported",
-      "downloads": 441,
-      "followers": 0,
-      "published": "2026-03-02T18:55:58.668472Z",
-      "updated": "2026-03-17T02:31:33.481236Z",
-      "license": {
-        "id": "LicenseRef-All-Rights-Reserved",
-        "name": "",
-        "url": null
-      },
-      "gallery": [],
-      "versions": [
-        "EJOIF8Br",
-        "rk1yIJRe",
-        "vHJRqBWj",
-        "EkLDr95O"
-      ],
-      "source_url": null,
-      "issues_url": null,
-      "wiki_url": null,
-      "discord_url": "https://discord.gg/TpBbyxhFSF",
-      "status": "approved"
-    },
-    {
-      "id": "CjgeYNJu",
-      "slug": "kohs-inv-cursor",
-      "title": "KoHs Inventory Tweaks",
-      "description": "Fast, precise, and fully customizable client-side inventory controls",
-      "body": "<p align=\"center\">\n  <a href=\"https://github.com/kerlycanelita/KoHs-Inventory-Tweaks\"><img alt=\"GitHub repository\" src=\"https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github\"></a>\n  <a href=\"https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues\"><img alt=\"Report an issue\" src=\"https://img.shields.io/badge/Issues-Report_a_bug-c93c7a?style=for-the-badge&logo=githubissues&logoColor=white\"></a>\n  <a href=\"https://discord.gg/9t2VxEF7UU\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-Join_us-5865F2?style=for-the-badge&logo=discord&logoColor=white\"></a>\n  <a href=\"https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/blob/main/docs/wiki/WIKI.md\"><img alt=\"Wiki\" src=\"https://img.shields.io/badge/%F0%9F%93%96-Wiki-7c3aed?style=for-the-badge\"></a>\n</p>\n\n![KoHs Inventory Tweaks main configuration menu](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/main-menu.png)\n\n> **Support update (September 2026):** KoHs Inventory Tweaks now supports **Minecraft 1.21.11 and later**. The 1.21.10 builds stay downloadable as archived versions but no longer receive fixes or new features.\n\n## Your inventory, your rules\n\n**KoHs Inventory Tweaks** is the client-side successor to **KoHs Inv Cursor**, maintained for Minecraft 1.21.11, 26.1, 26.1.1, 26.1.2, and 26.2. It gives you precise cursor placement, faster and more reliable inventory input, visual customization, item highlighting, and an inventory-only GUI scaler—all through a responsive purple configuration menu.\n\nThe mod keeps normal Minecraft inventory rules. It does not require installation on the server and does not add automated item transfers or custom inventory packets.\n\n## Features\n\n- **Cursor Landing** — choose where the cursor appears in your inventory, single or double chests, Ender Chests, and barrels. Every container can be individually disabled to keep its Vanilla behavior.\n- **Center Mouse Fix** — checks the cursor once, right as Minecraft releases the mouse, and fixes it only if it landed somewhere stale. Moving toward a totem or any item is never pulled back.\n- **SuperFastInventory** — opens the local inventory up to one tick (50 ms) sooner, and waits only when Vanilla would still run something first, such as a pending attack or an item in use.\n- **Customization** — recolor inventory and slot frames, control opacity and world backdrop darkness, or use a cropped image, GIF, or short video background.\n- **Resource-pack aware** — choose the active resource-pack inventory texture or the Vanilla base, then apply KoHs customization above it.\n- **Item Highlighter** — search Vanilla items and configure slot colors, borders, hotbar highlighting, and dynamic hover highlighting.\n- **GUI Scaler** — resize only the player inventory, including its slots, text, items, and character model.\n- **Player Visibility** — tint and a glowing silhouette for the players you can already see while your inventory is open. Blocks hide both: nothing shows through walls.\n- **Smooth responsive UI** — animated particles, soft transitions, clipped scrolling panels, hover explanations, and support for compact GUI scales.\n- **English and Spanish** — every supported Spanish locale uses the Spanish interface; other languages fall back to English.\n\n## A closer look\n\n### Cursor Landing\n\n![Cursor Landing configuration](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/cursor-landing.png)\n\n### Inventory Tweaks\n\n![Inventory Tweaks: Super Fast Inventory, Centered Mouse Fix and Reduce inventory visual motion](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/inventory-tweaks.png)\n\n### Inventory appearance\n\n![Inventory customization](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/customization.png)\n\n### Item Highlighter\n\n![Item Highlighter](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/item-highlighter.png)\n\n### Inventory-only GUI Scaler\n\n![GUI Scaler](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/gui-scaler.png)\n\n### Player Visibility\n\n![Player Visibility with the silhouette glow preview](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/player-visibility.png)\n\n## Requirements\n\n- Minecraft Java Edition **1.21.11, 26.1, 26.1.1, 26.1.2, or 26.2**\n- Fabric Loader **0.19.3 or newer**\n- The Fabric API release matching your Minecraft version\n- Java **21 or newer** for Minecraft 1.21.11; Java **25 or newer** for Minecraft 26.x\n- Mod Menu is optional\n\nInstall the mod only on the client. Enter a world or server before opening its configuration so Minecraft can provide the active player, item models, and resource packs. The configuration menu can be opened with **Y** by default and the key can be changed from the menu or Minecraft Controls.\n\nFor complete instructions, media limits, troubleshooting, and configuration backups, read the [KoHs Inventory Tweaks Wiki](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/blob/main/docs/wiki/WIKI.md).\n",
-      "icon_url": "https://cdn.modrinth.com/data/CjgeYNJu/76a59d8da3fa39c781db1410e9f53bef8861fab7_96.webp",
-      "project_type": "mod",
-      "categories": [
-        "game-mechanics"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "game_versions": [
-        "1.21.10",
-        "1.21.11",
-        "26.1",
-        "26.1.1",
-        "26.1.2",
-        "26.2"
-      ],
-      "client_side": "required",
-      "server_side": "unsupported",
-      "downloads": 1270,
-      "followers": 3,
-      "published": "2026-02-24T16:28:41.607845Z",
-      "updated": "2026-09-27T02:37:19.923803Z",
-      "license": {
-        "id": "MIT",
-        "name": "MIT License",
-        "url": null
-      },
-      "gallery": [],
-      "versions": [
-        "MbbiGqF2",
-        "ZSP4wYds",
-        "Csup9scQ",
-        "97lReQJx",
-        "BFdODKzR",
-        "AxWMtdYM",
-        "TnHuUDM4",
-        "CedcH6Zd",
-        "yQXpOVHN",
-        "PY7nmnAV",
-        "NfRMY4r6",
-        "AulHq0sr",
-        "YYZRInao",
-        "bheaUq68",
-        "w04hY3FZ",
-        "R27mP3TD",
-        "2PEYL4tR",
-        "Zy6jIM2o",
-        "xxjcF2vw",
-        "xKKUABhR",
-        "SH1mQm2t",
-        "wiDf8VbD",
-        "HX1zorp2",
-        "YfL7B6VL",
-        "vZvO1e6g",
-        "fmeZzxBu",
-        "JtLFTAJF",
-        "iMd6Zw84",
-        "kkFN5gwF",
-        "G6xOXDfT",
-        "O0TN7Eyl",
-        "4luZpAIL",
-        "tRBZoEp6",
-        "6K9weFBz",
-        "UYurLod3",
-        "6pT0DbrA",
-        "LYZkTLE6",
-        "qgZphMTt",
-        "ZLOcHhol"
-      ],
-      "source_url": "https://github.com/kerlycanelita/KoHs-Inventory-Tweaks",
-      "issues_url": "https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues",
-      "wiki_url": "https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/blob/main/WIKI.md",
       "discord_url": "https://discord.gg/9t2VxEF7UU",
       "status": "approved"
     },
@@ -492,10 +124,10 @@
       ],
       "client_side": "required",
       "server_side": "unsupported",
-      "downloads": 7655,
+      "downloads": 7834,
       "followers": 3,
       "published": "2026-02-27T21:54:52.886639Z",
-      "updated": "2026-09-27T16:03:14.334209Z",
+      "updated": "2026-09-30T03:20:22.153743Z",
       "license": {
         "id": "MIT",
         "name": "MIT License",
@@ -709,23 +341,381 @@
         "Z2DZi8e4",
         "wS3IAe0P",
         "b14tI53t",
-        "rJo2T0gx"
+        "rJo2T0gx",
+        "ZOdckrG5",
+        "iJIqO1Yu",
+        "tRhw9KhC",
+        "S1uSf4x4",
+        "Rc6EvgQC",
+        "uheBIq2x"
       ],
       "source_url": "https://github.com/kerlycanelita/KoHs-Crystal-Tweaks",
       "issues_url": null,
       "wiki_url": null,
       "discord_url": "https://discord.gg/KEgv6EZxFn",
       "status": "approved"
+    },
+    {
+      "id": "CjgeYNJu",
+      "slug": "kohs-inv-cursor",
+      "title": "KoHs Inventory Tweaks",
+      "description": "Fast, precise, and fully customizable client-side inventory controls",
+      "body": "<p align=\"center\">\n  <a href=\"https://github.com/kerlycanelita/KoHs-Inventory-Tweaks\"><img alt=\"GitHub repository\" src=\"https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github\"></a>\n  <a href=\"https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues\"><img alt=\"Report an issue\" src=\"https://img.shields.io/badge/Issues-Report_a_bug-c93c7a?style=for-the-badge&logo=githubissues&logoColor=white\"></a>\n  <a href=\"https://discord.gg/9t2VxEF7UU\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-Join_us-5865F2?style=for-the-badge&logo=discord&logoColor=white\"></a>\n  <a href=\"https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/blob/main/docs/wiki/WIKI.md\"><img alt=\"Wiki\" src=\"https://img.shields.io/badge/%F0%9F%93%96-Wiki-7c3aed?style=for-the-badge\"></a>\n</p>\n\n![KoHs Inventory Tweaks main configuration menu](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/main-menu.png)\n\n> **Support update (September 2026):** KoHs Inventory Tweaks now supports **Minecraft 1.21.11 and later**. The 1.21.10 builds stay downloadable as archived versions but no longer receive fixes or new features.\n\n## Your inventory, your rules\n\n**KoHs Inventory Tweaks** is the client-side successor to **KoHs Inv Cursor**, maintained for Minecraft 1.21.11, 26.1, 26.1.1, 26.1.2, and 26.2. It gives you precise cursor placement, faster and more reliable inventory input, visual customization, item highlighting, and an inventory-only GUI scaler—all through a responsive purple configuration menu.\n\nThe mod keeps normal Minecraft inventory rules. It does not require installation on the server and does not add automated item transfers or custom inventory packets.\n\n## Features\n\n- **Cursor Landing** — choose where the cursor appears in your inventory, single or double chests, Ender Chests, and barrels. Every container can be individually disabled to keep its Vanilla behavior.\n- **Center Mouse Fix** — checks the cursor once, right as Minecraft releases the mouse, and fixes it only if it landed somewhere stale. Moving toward a totem or any item is never pulled back.\n- **SuperFastInventory** — opens the local inventory up to one tick (50 ms) sooner, and waits only when Vanilla would still run something first, such as a pending attack or an item in use.\n- **Instant slot shortcuts** — F, 1-9, Q and Ctrl+Q act on the slot under your pointer the moment you press them, even right after a fast flick, in your inventory and every Vanilla container.\n- **Customization** — recolor inventory and slot frames, control opacity and world backdrop darkness, or use a cropped image, GIF, or short video background.\n- **Resource-pack aware** — choose the active resource-pack inventory texture or the Vanilla base, then apply KoHs customization above it.\n- **Item Highlighter** — search Vanilla items and configure slot colors, borders, hotbar highlighting, and dynamic hover highlighting.\n- **GUI Scaler** — resize only the player inventory, including its slots, text, items, and character model.\n- **Player Visibility** — tint and a glowing silhouette for the players you can already see while your inventory is open. Blocks hide both: nothing shows through walls.\n- **A new interface** — dark violet glass, a slow animated background that holds still when you reduce motion, controls that never shift under your pointer, hover explanations, and pages that fit at GUI scale 2, 3 and 4.\n- **English and Spanish** — every supported Spanish locale uses the Spanish interface; other languages fall back to English.\n\n## A closer look\n\n### Cursor Landing\n\n![Cursor Landing configuration](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/cursor-landing.png)\n\n### Inventory Tweaks\n\n![Inventory Tweaks: Super Fast Inventory, Centered Mouse Fix and Reduce inventory visual motion](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/inventory-tweaks.png)\n\n### Inventory appearance\n\n![Inventory customization](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/customization.png)\n\n### Item Highlighter\n\n![Item Highlighter](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/item-highlighter.png)\n\n### Inventory-only GUI Scaler\n\n![GUI Scaler](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/gui-scaler.png)\n\n### Player Visibility\n\n![Player Visibility with the silhouette glow preview](https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/player-visibility.png)\n\n\nFor complete instructions, media limits, troubleshooting, and configuration backups, read the [KoHs Inventory Tweaks Wiki](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/blob/main/docs/wiki/WIKI.md).\n",
+      "icon_url": "https://cdn.modrinth.com/data/CjgeYNJu/23115d325489a95de24b79b2054a8125e3a14c1e.png",
+      "project_type": "mod",
+      "categories": [
+        "game-mechanics"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "game_versions": [
+        "1.21.11",
+        "26.1",
+        "26.1.1",
+        "26.1.2",
+        "26.2"
+      ],
+      "client_side": "required",
+      "server_side": "unsupported",
+      "downloads": 1305,
+      "followers": 3,
+      "published": "2026-02-24T16:28:41.607845Z",
+      "updated": "2026-09-29T15:20:14.384911Z",
+      "license": {
+        "id": "MIT",
+        "name": "MIT License",
+        "url": null
+      },
+      "gallery": [],
+      "versions": [
+        "aL0wybX8",
+        "FFdixQnw",
+        "Wf8jrz5p",
+        "s7rcniSY",
+        "cqQ4CVS7",
+        "y4t0x4Wc",
+        "g5hMhETm",
+        "dmv47bjA",
+        "xsaXk1eI",
+        "LPzdwhLu"
+      ],
+      "source_url": "https://github.com/kerlycanelita/KoHs-Inventory-Tweaks",
+      "issues_url": "https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues",
+      "wiki_url": "https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/blob/main/WIKI.md",
+      "discord_url": "https://discord.gg/9t2VxEF7UU",
+      "status": "approved"
+    },
+    {
+      "id": "6IMVkzdT",
+      "slug": "keyboard-place-fix",
+      "title": "Keyboard Place Fix",
+      "description": "Fixes inventory right-click behavior for external Keyboard Place setups without changing core KBP functionality.",
+      "body": "# Keyboard Place Fix\n\nis a client-side Fabric mod for players who already use **Keyboard Place (KBP)** with external mouse/software remapping.\n\nIt restores vanilla right-click behavior in inventories while keeping your normal KBP gameplay flow.\n\n## What this mod fixes\n\nWhen KBP is used via external remap, inventory right-click actions can fail (or feel inconsistent), such as:\n\n- Splitting stacks (64 -> 32)\n- Right-click interactions in chests and other containers\n  \nThis mod fixes those inventory/container interactions.\n# ![KB](https://cdn.modrinth.com/data/cached_images/5e1182d457acb67de3ee1f5a06a2713ecc483d2f.gif)-![KB](https://cdn.modrinth.com/data/cached_images/a86530479cd0e07d9ee83191da72ff6d57b2b2ef.gif)-![KB](https://cdn.modrinth.com/data/cached_images/a141a4f37b91f19ef826ab34003dfa60325ff36e.gif)\n## What this mod does **not** change\n\n- It does **not** change core KBP functionality\n- It does **not** generate KBP by itself\n\n## Features\n\n- Virtual right-click keybind (default: `.`)\n- Works in inventory, chests, and storage containers\n- Optional Mod Menu config screen\n- Lightweight, client-side only\n\n## Requirements\n\n- KBP enabled externally (mouse software/remapper)\n  ![Replace this with a description](https://cdn.modrinth.com/data/cached_images/f68cbb58d0f52eb9305981004ed2314f0415d476_0.webp)\n\n## Usage\n\n1. Install the mod in your `mods` folder.\n2. Bind `Virtual Right Click` to your preferred key (or keep default).\n3. Use your KBP setup normally.\n\n## Important warning\n\nThis mod only works as intended if **Keyboard Place is already enabled externally** with your mouse/software remapper.\n",
+      "icon_url": "https://cdn.modrinth.com/data/6IMVkzdT/4f0b00a88a73f08f736017e7a92d8be02f4f3ad5_96.webp",
+      "project_type": "mod",
+      "categories": [
+        "game-mechanics",
+        "optimization",
+        "utility"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "game_versions": [
+        "1.21",
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10",
+        "1.21.11",
+        "26.1",
+        "26.1.1",
+        "26.1.2",
+        "26.2"
+      ],
+      "client_side": "required",
+      "server_side": "unsupported",
+      "downloads": 1211,
+      "followers": 1,
+      "published": "2026-03-10T07:09:55.160976Z",
+      "updated": "2026-08-17T22:37:48.829878Z",
+      "license": {
+        "id": "MIT",
+        "name": "MIT License",
+        "url": null
+      },
+      "gallery": [],
+      "versions": [
+        "1EwKvKVF",
+        "6KNbr3au",
+        "LgxyeCjH",
+        "VDak4OQm",
+        "RR8eiKCc",
+        "dFDqnONh",
+        "jGI9Uqje",
+        "hgj3h54f"
+      ],
+      "source_url": null,
+      "issues_url": null,
+      "wiki_url": null,
+      "discord_url": "https://discord.gg/TpBbyxhFSF",
+      "status": "approved"
+    },
+    {
+      "id": "npCfqe2V",
+      "slug": "kohs-bedrock-essentials-pvp",
+      "title": "KoHs Bedrock Essentials pvp",
+      "description": "Bedrock-only optimization for Paper crossplay servers.",
+      "body": "# Bedrock Essentials\n\nBedrock Essentials is a Paper plugin built for servers that use Geyser and Floodgate.\n\nIts goal is simple: make Bedrock players feel better on Java-based Paper servers without changing the Java experience and without adding unfair automation.\n\nThis plugin only affects Bedrock players detected through Floodgate and Geyser.\nJava players are left untouched.\n\n## What It Does\n\nBedrock Essentials currently focuses on four problem areas that are especially noticeable for Bedrock players on crossplay servers:\n\n### Ghost Block Mitigation\n\nWhen the server rejects or cancels an action, Bedrock clients can temporarily see the wrong block state or inventory state.\n\nThis plugin resynchronizes nearby blocks and inventory state to reduce:\n\n- ghost blocks\n- delayed visual corrections\n- failed interaction feedback\n\n### End Crystal Combat Assist\n\nBedrock crystal combat often feels worse than Java because place and break interactions do not line up as cleanly.\n\nThis plugin improves manual crystal combat by helping with:\n\n- faster manual place and break flow\n- better targeting around recent crystal placement\n- reduced desync during rapid PvP actions\n\nImportant:\n\n- this is not crystal aura\n- this is not auto-break\n- the player still has to manually right click and left click\n\n### Totem Offhand Optimizer\n\nMoving a totem into the offhand can feel visually delayed for Bedrock players, even when the inventory state is already changing on the server.\n\nThis plugin improves offhand synchronization so the totem appears faster and more consistently during manual inventory actions.\n\nImportant:\n\n- this is not autototem\n- the plugin does not equip a totem by itself\n- it only improves the synchronization of the player's own action\n\n### Respawn Anchor Optimizer\n\nRespawn anchor placement and glowstone charging can feel inconsistent on Bedrock clients, especially under fast PvP or repeated interactions.\n\nThis plugin improves:\n\n- respawn anchor placement feedback\n- glowstone charge synchronization\n- reduced ghosting around anchor interactions\n\n## What It Does Not Do\n\nTo keep the scope clear, Bedrock Essentials does not:\n\n- affect Java players\n- bypass protection plugins\n- replace Geyser or Floodgate\n- fully fix every Bedrock-side or protocol-side issue\n- automate PvP actions for the player\n\n## Requirements\n\n- Java 21\n- Paper 1.21.11\n- Floodgate\n- Geyser-Spigot\n\n## Installation\n\n1. Install Floodgate and Geyser-Spigot on your Paper server.\n2. Drop `BedrockEssentials-<version>.jar` into the `plugins/` folder.\n3. Start the server once to generate the plugin configuration.\n4. Review `plugins/BedrockEssentials/config.yml`.\n5. Restart the server fully after changing important settings.\n\nDo not use `/reload`.\n\n## Configuration\n\nThe plugin ships with a configurable `config.yml` that controls:\n\n- generic block and inventory resync behavior\n- Bedrock-only trigger conditions\n- crystal combat assistance\n- totem offhand synchronization\n- respawn anchor interaction handling\n\nIf you want the full configuration explanation, use the repository README and the source config as reference.\n\n## Compatibility Notes\n\n- Designed for Paper 1.21.11\n- Intended for crossplay servers using Geyser and Floodgate\n- Bedrock-only logic is applied through runtime player detection\n- Best results come from real-world tuning on the target server\n\n## Beta Notice\n\nThis release is still beta software.\n\nIt is already functional and structured, but it should still be treated as a plugin that benefits from testing under live Bedrock gameplay conditions.\n\n## Source Code and Issues\n\n- Source code: GitHub repository\n- Issue tracker: GitHub Issues\n\nIf you run a Bedrock-heavy crossplay server and want to improve feel without touching Java players, this plugin is built for that exact use case.\n",
+      "icon_url": "https://cdn.modrinth.com/data/npCfqe2V/5533c4e73bb25f6e85fe5b674fcf6e921da5eece_96.webp",
+      "project_type": "mod",
+      "categories": [
+        "game-mechanics",
+        "optimization",
+        "utility"
+      ],
+      "loaders": [
+        "paper"
+      ],
+      "game_versions": [
+        "1.21.10",
+        "1.21.11"
+      ],
+      "client_side": "unsupported",
+      "server_side": "required",
+      "downloads": 245,
+      "followers": 0,
+      "published": "2026-03-20T19:55:47.717792Z",
+      "updated": "2026-03-26T18:11:09.718392Z",
+      "license": {
+        "id": "GPL-3.0-only",
+        "name": "GNU General Public License v3.0 only",
+        "url": null
+      },
+      "gallery": [],
+      "versions": [
+        "9GtYyXTN",
+        "fjnGxE3E"
+      ],
+      "source_url": "https://github.com/kerlycanelita/bedrock-essentials.git",
+      "issues_url": "https://github.com/kerlycanelita/bedrock-essentials/issues",
+      "wiki_url": null,
+      "discord_url": "https://discord.gg/KEgv6EZxFn",
+      "status": "approved"
+    },
+    {
+      "id": "DNMK5gVu",
+      "slug": "healt-alert-tweaks",
+      "title": "Healt Alert Tweaks",
+      "description": "Customizable low-health vignette and heartbeat alerts.",
+      "body": "# Healt Alert Tweaks\n\n**Healt Alert Tweaks** is a client-side Fabric mod that helps you react faster when your health gets low by adding configurable visual and audio alerts.\n\nThe main feature is a customizable low-health vignette that fades onto your screen when your health drops below a configurable threshold. You can choose the color, transparency, size, intensity behavior, and animation style directly from the Mod Menu configuration screen.\n\nThe mod also includes heartbeat effects. The vignette can pulse like a heartbeat, and an optional heartbeat sound can play when your health is low. Both the visual pulse and the sound speed can react to your current health, becoming more intense as your health gets lower, or they can stay static if you prefer a calmer alert.\n\nEverything is configurable through a custom Mod Menu screen with separated tabs for visual tweaks and sound settings.\n\n## Features\n\n- Custom low-health vignette.\n- Custom vignette color picker.\n- Adjustable health threshold.\n- Adjustable vignette transparency.\n- Adjustable vignette size.\n- Smooth vignette fade animation.\n- Static Color mode.\n- Static color intensity slider.\n- Heartbeat-style vignette pulse.\n- Optional low-health heartbeat scaling.\n- Heartbeat sound alert.\n- Adjustable heartbeat sound volume.\n- Adjustable heartbeat sound intensity.\n- Sound preview player.\n- Vignette preview panel.\n- Mod Menu support.\n- Client-side only.\n\n## Low Health Vignette\n\nThe vignette appears when your health goes below the value you choose in the config menu.  \nYou can customize its color, transparency, size, and how strongly it reacts to your health.\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/60a284c6f6a5140b49fa595812637f4c5b7c95ec.gif)\n\n## Custom Color Picker\n\nChoose the vignette color directly from a palette-style selector.  \nThis lets you make the alert subtle, intense, dark, bright, or matching your own style.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/4cf1e5074886801425d236f946c70f76675a9c4e.png)\n\n## Static Color Mode\n\nBy default, the vignette becomes stronger as your health gets lower.  \nIf you prefer a fixed intensity, enable **Static Color** and adjust the intensity slider.\n\n\n## Smooth Fade\n\nThe vignette can appear and disappear smoothly instead of popping onto the screen suddenly.\n\n## Heartbeat Vignette\n\nThe vignette can pulse like a heartbeat.  \nWhen low-health integration is enabled, the pulse becomes faster as your health gets lower.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/22a29843a41aa97b27ad3a00757b03ec8c1f29d2.png)\n\n## Heartbeat Sound\n\nThe mod can also play a heartbeat sound when your health is low.  \nYou can adjust the volume and the heartbeat intensity from the Sound tab.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/c1b46ca53611491de44db6eb1e079f9809aaad44.png)\n\n## Mod Menu Configuration\n\nAll options are available from a custom Mod Menu screen with tabs for visual tweaks and sound settings.\n\nRequires:\n\n- Fabric Loader\n- Fabric API\n- Mod Menu is recommended for configuration\n",
+      "icon_url": "https://cdn.modrinth.com/data/DNMK5gVu/5417bc5a9ef27f79a7060e642801302a9454420e_96.webp",
+      "project_type": "mod",
+      "categories": [
+        "utility"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "game_versions": [
+        "1.21",
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10",
+        "1.21.11"
+      ],
+      "client_side": "required",
+      "server_side": "unsupported",
+      "downloads": 601,
+      "followers": 0,
+      "published": "2026-04-27T06:15:05.390927Z",
+      "updated": "2026-04-27T19:44:53.548095Z",
+      "license": {
+        "id": "LicenseRef-All-Rights-Reserved",
+        "name": "",
+        "url": null
+      },
+      "gallery": [
+        {
+          "url": "https://cdn.modrinth.com/data/DNMK5gVu/images/c06cde7f2d550459114538482bbf9cd072255a7b_350.webp",
+          "raw_url": "https://cdn.modrinth.com/data/DNMK5gVu/images/c06cde7f2d550459114538482bbf9cd072255a7b.png",
+          "featured": false,
+          "title": "config screen",
+          "description": "a config screen",
+          "created": "2026-04-27T06:21:01.882610Z",
+          "ordering": 0
+        }
+      ],
+      "versions": [
+        "scOyeVyY",
+        "vHYktX8X",
+        "l4rZaRfl",
+        "sVzgSTkd",
+        "ejWtpclh",
+        "k65BbULj"
+      ],
+      "source_url": null,
+      "issues_url": null,
+      "wiki_url": null,
+      "discord_url": "https://discord.gg/GyqVQdgKWt",
+      "status": "approved"
+    },
+    {
+      "id": "pxbRbYs8",
+      "slug": "kohs-offhand-whitelist",
+      "title": "KoHs Offhand Whitelist",
+      "description": "Client-side offhand whitelist with searchable items and custom presets.",
+      "body": "# KoHs Offhand Whitelist\n\n**KoHs Offhand Whitelist** is a client-side Fabric mod that controls which items you can move into the offhand slot.\n\nInstead of allowing every item, the mod uses a whitelist.  \nIf an item is not allowed, the mod blocks offhand insertion/swap actions for that item.\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/544d133d21012e7b7fd0d457336801273ddfe06a_0.webp)\n\n## What this mod does\n- Blocks non-whitelisted items from being placed in offhand\n- Allows editing the whitelist from an in-game GUI\n- Shows all Minecraft items (including potion variants) with search\n- Lets you quickly add/remove items with `+` and `-`\n- Supports presets (built-in + custom)\n- Auto-saves changes instantly (no manual save needed)\n\n## GUI Tabs\n- **Whitelist**: manage allowed and non-allowed items\n- **Create Preset**: build/edit a preset from selected items\n- **Custom Presets**: use, edit, or delete saved presets\n- **Report Issues**: support/help section with Discord button\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/a143fbb2848fa7c2f872200eac9e28f6dcdfcd5a.png)\n\n## Why use it\nUseful for PvP and utility clients when you want strict offhand control (for example only totem, shield, crystals, specific potions, etc.).\n\n![Replace this with a description](https://cdn.modrinth.com/data/cached_images/43d947d708f08147f086507e519d2a26f47e6bb6.gif)\n\n\n\n\n## Support\nFor support or help creating mods/plugins:  \n**https://discord.gg/TpBbyxhFSF**\n",
+      "icon_url": "https://cdn.modrinth.com/data/pxbRbYs8/cc15f582883311658571236d8ca4310275bbcbdd_96.webp",
+      "project_type": "mod",
+      "categories": [
+        "game-mechanics",
+        "utility"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "game_versions": [
+        "1.21",
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.9",
+        "1.21.10",
+        "1.21.11"
+      ],
+      "client_side": "required",
+      "server_side": "unsupported",
+      "downloads": 442,
+      "followers": 0,
+      "published": "2026-03-02T18:55:58.668472Z",
+      "updated": "2026-03-17T02:31:33.481236Z",
+      "license": {
+        "id": "LicenseRef-All-Rights-Reserved",
+        "name": "",
+        "url": null
+      },
+      "gallery": [],
+      "versions": [
+        "EJOIF8Br",
+        "rk1yIJRe",
+        "vHJRqBWj",
+        "EkLDr95O"
+      ],
+      "source_url": null,
+      "issues_url": null,
+      "wiki_url": null,
+      "discord_url": "https://discord.gg/TpBbyxhFSF",
+      "status": "approved"
+    },
+    {
+      "id": "FYUHG5B7",
+      "slug": "death-effects-kohs",
+      "title": "Death Effects KoHs",
+      "description": "Customizable player death effects featuring Silhouette, Ghost Player, Faint, Morph and Kids, with animations, sounds, multiplayer support, live previews and a responsive configuration menu.",
+      "body": "# KoHs Death Effects\n\nMake every defeat memorable.\n\n**KoHs Death Effects** replaces Minecraft's standard player death with stylish, dramatic and funny visual effects—without gore. Choose your favorite effect, customize its behavior and preview everything directly from the configuration menu.\n\n## Effects\n\n### Silhouette\n\nA colorful spirit rises from the defeated player and slowly fades away.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/6b9a0daa21d44e6e61e0f5f270a12946f35f9207.png\" alt=\"Silhouette death effect\" width=\"520\"></p>\n\n### Ghost Player\n\nCreates a fading ghost copy with optional armor, held items and rising movement.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/f3b9c2345a257fea43758ff85143606166e01031.png\" alt=\"Ghost Player death effect\" width=\"520\"></p>\n\n### Faint\n\nChoose **Fall** to collapse onto the ground or **Crawl** to move toward your opponent.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a_0.webp\" alt=\"Fall death effect\" width=\"520\"></p>\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/ce18f700c69e5cebd8a352dfa8c3f505778fec54.png\" alt=\"Crawl death effect\" width=\"520\"></p>\n\n### Morph\n\nTransform defeated players into Minecraft mobs with configurable transparency, movement and sounds.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png\" alt=\"Morph death effect\" width=\"520\"></p>\n\n### Kids\n\nTurn defeated players into miniature dolls. Carry two on your shoulders while additional dolls follow as a rope-connected train.\n\n<p style=\"text-align:center;\"><img src=\"https://cdn.modrinth.com/data/cached_images/1379b147468fe51214831d42dfa912e5860ac15d.png\" alt=\"Shoulder dolls and train effect\" width=\"520\"></p>\n\n## Features\n\n- Animated previews\n- Custom MP3 death sounds\n- Multiplayer synchronization\n- Timers, sliders and hover descriptions\n- Configurable colors, sizes, opacity and duration\n- Responsive purple configuration menu\n\n> Currently available for **Minecraft 1.21.11**.",
+      "icon_url": "https://cdn.modrinth.com/data/FYUHG5B7/f79f6702c7b9c5db48f816d4dea836a6c509039f_96.webp",
+      "project_type": "mod",
+      "categories": [
+        "cursed",
+        "equipment",
+        "utility"
+      ],
+      "loaders": [
+        "fabric"
+      ],
+      "game_versions": [
+        "1.21.11",
+        "26.1",
+        "26.1.1",
+        "26.1.2",
+        "26.2"
+      ],
+      "client_side": "required",
+      "server_side": "unsupported",
+      "downloads": 659,
+      "followers": 2,
+      "published": "2026-07-14T02:00:45.373072Z",
+      "updated": "2026-08-31T05:53:34.540003Z",
+      "license": {
+        "id": "LicenseRef-All-Rights-Reserved",
+        "name": "",
+        "url": null
+      },
+      "gallery": [
+        {
+          "url": "https://cdn.modrinth.com/data/FYUHG5B7/images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a_350.webp",
+          "raw_url": "https://cdn.modrinth.com/data/FYUHG5B7/images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a.png",
+          "featured": false,
+          "title": "Fall effect",
+          "description": null,
+          "created": "2026-07-14T02:15:59.615292Z",
+          "ordering": 0
+        },
+        {
+          "url": "https://cdn.modrinth.com/data/FYUHG5B7/images/1379b147468fe51214831d42dfa912e5860ac15d_350.webp",
+          "raw_url": "https://cdn.modrinth.com/data/FYUHG5B7/images/1379b147468fe51214831d42dfa912e5860ac15d.png",
+          "featured": false,
+          "title": "TRAIN",
+          "description": "Train Death effect",
+          "created": "2026-07-14T02:15:33.223237Z",
+          "ordering": 0
+        },
+        {
+          "url": "https://cdn.modrinth.com/data/FYUHG5B7/images/4e4f08e045c90e320ac8ea81f26d744bd745f992_350.webp",
+          "raw_url": "https://cdn.modrinth.com/data/FYUHG5B7/images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png",
+          "featured": false,
+          "title": "Morph effect",
+          "description": null,
+          "created": "2026-07-14T02:16:14.604853Z",
+          "ordering": 0
+        }
+      ],
+      "versions": [
+        "63kNd20q",
+        "zu0GbQzI",
+        "jBj7qj9U",
+        "exo4N8JT",
+        "TFszfWXO",
+        "nwWGALhv",
+        "mBy4LfzK",
+        "z6DMH2I5",
+        "3DiYD6KF"
+      ],
+      "source_url": null,
+      "issues_url": null,
+      "wiki_url": null,
+      "discord_url": "https://discord.gg/pxM4nQk36a",
+      "status": "approved"
     }
   ],
   "readmes": {
-    "herzium": "# Herzium\n\n[![GitHub](https://img.shields.io/badge/GitHub-Herzium-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/Herzium)\n[![Modrinth](https://img.shields.io/badge/Modrinth-Herzium-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/herzium)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/Herzium/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/herzium/icon.png\" alt=\"Herzium icon\" width=\"220\">\n</p>\n\n**Responsive hotbar previews with three selection-order preferences.**\n\nHerzium is a small client-side visual-response mod. When a hotbar slot is\nrequested with a configured hotbar key, Herzium can preview Vanilla's currently\nresolvable HUD highlight on the next rendered frame instead of waiting for\nVanilla's next client tick. Ordinary non-combat items can also be previewed in hand. That can\nmake the response visible up to one normal client tick (about 50 ms) sooner on\na high refresh-rate display.\n\nThe existing input sampling is unchanged: Herzium observes logical key events\nas Minecraft registers them, including remapped hotbar bindings. Attack/Use\ncontinue through their normal Vanilla path with the same cooldown handling.\n\nThe preview is provisional. Herzium order is the default; Vanilla order is one\nclick away in Mod Menu, which offers three preferences for multiple slot inputs\npending in the same tick:\n\n| Preference | Which slot wins? | Example |\n| --- | --- | --- |\n| Vanilla | Highest numbered slot | 1 + 9 selects 9 |\n| Herzium (default) | Most recently pressed binding among pending slots | 9 then 1 selects 1 |\n| Vanilla reversed | Lowest numbered slot | 1 + 9 selects 1 |\n\nThese are selection preferences, not a higher sampling rate. Herzium and Vanilla\nreversed change the **real selected slot**, so the hand, HUD and item used follow\nthe same preference. They are not Vanilla-equivalent and may be restricted by\nservers. Because Herzium order is the default, a fresh install is in that state\nfrom its first session; select Vanilla order to keep Vanilla selection. Repeated presses retain Vanilla's queue and normal tick processing;\nduplicate bindings in Herzium mode use the higher slot as a deterministic tie-break.\nA key tapped twice inside one tick, or held until it auto-repeats, leaves clicks\nqueued; in Herzium order those older clicks can no longer undo a newer key.\nVanilla applies every hotbar key of a tick before its Use and Attack clicks; in\nHerzium order a key pressed after such a click waits for the next tick, so the\nclick uses the item held when it was pressed.\nA preview that Vanilla's own selection contradicts suspends previews for that\nworld; a slot chosen by another mod or the server only clears it.\n\n## What it changes\n\n- **Hotbar preview.** Vanilla's currently resolvable requested slot can be\n  highlighted on the next rendered frame. Ordinary items can also appear in hand immediately;\n  combat items keep Vanilla's hand/equip transition.\n- **Selection-order preference.** A compact Mod Menu button cycles through the\n  three modes and saves the choice. No restart is needed.\n- **Ordinary-item equip transition.** Removes the decorative equip dip from\n  ordinary main-hand and offhand items. Placing one still plays Vanilla's short\n  hand dip, the visual confirmation of the placement. Combat items keep\n  Vanilla's complete equip transition.\n- **Smoother attack indicator.** Interpolates only the displayed attack meter,\n  conservatively within Vanilla's current tick. It does not change cooldowns\n  or attack timing.\n- **Shorter decorative start-up transitions.** Removes the title-screen fade\n  and post-world-creation hold. Resource loading and\n  world creation still perform their real work.\n\n## What it does not change\n\nHerzium does not increase FPS or accelerate client/server ticks. It leaves\nVSync, `Max Framerate`, `Reduce FPS when inactive`, Raw\nInput, Smooth Camera, sensitivity and cursor placement untouched. It does not\nwrite those options to `options.txt`.\n\nThe visual preview is not sent to the server. Selecting Vanilla order keeps the\nreal selection Vanilla too. The default Herzium order and Vanilla reversed can\nchange carried-slot packets and the resulting item/block actions because they\nselect a different item. Herzium does not dispatch actions early, add retries, send packets itself,\nconsume extra clicks or modify reach, cooldowns or hitboxes.\nServers may still restrict client mods or identify them through an approved\nclient/attestation system, so follow each server's rules.\n\n## When it helps\n\nThe difference is easiest to see on high refresh-rate displays while switching\nslots quickly, especially ordinary items. Herzium does not improve a GPU- or\nCPU-limited frame rate and will not make loading work finish faster.\n\n## Install\n\n1. Install [Fabric Loader](https://fabricmc.net/use/) 0.19.3 or newer.\n2. Put the jar that matches your exact Minecraft version in the `mods` folder.\n\n| Minecraft | Jar | Java |\n| --- | --- | --- |\n| 1.21.10 | `herzium-1.21.10-1.10.6.jar` | 21 |\n| 1.21.11 | `herzium-1.21.11-1.10.6.jar` | 21 |\n| 26.1 | `herzium-26.1-1.10.6.jar` | 25 |\n| 26.1.1 | `herzium-26.1.1-1.10.6.jar` | 25 |\n| 26.1.2 | `herzium-26.1.2-1.10.6.jar` or `herzium-1.10.6.jar` | 25 |\n| 26.2 | `herzium-26.2-1.10.6.jar` | 25 |\n| 26.3 | `herzium-26.3-1.10.6.jar` | 25 |\n\nThe root build's `herzium-1.10.6.jar` accepts `>=26.1.2 <26.2`, so it also loads\non a later 26.1.x patch; the per-version jars pin their exact version.\n\nHerzium is client-side only. **Fabric API and Mod Menu are both optional**, with\ntwo consequences worth knowing:\n\n- Fabric Loader ships no resource-pack support, so **without Fabric API**\n  Minecraft never reads any mod's language files and Herzium's screens show raw\n  keys such as `herzium.warning.title`. Everything still works; only the wording\n  is missing.\n- **Without Mod Menu** there is no button to open the settings screen, so the\n  selection order stays on its default.\n\nA short information screen is shown once; after the player chooses **Continue**,\nits acknowledgement is saved and it will not appear again.\n\n## Languages\n\nEnglish is the fallback. Minecraft's seven Spanish locales are included:\nArgentina, Chile, Ecuador, Spain, Mexico, Uruguay and Venezuela.\n\n## Compatibility\n\nHerzium does not control Raw Input or the cursor, so KoHsium, Raw Input Buffer,\nIxeris and KoHs Inventory Tweaks retain ownership of those behaviors. Detected\ninput-related mods are reported in the log for troubleshooting.\n\nIf Exordium is installed, Herzium bypasses Exordium's HUD frame buffer so the\nhotbar preview can be drawn each frame. Exordium's HUD caching is therefore\ninactive while both mods run. Players who prefer Exordium's caching should not\ncombine the two mods.\n\n## Building\n\n```bash\n./gradlew build\n```\n\nThe release JAR is written to `build/libs/herzium-<mod_version>.jar`, where\n`mod_version` comes from `gradle.properties` — currently `1.10.6`. The file\nending in `-sources.jar` is not the playable build.\n\nThe other game versions come from a separate build:\n\n```powershell\nversion\\build-all.ps1\n```\n\nEach target lands in `version/<minecraft_version>/build/libs/`. That script\nneeds a Java 25 JDK, which it resolves from `JAVA_HOME`, `PATH` or the usual\ninstall roots; the 1.21.x targets additionally compile at release 21 through a\ntoolchain Gradle downloads on demand.\n\nThe build runs `hotbarOrderTest`, which checks the production preference policy\nand logical GUI bounds without launching Minecraft. See the\n[26.1.2 audit](docs/audits/AUDIT-1.10.3-26.1.2.md) for scope and limitations, and\nthe [multiversion audit](docs/audits/AUDIT-1.10.3-multiversion.md) for how the\nper-version builds were checked.\n\nThe [seven-version release audit](docs/audits/AUDIT-1.10.3-release-2026-09-22.md)\ncovers the final JARs from 1.21.10 through 26.3, including the 26.3 hand-state\nadapter. To reproduce that build and export its isolated client launch inputs:\n\n```powershell\nversion\\build-all.ps1 -MinecraftVersions 1.21.10,1.21.11,26.1,26.1.1,26.1.2,26.2,26.3 -ExportRuntime\npy tools/validation/smoke-release.py 1.21.10 1.21.11 26.1 26.1.1 26.1.2 26.2 26.3\npy tools/validation/smoke-release.py 26.3 --gameplay\npy tools/validation/smoke-release.py 1.21.11 26.1.2 --orders\n```\n\nValidation clients use new profiles under `tmp/release-audit/`, test the packaged\nrelease JARs, and close automatically. The gameplay checks create their own world.\n`--orders` presses hotbar keys through the real keyboard handler and records what\nthe HUD showed and which slot packets were sent; the\n[in-game order audit](docs/audits/AUDIT-1.10.4-orders-ingame.md) has its results.\n`--crystal` (26.2 and later) times the obsidian and end-crystal placement cycle\nunder each order; the [1.10.5 audit](docs/audits/AUDIT-1.10.5-orders-static.md)\nhas its results and a per-version bytecode check of the order hooks.\nThe validation mod is never included in a release artifact.\n\n## Repository layout\n\n| Location | Contents |\n| --- | --- |\n| `src/` | The shared client mod; the root build targets 26.1.2. |\n| `version/` | Per-game-version builds and the adapters they need. |\n| `debug/` | The optional diagnostic companion, built separately. |\n| `docs/` | Audits, release text, checksums and recorded evidence. |\n| `tools/` | Hotbar tests and repository maintenance helpers. |\n\nStart with the [documentation index](docs/README.md). Build output and local\nMinecraft instances remain outside Git; keep installable JARs out of the source tree.\n\n## License\n\nMIT. See [LICENSE](LICENSE).\n\n## Credits\n\nMade by **zymekoh**.\n\n[Exordium](https://github.com/tr7zw/Exordium) was studied as a reference for how\na HUD cache behaves, which is why Herzium explicitly handles that overlap.\n",
+    "herzium": "# Herzium\n\n[![GitHub](https://img.shields.io/badge/GitHub-Herzium-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/Herzium)\n[![Modrinth](https://img.shields.io/badge/Modrinth-Herzium-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/herzium)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/Herzium/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/herzium/icon.png\" alt=\"Herzium icon\" width=\"220\">\n</p>\n\n**Responsive hotbar previews with three selection-order preferences.**\n\nHerzium is a small client-side visual-response mod. When a hotbar slot is\nrequested with a configured hotbar key, Herzium can preview Vanilla's currently\nresolvable HUD highlight on the next rendered frame instead of waiting for\nVanilla's next client tick. Ordinary non-combat items can also be previewed in hand. That can\nmake the response visible up to one normal client tick (about 50 ms) sooner on\na high refresh-rate display.\n\nThe existing input sampling is unchanged: Herzium observes logical key events\nas Minecraft registers them, including remapped hotbar bindings. Attack/Use\ncontinue through their normal Vanilla path with the same cooldown handling.\n\nThe preview is provisional. Herzium order is the default; Vanilla order is one\nclick away in Mod Menu, which offers three preferences for multiple slot inputs\npending in the same tick:\n\n| Preference | Which slot wins? | Example |\n| --- | --- | --- |\n| Vanilla | Highest numbered slot | 1 + 9 selects 9 |\n| Herzium (default) | Most recently pressed binding among pending slots | 9 then 1 selects 1 |\n| Vanilla reversed | Lowest numbered slot | 1 + 9 selects 1 |\n\nThese are selection preferences, not a higher sampling rate. Herzium and Vanilla\nreversed change the **real selected slot**, so the hand, HUD and item used follow\nthe same preference. They are not Vanilla-equivalent and may be restricted by\nservers. Because Herzium order is the default, a fresh install is in that state\nfrom its first session; select Vanilla order to keep Vanilla selection. Repeated presses retain Vanilla's queue and normal tick processing;\nduplicate bindings in Herzium mode use the higher slot as a deterministic tie-break.\nA key tapped twice inside one tick, or held until it auto-repeats, leaves clicks\nqueued; in Herzium order those older clicks can no longer undo a newer key.\nVanilla applies every hotbar key of a tick before its Use and Attack clicks; in\nHerzium order a key pressed after a click waits for the next tick, so the click\nuses the item held when it was pressed. The mouse wheel counts as the newest\ninput, so a key still queued from before a wheel turn cannot undo it.\nA preview that Vanilla's own selection contradicts suspends previews for that\nworld; a slot chosen by another mod or the server only clears it.\n\n### Burst options\n\nThree switches in Mod Menu refine how a fast burst of keys and clicks is split\nacross ticks. All three are **on in a fresh install**; with all three off,\nHerzium behaves exactly like 1.10.7.\n\n| Option | Applies to | What it does |\n| --- | --- | --- |\n| Split bursts | Herzium order | A click whose item (the last key pressed before it) is not the one this tick holds waits for the next tick, together with everything pressed after it. \"Obsidian, use, crystal, use\" inside one tick places the obsidian now and the crystal on the next tick, on top of it. |\n| Strict attacks | Herzium order | An attack keeps the key pressed before it even when a use follows in the same tick: \"sword, attack, crystal, use\" hits with the sword and places the crystal on the next tick. Off keeps Vanilla's \"attack, key, use\" in one tick, where the attack takes the later key's item. |\n| Offhand sync | Herzium and Vanilla reversed | The server learns the selected slot right before an offhand swap or a drop, as Vanilla already does before a use or an attack. Vanilla sends the swap first, so \"totem key, swap\" inside one tick swapped the item held before the key. |\n\nEvery tick keeps Vanilla's shape: at most one slot change, sent before that\ntick's clicks. The options only ever make a click wait one tick; nothing is sent\nearlier, and no click is created, repeated or dropped. The measurements behind\nthem, against Grim Anticheat with Ping Equalizer, are in the\n[1.11 laboratory audit](docs/audits/LAB-1.11-burst-options.md).\n\n## What it changes\n\n- **Hotbar preview.** Vanilla's currently resolvable requested slot can be\n  highlighted on the next rendered frame. Ordinary items can also appear in hand immediately;\n  combat items keep Vanilla's hand/equip transition.\n- **Selection-order preference.** A compact Mod Menu button cycles through the\n  three modes and saves the choice. No restart is needed.\n- **Ordinary-item equip transition.** Removes the decorative equip dip from\n  ordinary main-hand and offhand items. Placing one still plays Vanilla's short\n  hand dip, the visual confirmation of the placement. Combat items keep\n  Vanilla's complete equip transition.\n- **Smoother attack indicator.** Interpolates only the displayed attack meter,\n  conservatively within Vanilla's current tick. It does not change cooldowns\n  or attack timing.\n- **Shorter decorative start-up transitions.** Removes the title-screen fade\n  and post-world-creation hold. Resource loading and\n  world creation still perform their real work.\n\n## What it does not change\n\nHerzium does not increase FPS or accelerate client/server ticks. It leaves\nVSync, `Max Framerate`, `Reduce FPS when inactive`, Raw\nInput, Smooth Camera, sensitivity and cursor placement untouched. It does not\nwrite those options to `options.txt`.\n\nThe visual preview is not sent to the server. Selecting Vanilla order keeps the\nreal selection Vanilla too. The default Herzium order and Vanilla reversed can\nchange carried-slot packets and the resulting item/block actions because they\nselect a different item. Herzium does not dispatch actions early, add retries,\nconsume extra clicks or modify reach, cooldowns or hitboxes. The only packet it\ncauses is Vanilla's own carried-slot update, sent right before an offhand swap\nor a drop when Offhand sync is on.\nServers may still restrict client mods or identify them through an approved\nclient/attestation system, so follow each server's rules.\n\n## When it helps\n\nThe difference is easiest to see on high refresh-rate displays while switching\nslots quickly, especially ordinary items. Herzium does not improve a GPU- or\nCPU-limited frame rate and will not make loading work finish faster.\n\n## Install\n\n1. Install [Fabric Loader](https://fabricmc.net/use/) 0.19.3 or newer.\n2. Put the jar that matches your exact Minecraft version in the `mods` folder.\n\n| Minecraft | Jar | Java |\n| --- | --- | --- |\n| 1.21.10 | `herzium-1.21.10-1.11.0.jar` | 21 |\n| 1.21.11 | `herzium-1.21.11-1.11.0.jar` | 21 |\n| 26.1 | `herzium-26.1-1.11.0.jar` | 25 |\n| 26.1.1 | `herzium-26.1.1-1.11.0.jar` | 25 |\n| 26.1.2 | `herzium-26.1.2-1.11.0.jar` or `herzium-1.11.0.jar` | 25 |\n| 26.2 | `herzium-26.2-1.11.0.jar` | 25 |\n| 26.3 | `herzium-26.3-1.11.0.jar` | 25 |\n\nThe root build's `herzium-1.11.0.jar` accepts `>=26.1.2 <26.2`, so it also loads\non a later 26.1.x patch; the per-version jars pin their exact version.\n\nHerzium is client-side only. **Fabric API and Mod Menu are both optional**, with\ntwo consequences worth knowing:\n\n- Fabric Loader ships no resource-pack support, so **without Fabric API**\n  Minecraft never reads any mod's language files and Herzium's screens show raw\n  keys such as `herzium.warning.title`. Everything still works; only the wording\n  is missing.\n- **Without Mod Menu** there is no button to open the settings screen, so the\n  selection order stays on its default.\n\nA short information screen is shown once; after the player chooses **Continue**,\nits acknowledgement is saved and it will not appear again.\n\n## Languages\n\nEnglish is the fallback. Minecraft's seven Spanish locales are included:\nArgentina, Chile, Ecuador, Spain, Mexico, Uruguay and Venezuela.\n\n## Compatibility\n\nHerzium does not control Raw Input or the cursor, so KoHsium, Raw Input Buffer,\nIxeris and KoHs Inventory Tweaks retain ownership of those behaviors. Detected\ninput-related mods are reported in the log for troubleshooting.\n\nKoHs Anchor's and KoHs Crystal Tweaks show Herzium's order on their own\nscreens and change it through Herzium's own button, so the choice is saved in\nHerzium's config. KoHs Anchor's also reports the hotbar keys its anchor bursts\nuse, so Herzium's preview follows the item the burst is really holding.\n\nIf Exordium is installed, Herzium bypasses Exordium's HUD frame buffer so the\nhotbar preview can be drawn each frame. Exordium's HUD caching is therefore\ninactive while both mods run. Players who prefer Exordium's caching should not\ncombine the two mods.\n\n## Building\n\n```bash\n./gradlew build\n```\n\nThe release JAR is written to `build/libs/herzium-<mod_version>.jar`, where\n`mod_version` comes from `gradle.properties` — currently `1.11.0`. The file\nending in `-sources.jar` is not the playable build.\n\nThe other game versions come from a separate build:\n\n```powershell\nversion\\build-all.ps1\n```\n\nEach target lands in `version/<minecraft_version>/build/libs/`. That script\nneeds a Java 25 JDK, which it resolves from `JAVA_HOME`, `PATH` or the usual\ninstall roots; the 1.21.x targets additionally compile at release 21 through a\ntoolchain Gradle downloads on demand.\n\nThe build runs `hotbarOrderTest`, which checks the production preference policy\nand logical GUI bounds without launching Minecraft. See the\n[26.1.2 audit](docs/audits/AUDIT-1.10.3-26.1.2.md) for scope and limitations, and\nthe [multiversion audit](docs/audits/AUDIT-1.10.3-multiversion.md) for how the\nper-version builds were checked.\n\nThe [seven-version release audit](docs/audits/AUDIT-1.10.3-release-2026-09-22.md)\ncovers the final JARs from 1.21.10 through 26.3, including the 26.3 hand-state\nadapter. To reproduce that build and export its isolated client launch inputs:\n\n```powershell\nversion\\build-all.ps1 -MinecraftVersions 1.21.10,1.21.11,26.1,26.1.1,26.1.2,26.2,26.3 -ExportRuntime\npy tools/validation/smoke-release.py 1.21.10 1.21.11 26.1 26.1.1 26.1.2 26.2 26.3\npy tools/validation/smoke-release.py 26.3 --gameplay\npy tools/validation/smoke-release.py 1.21.11 26.1.2 --orders\n```\n\nValidation clients use new profiles under `tmp/release-audit/`, test the packaged\nrelease JARs, and close automatically. The gameplay checks create their own world.\n`--orders` presses hotbar keys through the real keyboard handler and records what\nthe HUD showed and which slot packets were sent; the\n[in-game order audit](docs/audits/AUDIT-1.10.4-orders-ingame.md) has its results.\n`--crystal` (26.2 and later) times the obsidian and end-crystal placement cycle\nunder each order; the [1.10.5 audit](docs/audits/AUDIT-1.10.5-orders-static.md)\nhas its results and a per-version bytecode check of the order hooks.\nThe validation mod is never included in a release artifact.\n\n## Repository layout\n\n| Location | Contents |\n| --- | --- |\n| `src/` | The shared client mod; the root build targets 26.1.2. |\n| `version/` | Per-game-version builds and the adapters they need. |\n| `debug/` | The optional diagnostic companion, built separately. |\n| `docs/` | Audits, release text, checksums and recorded evidence. |\n| `tools/` | Hotbar tests and repository maintenance helpers. |\n\nStart with the [documentation index](docs/README.md). Build output and local\nMinecraft instances remain outside Git; keep installable JARs out of the source tree.\n\n## License\n\nMIT. See [LICENSE](LICENSE).\n\n## Credits\n\nMade by **zymekoh**.\n\n[Exordium](https://github.com/tr7zw/Exordium) was studied as a reference for how\na HUD cache behaves, which is why Herzium explicitly handles that overlap.\n",
+    "kohs-crystal-tweaks": "# Crystal Tweaks\n\n[![GitHub](https://img.shields.io/badge/GitHub-Crystal--Tweaks-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Crystal-Tweaks)\n[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/kohs-crystal-tweaks)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Crystal-Tweaks/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/crystal_tweaks/icon.png\" alt=\"Crystal Tweaks icon\" width=\"220\">\n</p>\n\n**Customizable End Crystal visuals, sounds, and responsive previews.**\n\n## About\n\nCrystal Tweaks brings End Crystal visual and sound controls into one animated configuration screen. Version 2.3.0 adds fourteen flash styles for a destroyed crystal, rebuilds the settings into four tabs of tidy cards around a live preview, adds Crystal Practice (a practice world against a bot that plays real crystal PvP techniques, with your own kit arranged in a kit editor), fixes your own crystals being drawn with the enemy profile while spamming, and supports Minecraft 1.21.11 through 26.3.\n\n## Screenshots\n\n<p align=\"center\">\n  <img src=\"docs/images/glow.png\" alt=\"Your crystals glowing purple and an enemy crystal glowing red at night\" width=\"880\">\n</p>\n\n<p align=\"center\">\n  <img src=\"docs/images/flash-styles.png\" alt=\"Twelve of the fourteen flash styles a destroyed crystal can leave\" width=\"880\">\n</p>\n\n| Colors | Glow | Advanced |\n| --- | --- | --- |\n| ![Colors tab](docs/images/settings-colors.png) | ![Glow tab with a heart flash in the preview](docs/images/settings-glow.png) | ![Advanced tab](docs/images/settings-advanced.png) |\n\n| Crystal Practice | Kit editor | What the bot does |\n| --- | --- | --- |\n| ![Crystal Practice gear tab](docs/images/practice-gear.png) | ![Kit editor with the kit room and the practice inventory](docs/images/practice-kit.png) | ![Bot tab listing the Hard bot's techniques](docs/images/practice-bot.png) |\n\n<p align=\"center\">\n  <img src=\"docs/images/practice-worlds.png\" alt=\"The practice grounds: netherite flat, hole arena and natural meadows\" width=\"880\">\n</p>\n\n## What it changes\n\n- Independent colors for the outer layer, inner layer, and crystal core.\n- Glow with `0%`-`300%` power, colored reflections, its own color, and a smooth afterglow trail.\n- Fourteen flash styles for a destroyed crystal, in the glow color and sized from `10%` to `300%`: explosion, skull, your own head as a pale ghost, lightning toward the players you can see, heart, star, shockwave, vortex, crown, crescent, snowflake, flower, gem, and crossed swords.\n- Glow that respects walls instead of using an outline drawn through terrain.\n- Separate colors, glow, and animation speeds for crystals that were not placed by you (with approximate identification).\n- Rotation and floating speed controls from `0%` to `300%`.\n- Custom local explosion sounds with volume and playback-speed controls.\n- A settings screen in four tabs (Colors, Glow, Sound, Advanced) with an optimizer status chip, animated tabs and cards, and an interactive preview that shows your flash when you click it.\n- Automatic optimizer conflict handling: interaction helpers step aside while visuals, sounds, and the preview stay active.\n- Safe Crystal (switchable), optional ghost crystals (off by default), and a local Conflict Monitor.\n- Crystal Practice (experimental): a singleplayer world against a bot that plays real crystal PvP techniques by difficulty (hit-crystal, d-tap, safe and double anchors, butterfly and more, listed with how each works), your own kit arranged in a kit editor with presets modelled on MCTiers, MCPVP and PVPHQ, a Knockback I or II sword, your choice of totems, and a netherite flat, a hole arena or a natural meadow in eight biomes.\n- Spanish localization for Minecraft language codes beginning with `es`; English for every other locale.\n- Optional Mod Menu integration.\n\nCrystal Tweaks optimizes the client only: a crystal you break disappears on your screen straight away, but what reaches the server is not sped up. For that, Marlow's Crystal Optimizer is recommended (check your server's rules); with it installed, Crystal Tweaks turns all of its own optimizations off.\n\nSee the [Crystal Tweaks Wiki](docs/WIKI.md) for installation, configuration, preview controls, compatibility notes, and troubleshooting.\n\n## Requirements\n\n- Fabric Loader: each JAR declares the exact minimum it was built against; see\n  [`gradle/versions.properties`](gradle/versions.properties).\n- The Fabric API version matching your Minecraft installation.\n- Java 21 for Minecraft 1.21.11.\n- Java 25 for Minecraft 26.1–26.3.\n- Mod Menu is optional but recommended for opening the configuration screen.\n\n## Supported Minecraft versions\n\nCrystal Tweaks supports **Minecraft 1.21.11 and later**. The build matrix contains these exact\ntargets:\n\n```text\n1.21.11, 26.1, 26.1.1, 26.1.2, 26.2, and 26.3\n```\n\nEach JAR declares one exact Minecraft version. Minecraft 1.21 through 1.21.10 were archived on\n26 September 2026: their last release, 2.2.7, stays downloadable on Modrinth, and\n[archive/README.md](archive/README.md) lists what was kept and how to rebuild one.\n\n## Compatibility and multiplayer\n\nDo not load Crystal Tweaks together with the retired KoHs Crystal Tweaks mod or another mod that owns the same crystal input, prediction, or interaction paths. Competing mixins can produce inconsistent behavior even when one mod declares a higher mixin priority.\n\nServer rules differ. Review the rules of every multiplayer server and obtain staff approval when required; this project cannot guarantee acceptance by every server or anticheat.\n\nCrystal Tweaks never fabricates, delays, reorders or duplicates a gameplay packet, and never changes\nreach, rotation, attack cooldown or click rate. The server stays authoritative over every crystal.\n\nIts one predictive behavior is hiding a crystal you just hit before the server confirms the break,\nwhich is latency compensation for an action you already performed. It is constrained to hits the\nserver is expected to accept.\n\nSee [docs/audits/LEGITIMACY_AUDIT.md](docs/audits/LEGITIMACY_AUDIT.md) for the full client/server boundary of every feature,\nincluding the one place where the mod changes which packets are sent: Safe Crystal, which you can switch off.\n\n## Building\n\nEvery supported Minecraft version has its own row in [`gradle/versions.properties`](gradle/versions.properties),\nholding the Fabric Loader, Fabric API, Mod Menu and Java release that target is built against. Pick a\ntarget with `-Pmc`:\n\n```powershell\n.\\gradlew.bat build -Pmc=26.1.2\n```\n\nTo build the whole matrix, collect the JARs into `versions/` and refresh `CHECKSUMS.sha256`:\n\n```powershell\n.\\tools\\build-all.ps1\n```\n\nSee [docs/RELEASING.md](docs/RELEASING.md) for the full release process and for how to add a new Minecraft\nversion.\n\n## Support\n\n- [Read the wiki](docs/WIKI.md)\n- [Report a problem](https://github.com/kerlycanelita/KoHs-Crystal-Tweaks/issues/new)\n- [Join the Discord server](https://discord.gg/9t2VxEF7UU)\n- [Download from Modrinth](https://modrinth.com/mod/kohs-crystal-tweaks)\n\n## Repository layout\n\n| Location | Contents |\n| --- | --- |\n| `src/` | Shared client sources and the version-specific rendering adapters. |\n| `gradle/` | Wrapper and the exact Minecraft dependency matrix. |\n| `docs/` | Wiki, release workflow, audits and version notes. |\n| `tools/` | Build, artifact, Mixin and appearance checks. |\n| `archive/` | Code and matrix rows of the archived 1.21–1.21.10 targets; never compiled. |\n| `versions/`, `dist/` | Local generated JAR collections; excluded from Git. |\n\nStart with the [documentation index](docs/README.md). Build output and local\nMinecraft instances remain outside Git; keep installable JARs out of the source tree.\n\n## License\n\nCrystal Tweaks is maintained by **zymekoh** and distributed under the [MIT License](LICENSE).\n",
+    "kohs-inv-cursor": "# KoHs Inventory Tweaks\n\n[![GitHub](https://img.shields.io/badge/GitHub-KoHs--Inventory--Tweaks-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks)\n[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/kohs-inv-cursor)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/kohs_inventory_tweaks/icon.png\" alt=\"KoHs Inventory Tweaks icon\" width=\"220\">\n</p>\n\n**Deterministic cursor placement, inventory customization, and guarded rapid input.**\n\nKoHs Inventory Tweaks is a Fabric client-side mod that hooks into inventory-screen preparation and rendering without replacing server inventory logic. It provides deterministic cursor placement, guarded rapid input, configurable visuals, and a responsive interface while preserving vanilla interactions.\n\nThis repository contains released implementations for **Minecraft 26.2, 26.1.2, 26.1.1, 26.1, and 1.21.11**. The Minecraft 26.1.2 implementation is the repository root; every additional target lives in its own directory under `versions/`.\n\n## Screenshots\n\n<p align=\"center\">\n  <img src=\"docs/media/main-menu.png\" alt=\"KoHs Inventory Tweaks main menu\" width=\"720\">\n</p>\n\n| Inventory Tweaks | Player Visibility |\n| --- | --- |\n| <img src=\"docs/media/inventory-tweaks.png\" alt=\"Inventory Tweaks page with its three options\" width=\"360\"> | <img src=\"docs/media/player-visibility.png\" alt=\"Player Visibility page with the live world view and silhouette glow\" width=\"360\"> |\n| **Cursor Landing** | **Customization** |\n| <img src=\"docs/media/cursor-landing.png\" alt=\"Cursor Landing page\" width=\"360\"> | <img src=\"docs/media/customization.png\" alt=\"Customization page\" width=\"360\"> |\n| **Item Highlighter** | **GUI Scaler** |\n| <img src=\"docs/media/item-highlighter.png\" alt=\"Item Highlighter page\" width=\"360\"> | <img src=\"docs/media/gui-scaler.png\" alt=\"GUI Scaler page\" width=\"360\"> |\n\n## Supported versions\n\nSince 26 September 2026, KoHs Inventory Tweaks supports **Minecraft 1.21.11 and later**. Minecraft 1.21.10 is no longer maintained and will not receive fixes or new features. The 1.21.10 source tree and the unreleased 1.21–1.21.9 work moved to [`archive/`](archive/README.md).\n\n### Older versions\n\nModrinth only offers the latest version. Earlier releases stay on the [GitHub Releases](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/releases) page as archived references: they get no fixes, and each one lists the known problems that 1.1.0 fixes. The 1.0.3 and 1.0.4 releases include Minecraft 1.21.10 files.\n\n## Compatibility\n\n| Minecraft | Fabric API | Java | Source |\n|---|---|---:|---|\n| **26.2** | **0.157.0+26.2** | **25+** | `versions/kohs-inventory-tweaks-26.2` |\n| **26.1.2** | **0.155.2+26.1.2** | **25+** | Repository root |\n| **26.1.1** | **0.145.4+26.1.1** | **25+** | `versions/kohs-inventory-tweaks-26.1.1` |\n| **26.1** | **0.145.1+26.1** | **25+** | `versions/kohs-inventory-tweaks-26.1` |\n| **1.21.11** | **0.141.6+1.21.11** | **21+** | `versions/kohs-inventory-tweaks-1.21.11` |\n\nAll builds require Fabric Loader 0.19.3 or newer. Mod Menu is optional and recommended.\n\nThe mod does not need to be installed on the server.\n\n## What it changes\n\n- **Cursor Landing:** stores independent normalized coordinates for the player inventory, single chest, double chest, Shulker Box, Ender Chest, and barrel. Individual container types can fall back to vanilla cursor behavior.\n- **Center Mouse Fix:** checks the pointer once, right after Minecraft releases the mouse, and corrects it only when GLFW restored a stale position. Movement made while the inventory opens, such as reaching for a totem, is never pulled back.\n- **Super Fast Inventory:** optionally constructs the ordinary local inventory screen directly from the physical keyboard or remapped mouse press, up to one client tick (50 ms) sooner. It waits for the tick only when Vanilla would still run something first: a hotbar key, a pending attack or use, an item in use, or a block being broken. A held mouse button never holds it back, and holding the inventory key toggles it only once. Server-controlled openings, slot actions, packet types, cooldowns, and validation stay on Vanilla paths.\n- **Slot shortcuts:** F, 1-9, Q, Ctrl+Q, clicks and the wheel act on the slot under the pointer the moment they are pressed, even right after a fast flick, in the player inventory and in every Vanilla container.\n- **Reduce inventory visual motion:** stills recipe-button bounce, item return motion, the enchanting book and animated backgrounds, while progress indicators and enchanted-item glint stay Vanilla's.\n- **Customization:** composes player-inventory and compatible-container textures at runtime using RGB palettes, opacity controls, static or animated backgrounds, and resource-pack-aware sources.\n- **GUI Scaler:** scales the player inventory—including slots, items, text, and the player model—from 65% to 315%, starting at 200% on a fresh installation and using adaptive limits based on available space. The default-enabled Affect Containers switch applies that scale to supported chest, Shulker Box, barrel, and Ender Chest screens.\n- **Item Highlighter:** stores per-item colors, optional HUD hotbar highlighting, and dynamic activation based on Minecraft's calculated hovered slot.\n- **Player Visibility:** can tint normally visible players and draw a glowing silhouette around them while your inventory is open, outside its panel. Both are depth-tested like the body, so blocks hide them and nothing shows through walls; Minecraft's glowing outline is never used. Its page shows a live world view beside a walking preview of your own skin and equipment.\n- **Interface:** dark violet glass, a slow animated background that holds still with Reduce inventory visual motion, and controls that never shift under the pointer. Every page fits at GUI scale 2, 3 and 4; each option shows only its name, and hovering it explains the option.\n- **Safe persistence:** sanitizes every setting and writes it through atomic replacement to config/kohs_inventory_tweaks.json.\n\n## Install\n\n1. Install Fabric Loader for your supported Minecraft version.\n2. Install the matching Fabric API release.\n3. Place the matching KoHs Inventory Tweaks JAR in the instance's mods directory.\n4. Optionally install Mod Menu to access configuration through the mod list.\n5. Join a world or server before opening the configuration menu; previews require an active player and loaded resources.\n\nRead the [English wiki](docs/wiki/WIKI.md) for complete instructions covering colors, backgrounds, cursor placement, GUI scaling, and Item Highlighter. A Spanish edition is available through the language button at the top of the wiki.\n\n## Building\n\nWith JDK 25 available through `JAVA_HOME`:\n\n```powershell\n.\\gradlew.bat build --no-daemon\n```\n\nThe 26.1.2 JAR is written to `build/libs/`. To build another supported target, use the JDK declared by that target and run the same command from its `versions/kohs-inventory-tweaks-<minecraft-version>` directory; each JAR is written to that directory's `build/libs/`.\n\nChanges are made in the repository root (Minecraft 26.1.2). The other targets are rebuilt from it, with their own API differences applied:\n\n    python tools/port/port_version.py all\n\n## Verification\n\n    python tools/verify-all-versions.py\n\nAdd `--minecraft-version <version>` to check a range target against any version of its range rather than its default; pointing `--source-root` at an overlay target follows it to the sources it compiles.\n\nThis checks every source tree against the exact Minecraft jar it compiles against and reports any `@Mixin` target class, injected method, accessor, invoker, or `INVOKE` injection point that no longer exists there. It is the pre-launch check for the failure mode that produces a startup crash after a Minecraft update. Pass `--source-root <directory>` to `tools/verify-mixin-targets.py` to check a single tree.\n\n    python tools/verify-translations.py\n\nThis reports any translation key the client asks for that is missing from a language file, and any key present in English but absent from a translation.\n\n    python tools/verify-release-artifacts.py --release 1.1.1\n\nAfter building all five targets, this checks each release JAR's metadata, mixin classes, Java target and bundled translations, and prints its size and hashes.\n\n[`docs/PERFORMANCE.md`](docs/PERFORMANCE.md) documents which hooks run in the frame loop and what they are allowed to do.\n\n## Support\n\n- Reproducible bugs: [GitHub Issues](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues)\n- Community and help: [Discord](https://discord.gg/9t2VxEF7UU)\n\n## Repository layout\n\n| Location | Contents |\n| --- | --- |\n| `src/` | The main Minecraft 26.1.2 implementation. |\n| `versions/` | Separate source targets; legacy local artifacts stay excluded. |\n| `archive/` | Retired targets (Minecraft 1.21.10 and earlier), kept unchanged. |\n| `debug/` | Optional diagnostic companions, separate from the playable mod. |\n| `docs/` | English/Spanish wiki, player reports, audits and release notes. |\n| `tools/` | Mixin, translation, artifact and cursor-contract checks. |\n\nStart with the [documentation index](docs/README.md). Build output and local\nMinecraft instances remain outside Git; keep installable JARs out of the source tree.\n\n## License\n\nDistributed under the [MIT License](LICENSE). Copyright © 2026 zymekoh.\n\n## Credits\n\nMade by **zymekoh**.\n",
+    "keyboard-place-fix": "# Keyboard Place Fix\n\n[![GitHub](https://img.shields.io/badge/GitHub-Keyboard--Place--Fix-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Keyboard-Place-Fix)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Keyboard-Place-Fix/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/keyboardplacefix/icon.png\" alt=\"Keyboard Place Fix icon\" width=\"220\">\n</p>\n\n**Restores vanilla right-click inside inventories, containers and other screens\nwhen the button has been remapped to a key outside the game.**\n\nKeyboard Place remaps right-click onto a keyboard key. That works in the world,\nbut a screen still expects the physical mouse button, so ordinary inventory\nactions — splitting a stack, moving one item, dragging a distribution — stop\nresponding to the key the player is actually pressing. Keyboard Place Fix gives\nthose actions back, and only those.\n\n## What it changes\n\n- **The configured key becomes right-click only while a screen is open.** In the\n  world the mod produces no click at all and modifies none.\n- **It travels vanilla's own `MouseHandler` path,** so stack splitting, moving a\n  single item and right-drag distribution behave exactly as they do with a real\n  mouse button.\n- **It stays quiet while a text field has focus,** so typing a `.` into a search\n  or anvil field types a `.`.\n\n## What it does not change\n\nKeyboard Place Fix does not replace Keyboard Place and does not touch fast\nplacement, XP bottles, potions, cooldowns or packet frequency. It adds no packet\nof its own and retimes none.\n\n## Configuration\n\nThe default key is `.`. It must be set to the same key used by the external\nKeyboard Place remap, from **Controls** or from Mod Menu.\n\n## The 26.x interface\n\nThe four 26.x ports use a translucent, responsive screen with separate panels,\ninner margins and two independent scroll areas. The left column plays the three\noriginal demonstration GIFs from the Modrinth page. They are bundled inside the\nJAR, so nothing is downloaded while playing.\n\n## Compatibility\n\n| Minecraft | Fabric API | Java | Mod version | Source |\n|---|---|---:|---|---|\n| **26.2** | **0.157.0+26.2** | **25+** | 1.2.2 | `26.2` |\n| **26.1.2** | **0.155.2+26.1.2** | **25+** | 1.2.2 | `26.1.2` |\n| **26.1.1** | **0.145.4+26.1.1** | **25+** | 1.2.2 | `26.1.1` |\n| **26.1** | **0.145.1+26.1** | **25+** | 1.2.2 | `26.1` |\n| **1.21.10** | **0.138.4+1.21.10** | **21+** | 1.1.0 | Repository root |\n| **1.21.9** | **0.134.1+1.21.9** | **21+** | 1.1.0 | `1.21.9` |\n| **1.21.6** | **0.128.2+1.21.6** | **21+** | 1.1.0 | `1.21.6` |\n| **1.21** | **0.102.0+1.21** | **21+** | 1.1.0 | `1.21` |\n\nThe 26.x ports require Fabric Loader 0.19.3 or newer; the 1.21.x ports require\n0.16.14 or newer. Mod Menu is optional on every target.\n\nThe 26.1.1 and 26.1.2 ports compile the 26.1 sources, because the APIs they use\nare identical, but Loom recompiles and links each project against the exact JAR\nof its own Minecraft version.\n\nThe mod is client-side only and does not need to be installed on the server.\n\n## Install\n\n1. Install Fabric Loader for your Minecraft version and the matching Java\n   release from the table above.\n2. Install the matching Fabric API release.\n3. Put the matching `keyboard-place-fix` JAR in the `mods` folder.\n4. Open **Controls** or Mod Menu and set the key to the one Keyboard Place uses.\n\n## Building\n\nEach target builds from its own directory:\n\n```powershell\n.\\gradlew.bat -p 26.2 build\n.\\gradlew.bat -p 26.1.2 build\n.\\gradlew.bat -p 26.1.1 build\n.\\gradlew.bat -p 26.1 build\n```\n\nThe repository root builds the 1.21.10 target:\n\n```powershell\n.\\gradlew.bat build\n```\n\nEvery artifact is written to `<target>/build/libs/keyboard-place-fix-<version>+mc<minecraft>.jar`.\nThe file ending in `-sources.jar` is not the playable build.\n\nThe 26.x ports need Gradle to run on **JDK 25**, which is usually not the\ndefault `JAVA_HOME`:\n\n```powershell\n$env:JAVA_HOME = \"C:\\Program Files\\Java\\jdk-25.0.2\"\n```\n\n## License\n\nMIT. See [LICENSE](LICENSE).\n\n## Credits\n\nMade by **zymekoh**.\n",
     "kohs-bedrock-essentials-pvp": "# Bedrock Essentials\n\n`Bedrock Essentials` is a plugin for `Paper 1.21.11` designed to improve the experience of `Bedrock` players detected through `Floodgate`, with `Geyser` running locally or on a proxy (`Velocity`/`Bungee`).\n\nThe goal is not to change Java gameplay or add aggressive automation, but to reduce desync, ghost blocks, and visual/manual delays that Bedrock players often experience on Paper servers.\n\n## Status\n\nThis release is a `beta`.\n\nThis means:\n\n- the codebase compiles and loads correctly\n- the main logic is already separated into systems\n- it is still intended for fine-tuning through real in-game testing\n\n## What It Does\n\nThe plugin includes four main layers:\n\n- `Ghost mitigation`\n  Resynchronizes blocks and inventory when the server cancels Bedrock actions.\n- `Crystal combat assist`\n  Improves manual `End Crystal` placement and breaking for Bedrock without turning it into an aura or auto-break feature.\n- `Totem optimizer`\n  Speeds up visual and inventory synchronization when a totem reaches the `offhand`.\n- `Anchor optimizer`\n  Improves `Respawn Anchor` placement and charging with `Glowstone`, aiming to reduce ghosting and visual delays.\n\n## What It Does Not Do\n\nTo make the scope clear:\n\n- it does not affect Java players\n- it does not bypass protection plugins\n- it is not `autototem`\n- it is not `crystal aura`\n- it does not break crystals on its own without manual input\n- it does not fix deep Bedrock client bugs or the entire Geyser protocol\n\n## Requirements\n\n- `Java 21`\n- `Paper 1.21.11`\n- `Floodgate` on the Paper backend (required)\n- `Geyser` locally (`Geyser-Spigot`) or on a proxy (`Geyser-Velocity`/`Geyser-Bungee`)\n\n## Installation\n\n1. Make sure `Floodgate` is installed on the Paper backend where you will install this plugin.\n2. If you use a proxy (`Velocity`/`Bungee`) with Geyser on the proxy, share `key.pem` and enable Floodgate data forwarding to the backend.\n3. If you do not use a proxy, install `Geyser-Spigot` alongside `Floodgate` on the backend.\n4. Copy the `Bedrock Essentials` JAR into the Paper backend's `plugins/` folder.\n5. Start the server once.\n6. Review `config.yml`.\n7. Perform a `full restart` to test important changes.\n\nAvoid using `/reload`.\n\n## Building\n\n```powershell\n.\\gradlew.bat build\n```\n\nThe JAR is generated at:\n\n```txt\nbuild/libs/BedrockEssentials-<version>.jar\n```\n\n## Configuration\n\nFile:\n\n```txt\nplugins/BedrockEssentials/config.yml\n```\n\n### `warn-bedrock-only`\n\nDefault value:\n\n```yml\nwarn-bedrock-only: true\n```\n\nWhen set to `true`, the plugin prints a console warning that it:\n\n- only affects Bedrock players\n- does not modify Java players\n\nThis is useful for administration and as a reminder of the plugin's actual scope.\n\n### `debug`\n\nDefault value:\n\n```yml\ndebug: false\n```\n\nWhen enabled:\n\n- the plugin prints more information about each resync\n- it shows crystal assist attempts\n- it shows totem and anchor optimizer passes\n\nRecommended:\n\n- `false` in production\n- `true` while fine-tuning timings\n\n## `resync` Section\n\n```yml\nresync:\n  delay-ticks: 1\n  repeat-passes: 2\n  repeat-interval-ticks: 2\n  neighbor-radius: 1\n  inventory-sync: true\n  actionbar-hint: false\n  rate-limit:\n    window-millis: 1000\n    max-resyncs: 12\n```\n\n### `delay-ticks`\n\nNumber of ticks to wait before the first resync.\n\n- `1` tick = 50 ms\n- a low value makes the correction arrive quickly\n- a very high value makes the fix feel slower\n\n### `repeat-passes`\n\nNumber of times the resync is repeated.\n\n- more passes = a better chance of correcting Bedrock\n- more passes = more packets and higher load\n\n### `repeat-interval-ticks`\n\nNumber of ticks between passes.\n\n- `1` is aggressive\n- `2` or `3` is more conservative\n\n### `neighbor-radius`\n\nBlock radius around the problem location.\n\nExamples:\n\n- `0` = only the exact block\n- `1` = `3x3x3` cube\n- `2` = `5x5x5` cube\n\nIncreasing it helps when ghosting affects neighboring blocks, but it consumes more updates.\n\n### `inventory-sync`\n\nWhen set to `true`, the plugin synchronizes the inventory during relevant events.\n\nThis is important for:\n\n- blocks that Bedrock believes it has used\n- buckets\n- totems\n- anchor glowstone\n\n### `actionbar-hint`\n\nWhen set to `true`, it sends short resync messages to the player.\n\nIt is recommended to leave this set to `false` except for visual debugging.\n\n### `rate-limit.window-millis`\n\nThe rate limiter's time window.\n\n### `rate-limit.max-resyncs`\n\nMaximum number of resyncs per player within that window.\n\nThis helps:\n\n- prevent packet spam\n- protect performance\n\n## `triggers` Section\n\n```yml\ntriggers:\n  cancelled-block-break: true\n  cancelled-block-place: true\n  cancelled-block-interact: true\n  cancelled-bucket: true\n  cooldown-place-attempt: true\n```\n\n### `cancelled-block-break`\n\nCorrects the client when Bedrock attempts to break a block and the server denies it.\n\n### `cancelled-block-place`\n\nCorrects the client when Bedrock attempts to place a block and:\n\n- the event was cancelled\n- `canBuild=false`\n\n### `cancelled-block-interact`\n\nCorrects denied interactions.\n\nExamples:\n\n- doors\n- chests\n- buttons\n- protections\n\n### `cancelled-bucket`\n\nCorrects ghosting associated with buckets.\n\n### `cooldown-place-attempt`\n\nIntended for cases where Bedrock attempts to place something with an unusual cooldown or timing.\n\n## `crystal-combat` Section\n\n```yml\ncrystal-combat:\n  enabled: true\n  attack-reach: 4.5\n  hitbox-inflate: 0.35\n  recent-place-radius: 2.25\n  recent-place-window-millis: 450\n  placement-swing-ignore-millis: 50\n  assist-cooldown-millis: 25\n  break-buffer-retries: 3\n  break-buffer-interval-ticks: 1\n```\n\nThis is one of the most sensitive sections.\n\nIts goals are to:\n\n- prevent the crystal from breaking automatically when placed\n- allow fast manual `place + break` on Bedrock\n\n### `enabled`\n\nEnables or disables the crystal combat layer.\n\n### `attack-reach`\n\nMaximum distance for finding a valid crystal.\n\nIf you set it too high:\n\n- the system may become too permissive\n\nIf you set it too low:\n\n- breaking may feel awkward\n\n### `hitbox-inflate`\n\nSlightly expands crystal detection during ray tracing.\n\nThis helps compensate for small Bedrock alignment differences.\n\n### `recent-place-radius`\n\nRadius used to determine, \"this is the crystal I just placed.\"\n\n### `recent-place-window-millis`\n\nTime window during which the plugin still considers a placement recent.\n\nIf you set it too high:\n\n- it may affect swings later than intended\n\nIf you set it too low:\n\n- fast placement/breaking may become less consistent\n\n### `placement-swing-ignore-millis`\n\nThis value helps prevent `auto-break`.\n\nDuring this time, the plugin treats the first swing associated with placement as something that should be ignored.\n\nIf you still see auto-break:\n\n- increase it\n\nIf manual breaking feels too sluggish:\n\n- decrease it slightly\n\n### `assist-cooldown-millis`\n\nMinimum internal cooldown between assists.\n\nThis prevents accidental double attacks.\n\n### `break-buffer-retries`\n\nNumber of retries used to capture a manual break if the crystal is not yet ready to be hit.\n\nHigher values provide:\n\n- more assistance for Bedrock\n- more aggressive behavior\n\n### `break-buffer-interval-ticks`\n\nInterval between buffer retries.\n\n## `totem-optimizer` Section\n\n```yml\ntotem-optimizer:\n  enabled: true\n  sync-passes: 5\n  sync-interval-ticks: 1\n```\n\nThis layer does not equip totems automatically.\n\nIt:\n\n- detects when a totem reaches or attempts to reach the offhand\n- pushes an early visual update\n- repeats synchronization so Bedrock displays it in the hand/offhand sooner\n\n### `enabled`\n\nEnables or disables the totem optimizer.\n\n### `sync-passes`\n\nNumber of synchronization passes for the offhand.\n\nHigher values:\n\n- improve visual consistency\n- increase update traffic\n\n### `sync-interval-ticks`\n\nInterval between passes.\n\nFor totems, `1` usually feels best.\n\n## `anchor-optimizer` Section\n\n```yml\nanchor-optimizer:\n  enabled: true\n  resync-delay-ticks: 0\n  resync-passes: 4\n  resync-interval-ticks: 1\n  neighbor-radius: 1\n  inventory-sync: true\n```\n\nIntended for:\n\n- placing a `Respawn Anchor`\n- charging it with `Glowstone`\n- reducing ghost blocks\n- improving responsiveness on Bedrock\n\n### `enabled`\n\nEnables or disables the system.\n\n### `resync-delay-ticks`\n\nDelay before the first correction.\n\n`0` is the most aggressive option.\n\n### `resync-passes`\n\nNumber of resync passes for the anchor.\n\nMore passes provide:\n\n- better Bedrock consistency\n- more packets\n\n### `resync-interval-ticks`\n\nInterval between passes.\n\n### `neighbor-radius`\n\nBlock radius around the anchor to resynchronize.\n\nIncreasing it helps when ghosting affects nearby blocks, but it also increases the cost.\n\n### `inventory-sync`\n\nWhen enabled, the plugin also updates the inventory when using glowstone or placing an anchor.\n\n## Recommended Settings\n\n### Balanced Profile\n\nUse this beta's default values.\n\n### More Aggressive Profile for Bedrock PvP\n\nSuggestion:\n\n```yml\ncrystal-combat:\n  placement-swing-ignore-millis: 60\n  break-buffer-retries: 4\n\ntotem-optimizer:\n  sync-passes: 6\n\nanchor-optimizer:\n  resync-passes: 5\n```\n\n### More Conservative Profile\n\nSuggestion:\n\n```yml\ncrystal-combat:\n  break-buffer-retries: 2\n\ntotem-optimizer:\n  sync-passes: 3\n\nanchor-optimizer:\n  resync-passes: 3\n```\n\n## Recommended Tests\n\n### Crystal\n\n- place using only `right click`\n- confirm that it does not break automatically\n- then use `right click + left click`\n\n### Totem\n\n- move a totem to the offhand with a click\n- move it by dragging\n- test shift-click\n- test it alongside your current autototem workflow if another plugin is involved\n\n### Anchor\n\n- place an anchor\n- charge it with glowstone\n- repeat several times\n\n## Troubleshooting\n\n### The crystal breaks automatically when placed\n\n- increase `placement-swing-ignore-millis`\n- check whether another plugin is modifying PvP or entities\n\n### The crystal does not break quickly enough\n\n- increase `break-buffer-retries`\n- check the Bedrock player's ping\n\n### The totem appears late in the offhand\n\n- increase `sync-passes`\n- check whether another plugin modifies the offhand after the click\n\n### The anchor still creates ghost blocks\n\n- increase `resync-passes`\n- carefully try `neighbor-radius: 2`\n\n## Technical Foundation\n\nThis project is built on:\n\n- `Paper`\n- `Floodgate`\n- `Geyser-Spigot`\n\nThe `ref/` folder is used locally for research, but it is not part of the published package.\n\n## License\n\nThis project is distributed under the `GNU General Public License v3.0`.\n\nThe complete license text is available in the `LICENSE` file.\n\n> **Language note:** Some in-mod text may remain in Spanish for the convenience of the three modders responsible for the project.\n",
     "healt-alert-tweaks": "<p align=\"center\">\n  <img src=\"versions/26.1.2/src/main/resources/assets/alert_tweaks/icon.png\" width=\"360\" alt=\"Alert Tweaks KoHs logo\">\n</p>\n\n<h1 align=\"center\">Alert Tweaks KoHs</h1>\n\n<p align=\"center\">\n  <strong>Low-health vignette, heartbeat alert, and a directional indicator that points at whoever just hit you.</strong>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/kerlycanelita/Alert-Tweaks-KoHs\"><img alt=\"GitHub repository\" src=\"https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github\"></a>\n  <a href=\"https://github.com/kerlycanelita/Alert-Tweaks-KoHs/releases\"><img alt=\"Latest release\" src=\"https://img.shields.io/badge/Release-1.1.0-6f2cff?style=for-the-badge&logo=github\"></a>\n  <a href=\"https://github.com/kerlycanelita/Alert-Tweaks-KoHs/issues\"><img alt=\"Report an issue\" src=\"https://img.shields.io/badge/Issues-Report_an_issue-c93c7a?style=for-the-badge&logo=githubissues&logoColor=white\"></a>\n  <a href=\"https://discord.gg/9t2VxEF7UU\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-9t2VxEF7UU-5865F2?style=for-the-badge&logo=discord&logoColor=white\"></a>\n</p>\n\nAlert Tweaks KoHs is a Fabric client-side mod that draws combat awareness on the HUD without touching gameplay. It tints the screen edges as your health drops, plays a heartbeat that speeds up the closer you get to dying, and shows an on-screen arrow for each player who lands a hit on you.\n\nIt is the successor to **Healt Alert Tweaks** (`healt_tweaks`), which only survived as a compiled 1.21.6–1.21.8 jar. The code was rebuilt from that build and the threat indicator was added on top. Existing `config/healt_tweaks.json` settings are imported automatically the first time the mod runs.\n\nThis repository contains released implementations for **Minecraft 26.1.2 and 1.21.11**. Both targets ship the same features. 26.1.2 is the maintained branch; every target lives in its own directory under `versions/`.\n\n## Compatibility\n\n| Minecraft | Fabric API | Java | Source |\n|---|---|---:|---|\n| **26.1.2** | **0.155.2+26.1.2** | **25+** | `versions/26.1.2` |\n| **1.21.11** | **0.141.6+1.21.11** | **21+** | `versions/1.21.11` |\n\nBoth builds require Fabric Loader 0.19.3 or newer and Fabric API. Mod Menu is optional and is how the configuration screen is reached.\n\nThe mod is client-side only and does not need to be installed on the server.\n\n## Features\n\n- **Low Health Vignette.** Colored fade around the screen edges once health drops below a chosen threshold, ramping from 12% to full strength as health approaches zero. Configurable color, opacity, reach, smooth fade in and out, a fixed-intensity mode, and an optional heartbeat pulse that beats faster and harder the lower the health.\n- **Heartbeat Sound.** A dedicated sound event (`alert_tweaks:heartbeat`) with its own volume and tempo controls. With low-health linking on, the interval tightens from 0.7 s at the threshold down to 0.35 s near death and the pitch rises with it. Carries a subtitle for players who play with subtitles on.\n- **Threat Indicator.** An arrow around the crosshair for each player who hits you, described in full below.\n- **Live preview.** The configuration screen previews the vignette and loops the full threat animation, so color, opacity, reach, and indicator size can be judged without taking a hit.\n\n## Threat Indicator\n\nWhen another player damages you, an arrow appears around the crosshair pointing at them — including when the hit comes from behind, exactly like the damage indicator of any shooter.\n\n- **The arrow follows the attacker while it lasts.** Their position is refreshed every tick from the entity the client already tracks, so it points at where they are, not at where the hit landed. If the attacker unloads, dies, or leaves range, the arrow freezes at the last known position.\n- **The attacker is never drawn.** No outline, no highlight, no rendering through blocks. The only thing added to the screen is the arrow.\n- **Five seconds per hit**, then a fade-out. Each new hit from the same player refreshes their own arrow rather than stacking another. Up to four attackers are tracked at once; a fifth pushes out the stalest.\n- **Animation.** The arrow punches out of the crosshair behind a shockwave with a slight overshoot, breathes while it holds, and on the way out drifts outward and grows while a second ring expands behind it.\n\n### Sizing and placement\n\n- **Adaptive Size** — on by default. The arrow is sized as a constant fraction of the GUI height, which cancels out the GUI scale and keeps it the same physical size on screen at any setting.\n- **Scale** — 50% to 250%. Moving this slider turns Adaptive Size off, which is the intended way to take manual control.\n- **Distance** — 0% to 100%, how far from the crosshair the arrows orbit. At 0% they sit just clear of the crosshair without covering it; at 100% they push out towards the edge of the view. It follows the scale, so changing size keeps the ring proportional.\n\n### How the hit is detected\n\nNo mixins. Every client tick the mod reads `player.hurtTime`: it is set to `hurtDuration` when a damage event arrives and counts down afterwards, so any jump upwards means a fresh hit landed. The attacker then comes from `getLastDamageSource()`, which vanilla fills in on the client when it handles the damage packet the server already sends to the victim.\n\nFor a projectile the causing entity is used rather than the direct one, since the arrow itself is already on top of you and would give a meaningless direction.\n\n## What it does not change\n\nAlert Tweaks KoHs sends nothing to the server and reads no packets of its own. It does not touch aim, reach, cooldowns, attack timing, hitboxes, packet timing, or packet count. Everything it draws comes from state the client already holds.\n\nOne consequence worth stating plainly: while an arrow is alive it reports the attacker's current position even if they move behind blocks. That is more than vanilla's red damage tilt tells you, which only encodes the direction the hit came from. Servers may restrict client mods regardless of what they do, so follow each server's rules.\n\n## Installation\n\n1. Install [Fabric Loader](https://fabricmc.net/use/) 0.19.3 or newer for your Minecraft version.\n2. Install the matching Fabric API release from the compatibility table.\n3. Put the matching `alert-tweaks-<version>.jar` in the instance's `mods` folder.\n4. Optionally install Mod Menu to open the configuration screen from the mod list.\n\n## Configuration\n\nSettings live in `config/alert_tweaks.json` and are written when the screen closes, not on every slider movement. The screen has two tabs:\n\n- **Tweaks** — vignette color, threshold, opacity, reach, smooth fade, static color, heartbeat pulse, and the Threat Indicator section (adaptive size, scale, and distance from the crosshair).\n- **Sound** — heartbeat volume, tempo, low-health linking, and a Play button that previews four beats with the current settings.\n\n## Building\n\n    $env:JAVA_HOME = \"C:\\Program Files\\Java\\jdk-25.0.2\"\n    .\\gradlew.bat clean build\n\nRun it from `versions/26.1.2` or `versions/1.21.11`; each JAR is written to that directory's `build/libs/`. The file ending in `-sources.jar` is not the playable build.\n\nJDK 25 is needed to run Gradle for both targets even though the 1.21.11 build compiles against Java 21.\n\nThe two indicator sprites are generated, not hand-drawn. `tools/GenerateThreatSprites.java` redraws them:\n\n    java tools/GenerateThreatSprites.java \"versions/26.1.2/src/client/resources/assets/alert_tweaks/textures/gui\"\n\n## Support\n\n- Reproducible bugs: [GitHub Issues](https://github.com/kerlycanelita/Alert-Tweaks-KoHs/issues)\n- Community and help: [Discord](https://discord.gg/9t2VxEF7UU)\n\n## License\n\nDistributed under the [MIT License](LICENSE). Copyright © 2026 zymekoh.\n",
-    "keyboard-place-fix": "# Keyboard Place Fix\n\n[![GitHub](https://img.shields.io/badge/GitHub-Keyboard--Place--Fix-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Keyboard-Place-Fix)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Keyboard-Place-Fix/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/keyboardplacefix/icon.png\" alt=\"Keyboard Place Fix icon\" width=\"220\">\n</p>\n\n**Restores vanilla right-click inside inventories, containers and other screens\nwhen the button has been remapped to a key outside the game.**\n\nKeyboard Place remaps right-click onto a keyboard key. That works in the world,\nbut a screen still expects the physical mouse button, so ordinary inventory\nactions — splitting a stack, moving one item, dragging a distribution — stop\nresponding to the key the player is actually pressing. Keyboard Place Fix gives\nthose actions back, and only those.\n\n## What it changes\n\n- **The configured key becomes right-click only while a screen is open.** In the\n  world the mod produces no click at all and modifies none.\n- **It travels vanilla's own `MouseHandler` path,** so stack splitting, moving a\n  single item and right-drag distribution behave exactly as they do with a real\n  mouse button.\n- **It stays quiet while a text field has focus,** so typing a `.` into a search\n  or anvil field types a `.`.\n\n## What it does not change\n\nKeyboard Place Fix does not replace Keyboard Place and does not touch fast\nplacement, XP bottles, potions, cooldowns or packet frequency. It adds no packet\nof its own and retimes none.\n\n## Configuration\n\nThe default key is `.`. It must be set to the same key used by the external\nKeyboard Place remap, from **Controls** or from Mod Menu.\n\n## The 26.x interface\n\nThe four 26.x ports use a translucent, responsive screen with separate panels,\ninner margins and two independent scroll areas. The left column plays the three\noriginal demonstration GIFs from the Modrinth page. They are bundled inside the\nJAR, so nothing is downloaded while playing.\n\n## Compatibility\n\n| Minecraft | Fabric API | Java | Mod version | Source |\n|---|---|---:|---|---|\n| **26.2** | **0.157.0+26.2** | **25+** | 1.2.2 | `26.2` |\n| **26.1.2** | **0.155.2+26.1.2** | **25+** | 1.2.2 | `26.1.2` |\n| **26.1.1** | **0.145.4+26.1.1** | **25+** | 1.2.2 | `26.1.1` |\n| **26.1** | **0.145.1+26.1** | **25+** | 1.2.2 | `26.1` |\n| **1.21.10** | **0.138.4+1.21.10** | **21+** | 1.1.0 | Repository root |\n| **1.21.9** | **0.134.1+1.21.9** | **21+** | 1.1.0 | `1.21.9` |\n| **1.21.6** | **0.128.2+1.21.6** | **21+** | 1.1.0 | `1.21.6` |\n| **1.21** | **0.102.0+1.21** | **21+** | 1.1.0 | `1.21` |\n\nThe 26.x ports require Fabric Loader 0.19.3 or newer; the 1.21.x ports require\n0.16.14 or newer. Mod Menu is optional on every target.\n\nThe 26.1.1 and 26.1.2 ports compile the 26.1 sources, because the APIs they use\nare identical, but Loom recompiles and links each project against the exact JAR\nof its own Minecraft version.\n\nThe mod is client-side only and does not need to be installed on the server.\n\n## Install\n\n1. Install Fabric Loader for your Minecraft version and the matching Java\n   release from the table above.\n2. Install the matching Fabric API release.\n3. Put the matching `keyboard-place-fix` JAR in the `mods` folder.\n4. Open **Controls** or Mod Menu and set the key to the one Keyboard Place uses.\n\n## Building\n\nEach target builds from its own directory:\n\n```powershell\n.\\gradlew.bat -p 26.2 build\n.\\gradlew.bat -p 26.1.2 build\n.\\gradlew.bat -p 26.1.1 build\n.\\gradlew.bat -p 26.1 build\n```\n\nThe repository root builds the 1.21.10 target:\n\n```powershell\n.\\gradlew.bat build\n```\n\nEvery artifact is written to `<target>/build/libs/keyboard-place-fix-<version>+mc<minecraft>.jar`.\nThe file ending in `-sources.jar` is not the playable build.\n\nThe 26.x ports need Gradle to run on **JDK 25**, which is usually not the\ndefault `JAVA_HOME`:\n\n```powershell\n$env:JAVA_HOME = \"C:\\Program Files\\Java\\jdk-25.0.2\"\n```\n\n## License\n\nMIT. See [LICENSE](LICENSE).\n\n## Credits\n\nMade by **zymekoh**.\n",
-    "kohs-offhand-whitelist": "# KoHs Offhand Whitelist\n\n[![GitHub](https://img.shields.io/badge/GitHub-Offhand--Whitelist-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Offhand-Whitelist)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Offhand-Whitelist/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/kohs_offhand_whitelist/icon.png\" alt=\"KoHs Offhand Whitelist icon\" width=\"220\">\n</p>\n\n**Decide which items are allowed in the offhand, so the wrong one never gets\nthere in the middle of a fight.**\n\nClient-side Fabric mod. The offhand holds one slot and, in a fast exchange, the\nthing that ends up in it is whatever the last `F` press happened to be pointing\nat. A misfired swap costs a totem, or a shield, or the fight.\n\nThis mod keeps a whitelist. Anything not on it simply cannot reach the offhand.\n\n## What it changes\n\n- **Swap to offhand is filtered.** A swap key press carrying a non-whitelisted\n  item is consumed instead of performed.\n- **The offhand slot refuses non-whitelisted items** in the inventory screen, so\n  they cannot be dragged or shift-clicked in either.\n- **Container interactions are filtered on the same rule,** so the restriction\n  does not have a way around it through a chest screen.\n\nThe whitelist is stored per item id, and potions are stored per variant — a\nStrength potion and a Fire Resistance potion are separate entries, not one\n`minecraft:potion`.\n\n## The configuration screen\n\nOpen it from Mod Menu. It carries a searchable list of every item in the game,\nready-made **PvP presets**, and custom presets you can name and save yourself.\n\nTwo switches sit above all of it: one that turns the mod off entirely, and one\nthat turns only the whitelist off — useful for checking whether the mod is\nresponsible for something before removing it.\n\nSettings live in `config/kohs_offhand_whitelist.json`.\n\n## Compatibility\n\nA dedicated compatibility mixin keeps **Shield Status** reading the correct\ncooldown state while the whitelist is active. It is optional in both directions:\nneither mod requires the other.\n\n## Compatibility table\n\n| Minecraft | Source |\n|---|---|\n| **26.1.2** | Repository root, and `version/26.1.2` |\n| **1.21.6 – 1.21.11** | `version/1.21.6-1.21.11` |\n| **1.21.2 – 1.21.5** | `version/1.21.2-1.21.5` |\n| **1.21 – 1.21.1** | `version/1.21-1.21.1` |\n\nThe 26.1.2 build requires Fabric Loader 0.19.2 or newer, Fabric API\n0.149.1+26.1.2 and Java 25. Each `version/` directory keeps its own compilation\nstatus notes. Mod Menu is suggested, not required.\n\n## Install\n\n1. Install [Fabric Loader](https://fabricmc.net/use/) and Fabric API for your\n   Minecraft version.\n2. Put the `kohs-offhand-whitelist` JAR in the `mods` folder.\n3. Install Mod Menu to reach the configuration screen.\n\n## Building\n\n```powershell\n.\\gradlew.bat build --no-daemon\n```\n\nThe artifact is written to `build/libs/kohs-offhand-whitelist-1.0.2.jar`. To\nbuild another target, run the same command from its `version/` directory.\n\n`scripts/run_kohstest_matrix.ps1` drives the local test clients across every\nsupported version. Those client instances are not part of the repository.\n\n## Issue page\n\n`page issues/` is a small local Node service that collects bug reports through a\nform and files each one with its screenshots. It is a development helper, not\nsomething players need:\n\n```bash\ncd \"page issues\"\nnpm install\nnpm start\n```\n\n## License\n\nAll rights reserved.\n\n## Credits\n\nMade by **zymekoh**.\n",
-    "kohs-inv-cursor": "# KoHs Inventory Tweaks\n\n[![GitHub](https://img.shields.io/badge/GitHub-KoHs--Inventory--Tweaks-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks)\n[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/kohs-inv-cursor)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/kohs_inventory_tweaks/icon.png\" alt=\"KoHs Inventory Tweaks icon\" width=\"220\">\n</p>\n\n**Deterministic cursor placement, inventory customization, and guarded rapid input.**\n\nKoHs Inventory Tweaks is a Fabric client-side mod that hooks into inventory-screen preparation and rendering without replacing server inventory logic. It provides deterministic cursor placement, guarded rapid input, configurable visuals, and a responsive interface while preserving vanilla interactions.\n\nThis repository contains released implementations for **Minecraft 26.2, 26.1.2, 26.1.1, 26.1, and 1.21.11**. The Minecraft 26.1.2 implementation is the repository root; every additional target lives in its own directory under `versions/`.\n\n## Screenshots\n\n<p align=\"center\">\n  <img src=\"docs/media/main-menu.png\" alt=\"KoHs Inventory Tweaks main menu\" width=\"720\">\n</p>\n\n| Inventory Tweaks | Player Visibility |\n| --- | --- |\n| <img src=\"docs/media/inventory-tweaks.png\" alt=\"Inventory Tweaks page with its three options\" width=\"360\"> | <img src=\"docs/media/player-visibility.png\" alt=\"Player Visibility page with the live world view and silhouette glow\" width=\"360\"> |\n| **Cursor Landing** | **Customization** |\n| <img src=\"docs/media/cursor-landing.png\" alt=\"Cursor Landing page\" width=\"360\"> | <img src=\"docs/media/customization.png\" alt=\"Customization page\" width=\"360\"> |\n| **Item Highlighter** | **GUI Scaler** |\n| <img src=\"docs/media/item-highlighter.png\" alt=\"Item Highlighter page\" width=\"360\"> | <img src=\"docs/media/gui-scaler.png\" alt=\"GUI Scaler page\" width=\"360\"> |\n\n## Supported versions\n\nSince 26 September 2026, KoHs Inventory Tweaks supports **Minecraft 1.21.11 and later**. Minecraft 1.21.10 is no longer maintained: its builds (the last one is `1.0.8+mc1.21.10`) stay downloadable on Modrinth as archived versions, but they will not receive fixes or new features. The 1.21.10 source tree and the unreleased 1.21–1.21.9 work moved to [`archive/`](archive/README.md).\n\n## Compatibility\n\n| Minecraft | Fabric API | Java | Source |\n|---|---|---:|---|\n| **26.2** | **0.157.0+26.2** | **25+** | `versions/kohs-inventory-tweaks-26.2` |\n| **26.1.2** | **0.155.2+26.1.2** | **25+** | Repository root |\n| **26.1.1** | **0.145.4+26.1.1** | **25+** | `versions/kohs-inventory-tweaks-26.1.1` |\n| **26.1** | **0.145.1+26.1** | **25+** | `versions/kohs-inventory-tweaks-26.1` |\n| **1.21.11** | **0.141.6+1.21.11** | **21+** | `versions/kohs-inventory-tweaks-1.21.11` |\n\nAll builds require Fabric Loader 0.19.3 or newer. Mod Menu is optional and recommended.\n\nThe mod does not need to be installed on the server.\n\n## What it changes\n\n- **Cursor Landing:** stores independent normalized coordinates for the player inventory, single chest, double chest, Shulker Box, Ender Chest, and barrel. Individual container types can fall back to vanilla cursor behavior.\n- **Center Mouse Fix:** checks the pointer once, right after Minecraft releases the mouse, and corrects it only when GLFW restored a stale position. Movement made while the inventory opens, such as reaching for a totem, is never pulled back.\n- **Super Fast Inventory:** optionally constructs the ordinary local inventory screen directly from the physical keyboard or remapped mouse press, up to one client tick (50 ms) sooner. It waits for the tick only when Vanilla would still run something first: a hotbar key, a pending attack or use, an item in use, or a block being broken. A held mouse button never holds it back, and holding the inventory key toggles it only once. Server-controlled openings, slot actions, packet types, cooldowns, and validation stay on Vanilla paths.\n- **Reduce inventory visual motion:** stills recipe-button bounce, item return motion, the enchanting book and animated backgrounds, while progress indicators and enchanted-item glint stay Vanilla's.\n- **Customization:** composes player-inventory and compatible-container textures at runtime using RGB palettes, opacity controls, static or animated backgrounds, and resource-pack-aware sources.\n- **GUI Scaler:** scales the player inventory—including slots, items, text, and the player model—from 65% to 315%, starting at 200% on a fresh installation and using adaptive limits based on available space. The default-enabled Affect Containers switch applies that scale to supported chest, Shulker Box, barrel, and Ender Chest screens.\n- **Item Highlighter:** stores per-item colors, optional HUD hotbar highlighting, and dynamic activation based on Minecraft's calculated hovered slot.\n- **Player Visibility:** can tint normally visible players and draw a glowing silhouette around them while your inventory is open, outside its panel. Both are depth-tested like the body, so blocks hide them and nothing shows through walls; Minecraft's glowing outline is never used. Its page shows a live world view beside a walking preview of your own skin and equipment.\n- **Settings page:** each option shows only its name; hovering it explains the option.\n- **Safe persistence:** sanitizes every setting and writes it through atomic replacement to config/kohs_inventory_tweaks.json.\n\n## Install\n\n1. Install Fabric Loader for your supported Minecraft version.\n2. Install the matching Fabric API release.\n3. Place the matching KoHs Inventory Tweaks JAR in the instance's mods directory.\n4. Optionally install Mod Menu to access configuration through the mod list.\n5. Join a world or server before opening the configuration menu; previews require an active player and loaded resources.\n\nRead the [English wiki](docs/wiki/WIKI.md) for complete instructions covering colors, backgrounds, cursor placement, GUI scaling, and Item Highlighter. A Spanish edition is available through the language button at the top of the wiki.\n\n## Building\n\nWith JDK 25 available through `JAVA_HOME`:\n\n```powershell\n.\\gradlew.bat build --no-daemon\n```\n\nThe 26.1.2 JAR is written to `build/libs/`. To build another supported target, use the JDK declared by that target and run the same command from its `versions/kohs-inventory-tweaks-<minecraft-version>` directory; each JAR is written to that directory's `build/libs/`.\n\nChanges are made in the repository root (Minecraft 26.1.2). The other targets are rebuilt from it, with their own API differences applied:\n\n    python tools/port/port_version.py all\n\n## Verification\n\n    python tools/verify-all-versions.py\n\nAdd `--minecraft-version <version>` to check a range target against any version of its range rather than its default; pointing `--source-root` at an overlay target follows it to the sources it compiles.\n\nThis checks every source tree against the exact Minecraft jar it compiles against and reports any `@Mixin` target class, injected method, accessor, invoker, or `INVOKE` injection point that no longer exists there. It is the pre-launch check for the failure mode that produces a startup crash after a Minecraft update. Pass `--source-root <directory>` to `tools/verify-mixin-targets.py` to check a single tree.\n\n    python tools/verify-translations.py\n\nThis reports any translation key the client asks for that is missing from a language file, and any key present in English but absent from a translation.\n\n    python tools/verify-release-artifacts.py --release 1.0.13\n\nAfter building all five targets, this checks each release JAR's metadata, mixin classes, Java target and bundled translations, and prints its size and hashes.\n\n[`docs/PERFORMANCE.md`](docs/PERFORMANCE.md) documents which hooks run in the frame loop and what they are allowed to do.\n\n## Support\n\n- Reproducible bugs: [GitHub Issues](https://github.com/kerlycanelita/KoHs-Inventory-Tweaks/issues)\n- Community and help: [Discord](https://discord.gg/9t2VxEF7UU)\n\n## Repository layout\n\n| Location | Contents |\n| --- | --- |\n| `src/` | The main Minecraft 26.1.2 implementation. |\n| `versions/` | Separate source targets; legacy local artifacts stay excluded. |\n| `archive/` | Retired targets (Minecraft 1.21.10 and earlier), kept unchanged. |\n| `debug/` | Optional diagnostic companions, separate from the playable mod. |\n| `docs/` | English/Spanish wiki, player reports, audits and release notes. |\n| `tools/` | Mixin, translation, artifact and cursor-contract checks. |\n\nStart with the [documentation index](docs/README.md). Build output and local\nMinecraft instances remain outside Git; keep installable JARs out of the source tree.\n\n## License\n\nDistributed under the [MIT License](LICENSE). Copyright © 2026 zymekoh.\n\n## Credits\n\nMade by **zymekoh**.\n",
-    "kohs-crystal-tweaks": "# Crystal Tweaks\n\n[![GitHub](https://img.shields.io/badge/GitHub-Crystal--Tweaks-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Crystal-Tweaks)\n[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth&logoColor=white)](https://modrinth.com/mod/kohs-crystal-tweaks)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Crystal-Tweaks/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/crystal_tweaks/icon.png\" alt=\"Crystal Tweaks icon\" width=\"220\">\n</p>\n\n**Customizable End Crystal visuals, sounds, and responsive previews.**\n\n## About\n\nCrystal Tweaks brings End Crystal visual and sound controls into one animated configuration screen. Version 2.3.0 adds fourteen flash styles for a destroyed crystal, rebuilds the settings into four tabs of tidy cards around a live preview, adds Crystal Practice (a practice world against a bot that plays real crystal PvP techniques, with your own kit arranged in a kit editor), fixes your own crystals being drawn with the enemy profile while spamming, and supports Minecraft 1.21.11 through 26.3.\n\n## Screenshots\n\n<p align=\"center\">\n  <img src=\"docs/images/glow.png\" alt=\"Your crystals glowing purple and an enemy crystal glowing red at night\" width=\"880\">\n</p>\n\n<p align=\"center\">\n  <img src=\"docs/images/flash-styles.png\" alt=\"Twelve of the fourteen flash styles a destroyed crystal can leave\" width=\"880\">\n</p>\n\n| Colors | Glow | Advanced |\n| --- | --- | --- |\n| ![Colors tab](docs/images/settings-colors.png) | ![Glow tab with a heart flash in the preview](docs/images/settings-glow.png) | ![Advanced tab](docs/images/settings-advanced.png) |\n\n| Crystal Practice | Kit editor | What the bot does |\n| --- | --- | --- |\n| ![Crystal Practice gear tab](docs/images/practice-gear.png) | ![Kit editor with the kit room and the practice inventory](docs/images/practice-kit.png) | ![Bot tab listing the Hard bot's techniques](docs/images/practice-bot.png) |\n\n<p align=\"center\">\n  <img src=\"docs/images/practice-worlds.png\" alt=\"The practice grounds: netherite flat, hole arena and natural meadows\" width=\"880\">\n</p>\n\n## What it changes\n\n- Independent colors for the outer layer, inner layer, and crystal core.\n- Glow with `0%`-`300%` power, colored reflections, its own color, and a smooth afterglow trail.\n- Fourteen flash styles for a destroyed crystal, in the glow color and sized from `10%` to `300%`: explosion, skull, your own head as a pale ghost, lightning toward the players you can see, heart, star, shockwave, vortex, crown, crescent, snowflake, flower, gem, and crossed swords.\n- Glow that respects walls instead of using an outline drawn through terrain.\n- Separate colors, glow, and animation speeds for crystals that were not placed by you (with approximate identification).\n- Rotation and floating speed controls from `0%` to `300%`.\n- Custom local explosion sounds with volume and playback-speed controls.\n- A settings screen in four tabs (Colors, Glow, Sound, Advanced) with an optimizer status chip, animated tabs and cards, and an interactive preview that shows your flash when you click it.\n- Automatic optimizer conflict handling: interaction helpers step aside while visuals, sounds, and the preview stay active.\n- Safe Crystal (switchable), optional ghost crystals (off by default), and a local Conflict Monitor.\n- Crystal Practice (experimental): a singleplayer world against a bot that plays real crystal PvP techniques by difficulty (hit-crystal, d-tap, safe and double anchors, butterfly and more, listed with how each works), your own kit arranged in a kit editor with presets modelled on MCTiers, MCPVP and PVPHQ, a Knockback I or II sword, your choice of totems, and a netherite flat, a hole arena or a natural meadow in eight biomes.\n- Spanish localization for Minecraft language codes beginning with `es`; English for every other locale.\n- Optional Mod Menu integration.\n\nCrystal Tweaks optimizes the client only: a crystal you break disappears on your screen straight away, but what reaches the server is not sped up. For that, Marlow's Crystal Optimizer is recommended (check your server's rules); with it installed, Crystal Tweaks turns all of its own optimizations off.\n\nSee the [Crystal Tweaks Wiki](docs/WIKI.md) for installation, configuration, preview controls, compatibility notes, and troubleshooting.\n\n## Requirements\n\n- Fabric Loader: each JAR declares the exact minimum it was built against; see\n  [`gradle/versions.properties`](gradle/versions.properties).\n- The Fabric API version matching your Minecraft installation.\n- Java 21 for Minecraft 1.21.11.\n- Java 25 for Minecraft 26.1–26.3.\n- Mod Menu is optional but recommended for opening the configuration screen.\n\n## Supported Minecraft versions\n\nCrystal Tweaks supports **Minecraft 1.21.11 and later**. The build matrix contains these exact\ntargets:\n\n```text\n1.21.11, 26.1, 26.1.1, 26.1.2, 26.2, and 26.3\n```\n\nEach JAR declares one exact Minecraft version. Minecraft 1.21 through 1.21.10 were archived on\n26 September 2026: their last release, 2.2.7, stays downloadable on Modrinth, and\n[archive/README.md](archive/README.md) lists what was kept and how to rebuild one.\n\n## Compatibility and multiplayer\n\nDo not load Crystal Tweaks together with the retired KoHs Crystal Tweaks mod or another mod that owns the same crystal input, prediction, or interaction paths. Competing mixins can produce inconsistent behavior even when one mod declares a higher mixin priority.\n\nServer rules differ. Review the rules of every multiplayer server and obtain staff approval when required; this project cannot guarantee acceptance by every server or anticheat.\n\nCrystal Tweaks never fabricates, delays, reorders or duplicates a gameplay packet, and never changes\nreach, rotation, attack cooldown or click rate. The server stays authoritative over every crystal.\n\nIts one predictive behavior is hiding a crystal you just hit before the server confirms the break,\nwhich is latency compensation for an action you already performed. It is constrained to hits the\nserver is expected to accept.\n\nSee [docs/audits/LEGITIMACY_AUDIT.md](docs/audits/LEGITIMACY_AUDIT.md) for the full client/server boundary of every feature,\nincluding the one place where the mod changes which packets are sent: Safe Crystal, which you can switch off.\n\n## Building\n\nEvery supported Minecraft version has its own row in [`gradle/versions.properties`](gradle/versions.properties),\nholding the Fabric Loader, Fabric API, Mod Menu and Java release that target is built against. Pick a\ntarget with `-Pmc`:\n\n```powershell\n.\\gradlew.bat build -Pmc=26.1.2\n```\n\nTo build the whole matrix, collect the JARs into `versions/` and refresh `CHECKSUMS.sha256`:\n\n```powershell\n.\\tools\\build-all.ps1\n```\n\nSee [docs/RELEASING.md](docs/RELEASING.md) for the full release process and for how to add a new Minecraft\nversion.\n\n## Support\n\n- [Read the wiki](docs/WIKI.md)\n- [Report a problem](https://github.com/kerlycanelita/KoHs-Crystal-Tweaks/issues/new)\n- [Join the Discord server](https://discord.gg/9t2VxEF7UU)\n- [Download from Modrinth](https://modrinth.com/mod/kohs-crystal-tweaks)\n\n## Repository layout\n\n| Location | Contents |\n| --- | --- |\n| `src/` | Shared client sources and the version-specific rendering adapters. |\n| `gradle/` | Wrapper and the exact Minecraft dependency matrix. |\n| `docs/` | Wiki, release workflow, audits and version notes. |\n| `tools/` | Build, artifact, Mixin and appearance checks. |\n| `archive/` | Code and matrix rows of the archived 1.21–1.21.10 targets; never compiled. |\n| `versions/`, `dist/` | Local generated JAR collections; excluded from Git. |\n\nStart with the [documentation index](docs/README.md). Build output and local\nMinecraft instances remain outside Git; keep installable JARs out of the source tree.\n\n## License\n\nCrystal Tweaks is maintained by **zymekoh** and distributed under the [MIT License](LICENSE).\n"
+    "kohs-offhand-whitelist": "# KoHs Offhand Whitelist\n\n[![GitHub](https://img.shields.io/badge/GitHub-Offhand--Whitelist-6f2cff?style=for-the-badge&logo=github)](https://github.com/kerlycanelita/KoHs-Offhand-Whitelist)\n[![Issues](https://img.shields.io/badge/Report-Issues-a855f7?style=for-the-badge&logo=githubissues)](https://github.com/kerlycanelita/KoHs-Offhand-Whitelist/issues)\n[![Discord](https://img.shields.io/badge/Join-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/9t2VxEF7UU)\n\n<p align=\"center\">\n  <img src=\"src/main/resources/assets/kohs_offhand_whitelist/icon.png\" alt=\"KoHs Offhand Whitelist icon\" width=\"220\">\n</p>\n\n**Decide which items are allowed in the offhand, so the wrong one never gets\nthere in the middle of a fight.**\n\nClient-side Fabric mod. The offhand holds one slot and, in a fast exchange, the\nthing that ends up in it is whatever the last `F` press happened to be pointing\nat. A misfired swap costs a totem, or a shield, or the fight.\n\nThis mod keeps a whitelist. Anything not on it simply cannot reach the offhand.\n\n## What it changes\n\n- **Swap to offhand is filtered.** A swap key press carrying a non-whitelisted\n  item is consumed instead of performed.\n- **The offhand slot refuses non-whitelisted items** in the inventory screen, so\n  they cannot be dragged or shift-clicked in either.\n- **Container interactions are filtered on the same rule,** so the restriction\n  does not have a way around it through a chest screen.\n\nThe whitelist is stored per item id, and potions are stored per variant — a\nStrength potion and a Fire Resistance potion are separate entries, not one\n`minecraft:potion`.\n\n## The configuration screen\n\nOpen it from Mod Menu. It carries a searchable list of every item in the game,\nready-made **PvP presets**, and custom presets you can name and save yourself.\n\nTwo switches sit above all of it: one that turns the mod off entirely, and one\nthat turns only the whitelist off — useful for checking whether the mod is\nresponsible for something before removing it.\n\nSettings live in `config/kohs_offhand_whitelist.json`.\n\n## Compatibility\n\nA dedicated compatibility mixin keeps **Shield Status** reading the correct\ncooldown state while the whitelist is active. It is optional in both directions:\nneither mod requires the other.\n\n## Compatibility table\n\n| Minecraft | Source |\n|---|---|\n| **26.1.2** | Repository root, and `version/26.1.2` |\n| **1.21.6 – 1.21.11** | `version/1.21.6-1.21.11` |\n| **1.21.2 – 1.21.5** | `version/1.21.2-1.21.5` |\n| **1.21 – 1.21.1** | `version/1.21-1.21.1` |\n\nThe 26.1.2 build requires Fabric Loader 0.19.2 or newer, Fabric API\n0.149.1+26.1.2 and Java 25. Each `version/` directory keeps its own compilation\nstatus notes. Mod Menu is suggested, not required.\n\n## Install\n\n1. Install [Fabric Loader](https://fabricmc.net/use/) and Fabric API for your\n   Minecraft version.\n2. Put the `kohs-offhand-whitelist` JAR in the `mods` folder.\n3. Install Mod Menu to reach the configuration screen.\n\n## Building\n\n```powershell\n.\\gradlew.bat build --no-daemon\n```\n\nThe artifact is written to `build/libs/kohs-offhand-whitelist-1.0.2.jar`. To\nbuild another target, run the same command from its `version/` directory.\n\n`scripts/run_kohstest_matrix.ps1` drives the local test clients across every\nsupported version. Those client instances are not part of the repository.\n\n## Issue page\n\n`page issues/` is a small local Node service that collects bug reports through a\nform and files each one with its screenshots. It is a development helper, not\nsomething players need:\n\n```bash\ncd \"page issues\"\nnpm install\nnpm start\n```\n\n## License\n\nAll rights reserved.\n\n## Credits\n\nMade by **zymekoh**.\n"
   },
   "images": {
     "https://raw.githubusercontent.com/kerlycanelita/Herzium/main/src/main/resources/assets/herzium/icon.png": [
@@ -747,162 +737,6 @@
     "https://raw.githubusercontent.com/kerlycanelita/Herzium/HEAD/src/main/resources/assets/herzium/icon.png": [
       1254,
       1254
-    ],
-    "https://cdn.modrinth.com/data/DNMK5gVu/images/c06cde7f2d550459114538482bbf9cd072255a7b.png": [
-      937,
-      712
-    ],
-    "https://cdn.modrinth.com/data/cached_images/60a284c6f6a5140b49fa595812637f4c5b7c95ec.gif": [
-      1434,
-      806
-    ],
-    "https://cdn.modrinth.com/data/cached_images/4cf1e5074886801425d236f946c70f76675a9c4e.png": [
-      369,
-      105
-    ],
-    "https://cdn.modrinth.com/data/cached_images/22a29843a41aa97b27ad3a00757b03ec8c1f29d2.png": [
-      497,
-      252
-    ],
-    "https://cdn.modrinth.com/data/cached_images/c1b46ca53611491de44db6eb1e079f9809aaad44.png": [
-      670,
-      287
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/Alert-Tweaks-KoHs/HEAD/versions/26.1.2/src/main/resources/assets/alert_tweaks/icon.png": [
-      256,
-      256
-    ],
-    "https://cdn.modrinth.com/data/FYUHG5B7/images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a.png": [
-      725,
-      535
-    ],
-    "https://cdn.modrinth.com/data/FYUHG5B7/images/1379b147468fe51214831d42dfa912e5860ac15d.png": [
-      1452,
-      1005
-    ],
-    "https://cdn.modrinth.com/data/FYUHG5B7/images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png": [
-      731,
-      504
-    ],
-    "https://cdn.modrinth.com/data/cached_images/6b9a0daa21d44e6e61e0f5f270a12946f35f9207.png": [
-      787,
-      621
-    ],
-    "https://cdn.modrinth.com/data/cached_images/f3b9c2345a257fea43758ff85143606166e01031.png": [
-      656,
-      651
-    ],
-    "https://cdn.modrinth.com/data/cached_images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a_0.webp": [
-      725,
-      535
-    ],
-    "https://cdn.modrinth.com/data/cached_images/ce18f700c69e5cebd8a352dfa8c3f505778fec54.png": [
-      680,
-      520
-    ],
-    "https://cdn.modrinth.com/data/cached_images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png": [
-      731,
-      504
-    ],
-    "https://cdn.modrinth.com/data/cached_images/1379b147468fe51214831d42dfa912e5860ac15d.png": [
-      1452,
-      1005
-    ],
-    "https://cdn.modrinth.com/data/cached_images/5e1182d457acb67de3ee1f5a06a2713ecc483d2f.gif": [
-      240,
-      240
-    ],
-    "https://cdn.modrinth.com/data/cached_images/a86530479cd0e07d9ee83191da72ff6d57b2b2ef.gif": [
-      240,
-      240
-    ],
-    "https://cdn.modrinth.com/data/cached_images/a141a4f37b91f19ef826ab34003dfa60325ff36e.gif": [
-      240,
-      240
-    ],
-    "https://cdn.modrinth.com/data/cached_images/f68cbb58d0f52eb9305981004ed2314f0415d476_0.webp": [
-      578,
-      35
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Keyboard-Place-Fix/HEAD/src/main/resources/assets/keyboardplacefix/icon.png": [
-      64,
-      64
-    ],
-    "https://cdn.modrinth.com/data/cached_images/544d133d21012e7b7fd0d457336801273ddfe06a_0.webp": [
-      217,
-      219
-    ],
-    "https://cdn.modrinth.com/data/cached_images/a143fbb2848fa7c2f872200eac9e28f6dcdfcd5a.png": [
-      508,
-      529
-    ],
-    "https://cdn.modrinth.com/data/cached_images/43d947d708f08147f086507e519d2a26f47e6bb6.gif": [
-      540,
-      540
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Offhand-Whitelist/HEAD/src/main/resources/assets/kohs_offhand_whitelist/icon.png": [
-      512,
-      512
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/main-menu.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/cursor-landing.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/inventory-tweaks.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/customization.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/item-highlighter.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/gui-scaler.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/main/docs/media/player-visibility.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/src/main/resources/assets/kohs_inventory_tweaks/icon.png": [
-      1254,
-      1254
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/main-menu.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/inventory-tweaks.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/player-visibility.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/cursor-landing.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/customization.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/item-highlighter.png": [
-      1440,
-      1000
-    ],
-    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/gui-scaler.png": [
-      1440,
-      1000
     ],
     "https://cdn.modrinth.com/data/dwVY5imH/images/420fb8851c3ce3cabf6ceb668daa4904157cac69.png": [
       1087,
@@ -999,6 +833,162 @@
     "https://raw.githubusercontent.com/kerlycanelita/KoHs-Crystal-Tweaks/HEAD/docs/images/practice-worlds.png": [
       880,
       472
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/main-menu.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/cursor-landing.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/inventory-tweaks.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/customization.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/item-highlighter.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/gui-scaler.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/v1.1.0/docs/media/player-visibility.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/src/main/resources/assets/kohs_inventory_tweaks/icon.png": [
+      512,
+      512
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/main-menu.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/inventory-tweaks.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/player-visibility.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/cursor-landing.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/customization.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/item-highlighter.png": [
+      1440,
+      1000
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Inventory-Tweaks/HEAD/docs/media/gui-scaler.png": [
+      1440,
+      1000
+    ],
+    "https://cdn.modrinth.com/data/cached_images/5e1182d457acb67de3ee1f5a06a2713ecc483d2f.gif": [
+      240,
+      240
+    ],
+    "https://cdn.modrinth.com/data/cached_images/a86530479cd0e07d9ee83191da72ff6d57b2b2ef.gif": [
+      240,
+      240
+    ],
+    "https://cdn.modrinth.com/data/cached_images/a141a4f37b91f19ef826ab34003dfa60325ff36e.gif": [
+      240,
+      240
+    ],
+    "https://cdn.modrinth.com/data/cached_images/f68cbb58d0f52eb9305981004ed2314f0415d476_0.webp": [
+      578,
+      35
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Keyboard-Place-Fix/HEAD/src/main/resources/assets/keyboardplacefix/icon.png": [
+      64,
+      64
+    ],
+    "https://cdn.modrinth.com/data/DNMK5gVu/images/c06cde7f2d550459114538482bbf9cd072255a7b.png": [
+      937,
+      712
+    ],
+    "https://cdn.modrinth.com/data/cached_images/60a284c6f6a5140b49fa595812637f4c5b7c95ec.gif": [
+      1434,
+      806
+    ],
+    "https://cdn.modrinth.com/data/cached_images/4cf1e5074886801425d236f946c70f76675a9c4e.png": [
+      369,
+      105
+    ],
+    "https://cdn.modrinth.com/data/cached_images/22a29843a41aa97b27ad3a00757b03ec8c1f29d2.png": [
+      497,
+      252
+    ],
+    "https://cdn.modrinth.com/data/cached_images/c1b46ca53611491de44db6eb1e079f9809aaad44.png": [
+      670,
+      287
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/Alert-Tweaks-KoHs/HEAD/versions/26.1.2/src/main/resources/assets/alert_tweaks/icon.png": [
+      256,
+      256
+    ],
+    "https://cdn.modrinth.com/data/cached_images/544d133d21012e7b7fd0d457336801273ddfe06a_0.webp": [
+      217,
+      219
+    ],
+    "https://cdn.modrinth.com/data/cached_images/a143fbb2848fa7c2f872200eac9e28f6dcdfcd5a.png": [
+      508,
+      529
+    ],
+    "https://cdn.modrinth.com/data/cached_images/43d947d708f08147f086507e519d2a26f47e6bb6.gif": [
+      540,
+      540
+    ],
+    "https://raw.githubusercontent.com/kerlycanelita/KoHs-Offhand-Whitelist/HEAD/src/main/resources/assets/kohs_offhand_whitelist/icon.png": [
+      512,
+      512
+    ],
+    "https://cdn.modrinth.com/data/FYUHG5B7/images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a.png": [
+      725,
+      535
+    ],
+    "https://cdn.modrinth.com/data/FYUHG5B7/images/1379b147468fe51214831d42dfa912e5860ac15d.png": [
+      1452,
+      1005
+    ],
+    "https://cdn.modrinth.com/data/FYUHG5B7/images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png": [
+      731,
+      504
+    ],
+    "https://cdn.modrinth.com/data/cached_images/6b9a0daa21d44e6e61e0f5f270a12946f35f9207.png": [
+      787,
+      621
+    ],
+    "https://cdn.modrinth.com/data/cached_images/f3b9c2345a257fea43758ff85143606166e01031.png": [
+      656,
+      651
+    ],
+    "https://cdn.modrinth.com/data/cached_images/0177b9e7c76c2d2d1f224b2395b092d05fc5277a_0.webp": [
+      725,
+      535
+    ],
+    "https://cdn.modrinth.com/data/cached_images/ce18f700c69e5cebd8a352dfa8c3f505778fec54.png": [
+      680,
+      520
+    ],
+    "https://cdn.modrinth.com/data/cached_images/4e4f08e045c90e320ac8ea81f26d744bd745f992.png": [
+      731,
+      504
+    ],
+    "https://cdn.modrinth.com/data/cached_images/1379b147468fe51214831d42dfa912e5860ac15d.png": [
+      1452,
+      1005
     ]
   }
 }
