@@ -396,6 +396,18 @@ html.labs-intro-open { overflow: hidden; }
 .ledger__row.is-bad .ledger__value { color: var(--tone-bad); }
 .ledger__row.is-bad { border-color: rgba(251, 113, 133, .35); }
 
+/* An icon that could not load: the KoHs mark instead of a broken image */
+.icon-fallback {
+  display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(circle at 50% 40%, #2d1257, #0a0414 75%);
+}
+.icon-fallback svg { width: 62%; height: 62%; filter: drop-shadow(0 0 10px rgba(255, 79, 184, .55)); }
+.lab__icon .icon-fallback {
+  position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 22px;
+  box-shadow: 0 0 0 2px var(--line-2), 0 16px 40px -18px rgba(255, 79, 184, .8);
+}
+.tool .icon-fallback { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 0 0 1px var(--line-2); }
+
 /* Pending lab */
 .lab__pending { margin-top: 22px; padding: 18px; border-radius: 18px; border: 1px dashed var(--line-2); background: var(--surface); }
 .lab__pending p { margin: 0 0 12px; color: var(--text-2); }

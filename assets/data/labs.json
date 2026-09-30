@@ -5,6 +5,7 @@
       "id": "herzium",
       "name": "Herzium",
       "icon": "https://cdn.modrinth.com/data/5yMyq4qM/b0542d85334b69b86511375d42a8b3e0ccfe092a_96.webp",
+      "modrinth": "herzium",
       "state": "live",
       "status": { "en": "Released · 1.11.0", "es": "Publicado · 1.11.0" },
       "kicker": { "en": "Hotbar burst lab", "es": "Laboratorio de ráfagas de barra" },
@@ -206,7 +207,8 @@
     {
       "id": "inventory",
       "name": "KoHs Inventory Tweaks",
-      "icon": "https://cdn.modrinth.com/data/CjgeYNJu/76a59d8da3fa39c781db1410e9f53bef8861fab7_96.webp",
+      "icon": "https://cdn.modrinth.com/data/CjgeYNJu/23115d325489a95de24b79b2054a8125e3a14c1e.png",
+      "modrinth": "kohs-inv-cursor",
       "state": "pending",
       "status": { "en": "QA lab · write-up in the forge", "es": "Laboratorio QA · informe en la forja" },
       "kicker": { "en": "QA macro lab", "es": "Laboratorio QA de macros" },
@@ -226,6 +228,7 @@
   "tools": [
     {
       "name": "Grim Anticheat",
+      "slug": "grimac",
       "by": "GrimAnticheat",
       "license": "GPL-3.0",
       "icon": "https://cdn.modrinth.com/data/LJNGWSvH/3379356966ea4465a023f75d4f29073bfec2afc6_96.webp",
@@ -238,6 +241,7 @@
     },
     {
       "name": "Ravenclaw's Ping Equalizer",
+      "slug": "ravenclaws-ping-equalizer",
       "by": "ravineclaw",
       "license": "MIT",
       "icon": "https://cdn.modrinth.com/data/pWxTsF2R/24865e7decaa06a4f22eac7dc51b0fb5138ce2f8_96.webp",
@@ -250,6 +254,7 @@
     },
     {
       "name": "Marlow's Crystal Optimizer",
+      "slug": "marlow-crystal-optimizer",
       "by": "Bram1903",
       "license": "MIT",
       "icon": "https://cdn.modrinth.com/data/ozpC8eDC/3d4faf5604c309cacdd3c8d88be4f14257915385_96.webp",
@@ -262,6 +267,7 @@
     },
     {
       "name": "Fabric API",
+      "slug": "fabric-api",
       "by": "FabricMC",
       "license": "Apache-2.0",
       "icon": "https://cdn.modrinth.com/data/P7dR8mSH/icon.png",
@@ -274,6 +280,7 @@
     },
     {
       "name": "Mod Menu",
+      "slug": "modmenu",
       "by": "TerraformersMC",
       "license": "MIT",
       "icon": "https://cdn.modrinth.com/data/mOgUt4GM/5a20ed1450a0e1e79a1fe04e61bb4e5878bf1d20.png",

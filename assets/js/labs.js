@@ -3,6 +3,7 @@
   'use strict';
 
   const DATA_URL = 'assets/data/labs.json';
+  const MODRINTH_API = 'https://api.modrinth.com/v2';
   const INTRO_KEY = 'kohs-labs-intro';
   const LANG_KEY = 'kohs-lang';
   const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -540,8 +541,9 @@
       img.alt = '';
       img.width = 56; img.height = 56;
       img.loading = 'lazy';
+      if (lab.modrinth) img.dataset.slug = lab.modrinth;
       img.src = lab.icon;
-      img.addEventListener('error', () => item.remove(), { once: true });
+      img.addEventListener('error', () => { if (!img.dataset.retry) item.remove(); }, { once: true });
       item.append(img);
       orbit.append(item);
       return item;
@@ -805,6 +807,65 @@
     return { block, panels };
   }
 
+  /* ---------- Icons: live from Modrinth, a KoHs mark if one fails ---------- */
+
+  let liveIcons = null;
+
+  function watchIcon(img, slug) {
+    if (slug) img.dataset.slug = slug;
+    img.addEventListener('error', () => iconFallback(img), { once: true });
+  }
+
+  function iconFallback(img) {
+    const box = el('span', 'icon-fallback');
+    box.dataset.cls = img.className;
+    box.dataset.alt = img.alt;
+    box.dataset.size = String(img.width || 56);
+    if (img.dataset.slug) box.dataset.slug = img.dataset.slug;
+    if (img.className) box.classList.add(...img.className.split(' '));
+    if (img.alt) { box.setAttribute('role', 'img'); box.setAttribute('aria-label', img.alt); }
+    const mark = svg('svg', { viewBox: '0 0 64 64', 'aria-hidden': 'true' });
+    mark.append(svg('use', { href: '#logo-mark' }));
+    box.append(mark);
+    img.replaceWith(box);
+  }
+
+  function refreshIcons() {
+    if (!data) return;
+    if (!liveIcons) {
+      const slugs = [...data.labs.map((l) => l.modrinth), ...data.tools.map((tool) => tool.slug)].filter(Boolean);
+      liveIcons = fetch(`${MODRINTH_API}/projects?ids=${encodeURIComponent(JSON.stringify(slugs))}`)
+        .then((res) => (res.ok ? res.json() : []))
+        .then((list) => {
+          const icons = new Map();
+          for (const project of Array.isArray(list) ? list : []) {
+            const href = safeUrl(project.icon_url);
+            if (href && new URL(href).hostname === 'cdn.modrinth.com') icons.set(project.slug, href);
+          }
+          return icons;
+        })
+        .catch(() => new Map());
+    }
+    liveIcons.then((icons) => {
+      for (const lab of data.labs) if (icons.has(lab.modrinth)) lab.icon = icons.get(lab.modrinth);
+      for (const tool of data.tools) if (icons.has(tool.slug)) tool.icon = icons.get(tool.slug);
+      $$('img[data-slug]').forEach((img) => {
+        const next = icons.get(img.dataset.slug);
+        if (next && img.src !== next) { img.dataset.retry = '1'; img.src = next; }
+      });
+      $$('.icon-fallback[data-slug]').forEach((box) => {
+        const next = icons.get(box.dataset.slug);
+        if (!next) return;
+        const img = el('img', box.dataset.cls || null);
+        img.alt = box.dataset.alt || '';
+        img.width = Number(box.dataset.size); img.height = img.width;
+        watchIcon(img, box.dataset.slug);
+        img.src = next;
+        box.replaceWith(img);
+      });
+    });
+  }
+
   /* ---------- Labs & tools ---------- */
 
   const LINK_ICONS = { doc: 'i-file-text', github: 'i-github', modrinth: 'i-modrinth' };
@@ -821,6 +882,7 @@
     img.alt = `${lab.name} icon`;
     img.width = 84; img.height = 84;
     img.loading = 'lazy';
+    watchIcon(img, lab.modrinth);
     img.src = lab.icon;
     iconWrap.append(img);
     const titles = el('div');
@@ -887,6 +949,7 @@
     img.alt = '';
     img.width = 56; img.height = 56;
     img.loading = 'lazy';
+    watchIcon(img, tool.slug);
     img.src = tool.icon;
     const head = el('div');
     head.append(el('h3', 'tool__name', tool.name));
@@ -937,6 +1000,7 @@
     requestAnimationFrame(() => allPanels.forEach(measurePaths));
     initMagnetic(list);
     renderOrbit();
+    refreshIcons();
   }
 
   function renderError() {
