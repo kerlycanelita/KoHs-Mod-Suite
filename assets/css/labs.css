@@ -268,6 +268,9 @@ html.labs-intro-open { overflow: hidden; }
 }
 .lab__status::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--pink); animation: ping 1.8s ease-out infinite; }
 .lab[data-state="forge"] .lab__status::before { background: var(--lilac); animation: blink 1.4s steps(1) infinite; }
+.lab[data-state="review"] .lab__status { color: #fcd34d; }
+[data-theme="light"] .lab[data-state="review"] .lab__status { color: #b45309; }
+.lab[data-state="review"] .lab__status::before { background: #fbbf24; animation: ping-amber 1.8s ease-out infinite; }
 .lab[data-state="pending"] .lab__status::before { background: var(--text-3); animation: none; }
 .lab__tagline { margin: 18px 0 0; max-width: 78ch; color: var(--text-2); font-size: clamp(15.5px, 1.5vw, 17px); }
 .lab__rig { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }

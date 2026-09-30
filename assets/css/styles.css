@@ -1126,6 +1126,21 @@ kbd {
 .soon-card--more h3 { margin: 0; font-size: 22px; }
 .soon-card--more p { margin: 0; color: var(--text-2); }
 
+.soon-card__icon {
+  position: relative; width: 72%; height: 72%; object-fit: cover; border-radius: 26px;
+  box-shadow: 0 0 0 2px rgba(216, 180, 254, .35), 0 0 30px -4px rgba(255, 79, 184, .65);
+  animation: float 5s ease-in-out infinite;
+}
+.soon-card--review .soon-card__dot { background: #fbbf24; animation: ping-amber 1.8s ease-out infinite; }
+.soon-card--review .soon-card__status { color: #fcd34d; }
+[data-theme="light"] .soon-card--review .soon-card__status { color: #b45309; }
+@keyframes ping-amber { 0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, .6); } 100% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); } }
+.soon-card__chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
+.soon-card__chips li {
+  padding: 5px 11px; border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--text);
+  background: var(--surface); border: 1px solid var(--line-2);
+}
+.soon-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 @media (min-width: 600px) { .soon-card:not(.soon-card--more) { grid-template-columns: auto minmax(0, 1fr); } }
 @media (min-width: 960px) { .soon { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } }
 

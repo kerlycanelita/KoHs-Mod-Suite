@@ -117,8 +117,8 @@
       "id": "anchors",
       "name": "KoHs Anchor's",
       "icon": "https://raw.githubusercontent.com/kerlycanelita/KoHs-Anchors/main/src/main/resources/assets/kohs_anchors/icon.png",
-      "state": "forge",
-      "status": { "en": "In the forge · 0.4.0", "es": "En la forja · 0.4.0" },
+      "state": "review",
+      "status": { "en": "Awaiting approval · 0.4.0", "es": "En espera de aprobación · 0.4.0" },
       "kicker": { "en": "Anchor lab", "es": "Laboratorio de anclas" },
       "tagline": {
         "en": "Respawn anchors placed, charged and detonated at real speed, with 0 to 150 ms of lag, against a server with Grim — timed from the first click to the server's last explosion.",
