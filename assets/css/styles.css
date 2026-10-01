@@ -1405,3 +1405,7 @@ kbd {
   }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* Buy Me a Coffee */
+.btn--coffee .icon { color: #fbbf24; }
+.btn--coffee:hover .icon { animation: q-pulse 1.2s ease-in-out infinite; }
