@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30",
+  "updated": "2026-10-06",
   "labs": [
     {
       "id": "herzium",
@@ -118,20 +118,59 @@
       "name": "KoHs Anchor's",
       "icon": "https://raw.githubusercontent.com/kerlycanelita/KoHs-Anchors/main/src/main/resources/assets/kohs_anchors/icon.png",
       "state": "review",
-      "status": { "en": "Awaiting approval · 0.4.0", "es": "En espera de aprobación · 0.4.0" },
+      "status": { "en": "0.5.0 awaiting approval · 0.5.1 in testing", "es": "0.5.0 en espera de aprobación · 0.5.1 en pruebas" },
       "kicker": { "en": "Anchor lab", "es": "Laboratorio de anclas" },
       "tagline": {
         "en": "Respawn anchors placed, charged and detonated at real speed, with 0 to 150 ms of lag, against a server with Grim — timed from the first click to the server's last explosion.",
         "es": "Anclas de reaparición colocadas, cargadas y detonadas a velocidad real, con 0 a 150 ms de lag, contra un servidor con Grim, cronometradas desde el primer clic hasta la última explosión en el servidor."
       },
-      "rig": { "en": "Minecraft 26.2 · Grim Anticheat 2.3.74 · Ping Equalizer 1.5 · 20 anchors per test", "es": "Minecraft 26.2 · Grim Anticheat 2.3.74 · Ping Equalizer 1.5 · 20 anclas por prueba" },
+      "rig": { "en": "Minecraft 1.21.11 to 26.3 · Grim Anticheat 2.3.74 · Ping Equalizer 1.5 · 0 to 150 ms", "es": "Minecraft 1.21.11 a 26.3 · Grim Anticheat 2.3.74 · Ping Equalizer 1.5 · 0 a 150 ms" },
       "figures": [
+        { "value": 6, "suffix": "/6", "label": { "en": "Minecraft versions where every tick sent is one Vanilla could send", "es": "versiones de Minecraft donde cada tick enviado es uno que Vanilla podría mandar" } },
+        { "value": 100, "suffix": "%", "label": { "en": "double anchors that put the next anchor back, 1.21.11 to 26.3", "es": "double anchors que vuelven a poner el anchor, de 1.21.11 a 26.3" } },
         { "value": 152, "suffix": " ms", "label": { "en": "per anchor at a steady rhythm, with no lag", "es": "por ancla a ritmo constante, sin lag" } },
-        { "value": 100, "suffix": "%", "label": { "en": "anchors done from 0 to 150 ms of lag", "es": "anclas completadas de 0 a 150 ms de lag" } },
-        { "value": 10.02, "decimals": 2, "suffix": "/s", "label": { "en": "anchors in one-tick bursts at +50 ms", "es": "anclas por segundo en ráfagas de un tick a +50 ms" } },
-        { "value": 0, "suffix": "", "label": { "en": "Grim alerts, and 0 lost clicks", "es": "alertas de Grim, y 0 clics perdidos" } }
+        { "value": 0, "suffix": "", "label": { "en": "Grim alerts in every version and test", "es": "alertas de Grim en todas las versiones y pruebas" } }
       ],
       "charts": [
+        {
+          "id": "legit",
+          "tab": { "en": "Every version", "es": "Cada versión" },
+          "type": "ledger",
+          "title": { "en": "Grim alerts per version: anchor cycles, double anchors and one-tick bursts, KoHs Anchor's on and off", "es": "Alertas de Grim por versión: ciclos de anclas, double anchors y ráfagas de un tick, con KoHs Anchor's y sin él" },
+          "rows": [
+            { "label": { "en": "1.21.11", "es": "1.21.11" }, "value": 0 },
+            { "label": { "en": "26.1 (on a 26.1.2 server, same protocol)", "es": "26.1 (en un servidor 26.1.2, mismo protocolo)" }, "value": 0 },
+            { "label": { "en": "26.1.1 (on a 26.1.2 server)", "es": "26.1.1 (en un servidor 26.1.2)" }, "value": 0 },
+            { "label": { "en": "26.1.2", "es": "26.1.2" }, "value": 0 },
+            { "label": { "en": "26.2", "es": "26.2" }, "value": 0 },
+            { "label": { "en": "26.3 (no Grim build yet: packets only, in singleplayer)", "es": "26.3 (aún sin Grim: solo paquetes, en un jugador)" }, "value": 0 }
+          ],
+          "note": {
+            "en": "Every packet the client sent was recorded and cut into client ticks. Vanilla applies the hotbar keys before the clicks and reads the crosshair once per tick, so it never sends a hotbar change after a click of the same tick, nor clicks of one tick at two different blocks. In every version, with KoHs Anchor's on: 0 of either, over 8 scenarios each. Screenshots before and after each scenario checked that the field was clean and the tester never moved.",
+            "es": "Se grabó cada paquete que mandó el cliente y se cortó en ticks. Vanilla aplica las teclas de la barra antes de los clics y lee la mira una vez por tick, así que nunca manda un cambio de ranura después de un clic del mismo tick, ni clics de un tick a dos bloques distintos. En todas las versiones, con KoHs Anchor's: 0 de cada, en 8 escenarios por versión. Capturas antes y después de cada escenario comprobaron que el campo estaba limpio y que el probador no se movió."
+          }
+        },
+        {
+          "id": "double",
+          "tab": { "en": "Double anchor", "es": "Double anchor" },
+          "type": "bars",
+          "title": { "en": "Double anchor: the next anchor back on the spot after a double click with anchors", "es": "Double anchor: el anchor nuevo en su sitio tras un doble clic con anchors" },
+          "unit": "%",
+          "max": 100,
+          "series": [
+            { "name": { "en": "Vanilla", "es": "Vanilla" }, "tone": "muted" },
+            { "name": { "en": "KoHs Anchor's 0.5.1", "es": "KoHs Anchor's 0.5.1" }, "tone": "hot" }
+          ],
+          "rows": [
+            { "label": { "en": "1.21.11 to 26.3, both clicks in one tick", "es": "1.21.11 a 26.3, los dos clics en un tick" }, "values": [100, 100] },
+            { "label": { "en": "1.21.11 to 26.3, +70 ms", "es": "1.21.11 a 26.3, +70 ms" }, "values": [100, 100] },
+            { "label": { "en": "26.2 fight lab, a step every 100 ms, +70 ms", "es": "26.2 laboratorio de pelea, un paso cada 100 ms, +70 ms" }, "values": [100, 100] }
+          ],
+          "note": {
+            "en": "Same packets as Vanilla in every tick. Up to 0.5.0 the second click of one tick was taken for a double click that could only stack an anchor, and dropped; a detonation drawn before the world had its glowstone could also leave a ghost anchor on top. Faster than the round trip (a step every 50 to 60 ms at +70 ms) the runs still vary a lot, for KoHs Anchor's and Vanilla alike: not settled yet.",
+            "es": "Los mismos paquetes que Vanilla en cada tick. Hasta la 0.5.0 el segundo clic de un tick se tomaba por un doble clic que solo podía apilar un anchor y se descartaba; una detonación dibujada antes de que el mundo tuviera su glowstone podía además dejar un anchor fantasma encima. Más rápido que la ida y vuelta (un paso cada 50 a 60 ms con +70 ms) las tandas aún varían mucho, igual en KoHs Anchor's que en Vanilla: sin cerrar todavía."
+          }
+        },
         {
           "id": "time",
           "tab": { "en": "Time per anchor", "es": "Tiempo por ancla" },
@@ -201,6 +240,7 @@
         { "kind": "doc", "label": { "en": "Server lab (0.2.0)", "es": "Laboratorio de servidor (0.2.0)" }, "url": "https://github.com/kerlycanelita/KoHs-Anchors/blob/main/docs/research/server-lab-0.2.0.md" },
         { "kind": "doc", "label": { "en": "Anchors and Herzium (0.2.1)", "es": "Anclas y Herzium (0.2.1)" }, "url": "https://github.com/kerlycanelita/KoHs-Anchors/blob/main/docs/research/anchors-and-herzium-0.2.1.md" },
         { "kind": "doc", "label": { "en": "0.4.0 research", "es": "Investigación de la 0.4.0" }, "url": "https://github.com/kerlycanelita/KoHs-Anchors/blob/main/docs/research/anchors-0.4.0.md" },
+        { "kind": "doc", "label": { "en": "Double anchor and every version (0.5.1)", "es": "Double anchor y cada versión (0.5.1)" }, "url": "https://github.com/kerlycanelita/KoHs-Anchors/blob/fix/feel-0.5.1/docs/research/double-anchor-0.5.1.md" },
         { "kind": "github", "label": { "en": "Source", "es": "Código" }, "url": "https://github.com/kerlycanelita/KoHs-Anchors" }
       ]
     },
